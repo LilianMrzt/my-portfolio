@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@src/*": ["./*"],
+      "@constants/*": ["./constants/*"],
+      "@interfaces/*": ["./interfaces/*"],
+      "@resources/*": ["./resources/*"],
+      "@assets/*": ["./resources/assets/*"],
+      "@services/*": ["./services/*"],
+      "@ui/*": ["./ui/*"],
+      "@components/*": ["./ui/components/*"],
+      "@navigation/*": ["./ui/navigation/*"],
+      "@views/*": ["./ui/views/*"],
+      "@utils/*": ["./utils/*"]
+    }
+  }
+}
