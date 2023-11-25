@@ -1,12 +1,12 @@
-import React from 'react';
-import MainNavigation from "@navigation/MainNavigation";
+import React, { type FC } from 'react'
+import MainNavigation from '@navigation/MainNavigation'
 
-function App() {
+const App: FC = () => {
   return (
-    <div className="App">
-      <MainNavigation/>
-    </div>
-  );
+        <div className="App">
+            <MainNavigation/>
+        </div>
+  )
 }
 
-export default App;
+export default App

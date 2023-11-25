@@ -1,6 +1,6 @@
-import React from "react";
+import React, { type FC } from 'react'
 
-const HomeScreen = () => {
+const HomeScreen: FC = () => {
   return (
       <div>
           <p>

@@ -1,8 +1,8 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import HomeScreen from "@views/HomeScreen";
+import React, { type FC } from 'react'
+import { Route, Routes } from 'react-router-dom'
+import HomeScreen from '@views/HomeScreen'
 
-const MainNavigation = () => {
+const MainNavigation: FC = () => {
   return (
       <Routes>
             <Route path="/" element={<HomeScreen />}/>
