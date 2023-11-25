@@ -1,10 +1,10 @@
 import React from 'react';
-import HomeScreen from "@views/HomeScreen";
+import MainNavigation from "@navigation/MainNavigation";
 
 function App() {
   return (
     <div className="App">
-      <HomeScreen/>
+      <MainNavigation/>
     </div>
   );
 }
