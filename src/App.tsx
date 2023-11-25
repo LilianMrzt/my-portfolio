@@ -1,9 +1,11 @@
 import React, { type FC } from 'react'
 import MainNavigation from '@navigation/MainNavigation'
+import NavigationBar from '@components/navigation/NavigationBar'
 
 const App: FC = () => {
   return (
-        <div className="App">
+        <div>
+            <NavigationBar/>
             <MainNavigation/>
         </div>
   )
