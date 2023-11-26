@@ -1,4 +1,5 @@
 import React, { type FC } from 'react'
+import Button from '@components/common/Button'
 
 const NavigationBar: FC = () => {
   return (
@@ -6,13 +7,14 @@ const NavigationBar: FC = () => {
           <p>
               Test
           </p>
-          <div className='d-flex'>
-              <p>
-                  Test
-              </p>
-              <p>
-                  Test
-              </p>
+          <div className='d-flex flex-row'>
+              <Button
+                  label={'Test'}
+              />
+              <Button
+                  label={'Test'}
+                  className={'ml-10'}
+              />
           </div>
       </div>
   )

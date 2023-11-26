@@ -14,7 +14,11 @@ code {
 }
 
 :root {
-  --background: #F8F8FF
+  --background: #F8F8FF;
+  --primary: #f4661b;
+  --text: #000000;
+  --blackish: #272727;
+  --surface: #ffffff;
 }
 
 /* CUSTOM CSS */
@@ -31,6 +35,14 @@ code {
 
 .align-center {
   align-items: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 /* height */
@@ -51,8 +63,32 @@ code {
 
 /* color */
 
+.color-primary {
+  color: var(--primary);
+}
+
+.color-surface {
+  color: var(--surface)
+}
+
+.color-text {
+  color: var(--text);
+}
+
 .bg-background {
   background-color: var(--background);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-blackish {
+  background-color: var(--blackish);
+}
+
+.bg-surface {
+  background-color: var(--surface);
 }
 
 /* shadow */
@@ -64,9 +100,23 @@ code {
 
 /* margin */
 
+.m-0 {
+  margin: 0;
+}
 
+.ml-10 {
+  margin-left: 10px;
+}
 
 /* padding */
+
+.p-0 {
+  padding: 0;
+}
+
+.p-10 {
+  padding: 10px;
+}
 
 .pl-10 {
   padding-left: 10px;
@@ -74,4 +124,34 @@ code {
 
 .pr-10 {
   padding-right: 10px;
+}
+
+/* border */
+
+.border-none {
+  border: none;
+}
+
+.border-radius-small {
+  border-radius: 5px;
+}
+
+/* cursor */
+
+.pointer {
+  cursor : pointer;
+}
+
+/* text */
+
+.text-small {
+  font-size: 12px;
+}
+
+.text-medium {
+  font-size: 16px;
+}
+
+.text-large {
+  font-size: 20px;
 }
