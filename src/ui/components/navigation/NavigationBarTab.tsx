@@ -5,7 +5,8 @@ import Text from '@components/common/Text'
 const NavigationBarTab: FC<NavigationBarTabProps> = ({
   label,
   className,
-  onClick
+  onClick,
+  isActive
 }): ReactElement => {
   return (
       <button
@@ -15,6 +16,7 @@ const NavigationBarTab: FC<NavigationBarTabProps> = ({
         <Text
             className={'hover-primary pointer'}
             fontWeight={'bold'}
+            color={isActive ? 'primary' : 'text'}
         >
             {label}
         </Text>

@@ -1,14 +1,14 @@
 import React, { type ReactElement } from 'react'
 import Text from '@components/common/Text'
 
-const HomeScreen = (): ReactElement => {
+const AboutScreen = (): ReactElement => {
   return (
       <div>
           <Text>
-              HomeScreen
+              AboutScreen
           </Text>
       </div>
   )
 }
 
-export default HomeScreen
+export default AboutScreen

@@ -4,12 +4,18 @@ import IconButton from '@components/common/IconButton'
 import { LetterLogo, MoonLogo, SunLogo } from '@assets/Images'
 import { Theme } from '@constants/Constants'
 import NavigationBarTab from '@components/navigation/NavigationBarTab'
+import { useNavigate } from 'react-router-dom'
+import { RoutesConstants } from '@constants/RoutesConstants'
 
 const NavigationBar: FC<NavigationBarProps> = ({
   theme,
   toggleTheme
 }): ReactElement => {
   const [isIconSun, setIsIconSun] = useState(theme === Theme.dark)
+
+  const navigate = useNavigate()
+
+  const [activeTab, setActiveTab] = useState(RoutesConstants.home)
 
   const handleThemeChange = (): void => {
     setIsIconSun(!isIconSun)
@@ -26,6 +32,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
               icon={LetterLogo}
               size={'large'}
               padding={0}
+              onClick={() => { navigate(RoutesConstants.home) }}
           />
           <div
               className='d-flex flex-row align-center'
@@ -33,18 +40,38 @@ const NavigationBar: FC<NavigationBarProps> = ({
               <NavigationBarTab
                   label={'Accueil'}
                   className={'mr-10'}
+                  onClick={() => {
+                    navigate(RoutesConstants.home)
+                    setActiveTab(RoutesConstants.home)
+                  }}
+                  isActive={activeTab === RoutesConstants.home}
               />
               <NavigationBarTab
                   label={'A propos'}
                   className={'ml-10 mr-10'}
+                  onClick={() => {
+                    navigate(RoutesConstants.about)
+                    setActiveTab(RoutesConstants.about)
+                  }}
+                  isActive={activeTab === RoutesConstants.about}
               />
               <NavigationBarTab
                   label={'Compétences'}
                   className={'ml-10 mr-10'}
+                  onClick={() => {
+                    navigate(RoutesConstants.skills)
+                    setActiveTab(RoutesConstants.skills)
+                  }}
+                  isActive={activeTab === RoutesConstants.skills}
               />
               <NavigationBarTab
                   label={'Contact'}
                   className={'ml-10 mr-10'}
+                  onClick={() => {
+                    navigate(RoutesConstants.contact)
+                    setActiveTab(RoutesConstants.contact)
+                  }}
+                  isActive={activeTab === RoutesConstants.contact}
               />
               <IconButton
                   backgroundColor={'background'}
