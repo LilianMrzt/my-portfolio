@@ -12,7 +12,10 @@ const NavigationBarTab: FC<NavigationBarTabProps> = ({
           className={`${className} bg-background border-none`}
           onClick={onClick}
       >
-        <Text className={'hover-primary pointer'} fontWeight={'bold'}>
+        <Text
+            className={'hover-primary pointer'}
+            fontWeight={'bold'}
+        >
             {label}
         </Text>
       </button>
