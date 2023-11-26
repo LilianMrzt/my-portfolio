@@ -5,4 +5,5 @@ export interface ButtonProps {
   className?: string
   backgroundColor?: ColorsType
   color?: ColorsType
+  onClick?: () => void
 }

@@ -21,7 +21,16 @@ code {
   --surface: #ffffff;
 }
 
-/* CUSTOM CSS */
+[data-theme='dark'] {
+  --background: #272727;
+  --primary: #f4661b;
+  --text: #ffffff;
+  --blackish: #F8F8FF;
+  --surface: #000000;
+}
+
+
+/***** CUSTOM CSS *****/
 
 /* flexbox */
 

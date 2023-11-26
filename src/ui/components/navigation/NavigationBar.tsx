@@ -1,13 +1,15 @@
-import React, { type FC } from 'react'
+import React, { type FC, type ReactElement } from 'react'
 import Button from '@components/common/Button'
+import Switch from '@components/common/Switch'
+import { type NavigationBarProps } from '@interfaces/components/NavigationBarProps'
 
-const NavigationBar: FC = () => {
+const NavigationBar: FC<NavigationBarProps> = ({ theme, onChange }): ReactElement => {
   return (
       <div className='d-flex space-between h-64px align-center bg-background shadow pl-10 pr-10'>
           <p>
               Test
           </p>
-          <div className='d-flex flex-row'>
+          <div className='d-flex flex-row align-center'>
               <Button
                   label={'Test'}
               />
@@ -15,6 +17,7 @@ const NavigationBar: FC = () => {
                   label={'Test'}
                   className={'ml-10'}
               />
+              <Switch checked={theme === 'dark'} changeValue={onChange}/>
           </div>
       </div>
   )
