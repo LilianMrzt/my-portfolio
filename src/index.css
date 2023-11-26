@@ -92,6 +92,11 @@ code {
   color: var(--primary);
 }
 
+.hover-primary:hover {
+  color: var(--primary);
+  transition: 0.3s;
+}
+
 .color-surface {
   color: var(--surface)
 }
@@ -133,6 +138,10 @@ code {
   margin-left: 10px;
 }
 
+.mr-10 {
+  margin-right: 10px;
+}
+
 /* padding */
 
 .p-0 {
@@ -151,8 +160,16 @@ code {
   padding-left: 10px;
 }
 
+.pl-20 {
+  padding-left: 20px;
+}
+
 .pr-10 {
   padding-right: 10px;
+}
+
+.pr-20 {
+  padding-right: 20px;
 }
 
 /* border */
@@ -187,6 +204,14 @@ code {
 
 .text-large {
   font-size: 20px;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-bold {
+  font-weight: 600;
 }
 
 /* transition */

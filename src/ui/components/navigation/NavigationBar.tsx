@@ -1,9 +1,9 @@
 import React, { type FC, type ReactElement, useState } from 'react'
-import Button from '@components/common/Button'
-import { type NavigationBarProps } from '@interfaces/components/NavigationBarProps'
+import { type NavigationBarProps } from '@interfaces/components/navigation/NavigationBarProps'
 import IconButton from '@components/common/IconButton'
 import { MoonLogo, SunLogo } from '@assets/Images'
 import { Theme } from '@constants/Constants'
+import NavigationBarTab from '@components/navigation/NavigationBarTab'
 
 const NavigationBar: FC<NavigationBarProps> = ({
   theme,
@@ -18,7 +18,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
 
   return (
       <div
-          className='d-flex space-between h-64px align-center bg-background shadow pl-10 pr-10'
+          className='d-flex space-between h-64px align-center bg-background shadow pl-20 pr-20'
       >
           <p>
               Test
@@ -26,12 +26,21 @@ const NavigationBar: FC<NavigationBarProps> = ({
           <div
               className='d-flex flex-row align-center'
           >
-              <Button
-                  label={'Test'}
+              <NavigationBarTab
+                  label={'Accueil'}
+                  className={'mr-10'}
               />
-              <Button
-                  label={'Test'}
-                  className={'ml-10'}
+              <NavigationBarTab
+                  label={'A propos'}
+                  className={'ml-10 mr-10'}
+              />
+              <NavigationBarTab
+                  label={'Compétences'}
+                  className={'ml-10 mr-10'}
+              />
+              <NavigationBarTab
+                  label={'Contact'}
+                  className={'ml-10 mr-10'}
               />
               <IconButton
                   backgroundColor={'background'}
