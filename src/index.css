@@ -19,6 +19,7 @@ code {
   --text: #000000;
   --blackish: #272727;
   --surface: #ffffff;
+  --secondary: #E3E2DF
 }
 
 [data-theme='dark'] {
@@ -27,6 +28,7 @@ code {
   --text: #ffffff;
   --blackish: #F8F8FF;
   --surface: #000000;
+  --secondary: #3b3b3b;
 }
 
 
@@ -113,6 +115,10 @@ code {
   background-color: var(--primary);
 }
 
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
 .bg-blackish {
   background-color: var(--blackish);
 }
@@ -125,6 +131,14 @@ code {
 
 .shadow {
   box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
+}
+
+.index-0 {
+  z-index: 0;
+}
+
+.index-1 {
+  z-index: 1;
 }
 
 
@@ -218,4 +232,29 @@ code {
 
 .transition-3 {
   transition: 0.3s;
+}
+
+/* form */
+
+.triangle {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  border-style: solid;
+  border-width: 60vh 100vw 0 0;
+  border-color: var(--secondary) transparent transparent transparent;
+  transform: rotate(0deg);
+}
+
+
+/* position */
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
 }

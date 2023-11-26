@@ -4,4 +4,5 @@ export type ColorsType =
     | 'surface'
     | 'text'
     | 'background'
+    | 'secondary'
     | string

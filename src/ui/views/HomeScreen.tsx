@@ -3,10 +3,13 @@ import Text from '@components/common/Text'
 
 const HomeScreen = (): ReactElement => {
   return (
-      <div>
-          <Text>
-              HomeScreen
-          </Text>
+      <div className={'relative'}>
+          <div className={'index-1 relative'}>
+              <Text>
+                  HomeScreen
+              </Text>
+          </div>
+          <div className={'triangle'}/>
       </div>
   )
 }

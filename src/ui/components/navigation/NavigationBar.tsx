@@ -24,10 +24,10 @@ const NavigationBar: FC<NavigationBarProps> = ({
 
   return (
       <div
-          className='d-flex space-between h-64px align-center bg-background shadow pl-20 pr-20'
+          className='d-flex space-between h-64px align-center bg-secondary shadow pl-20 pr-20'
       >
           <IconButton
-              backgroundColor={'background'}
+              backgroundColor={'secondary'}
               color={'text'}
               icon={LetterLogo}
               size={'large'}
@@ -74,7 +74,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
                   isActive={activeTab === RoutesConstants.contact}
               />
               <IconButton
-                  backgroundColor={'background'}
+                  backgroundColor={'secondary'}
                   color={'primary'}
                   icon={isIconSun ? SunLogo : MoonLogo}
                   onClick={handleThemeChange}
