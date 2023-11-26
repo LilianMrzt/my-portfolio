@@ -4,7 +4,7 @@ import NavigationBar from '@components/navigation/NavigationBar'
 import { useTheme } from '@utils/UseThemeHook'
 
 const App: FC = () => {
-  const [theme, handleChange] = useTheme('light')
+  const [theme, handleChange] = useTheme()
 
   return (
         <body data-theme={theme}>
