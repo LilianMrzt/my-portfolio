@@ -1,14 +1,17 @@
-import React, { type FC } from 'react'
+import React, { type ReactElement } from 'react'
 import MainNavigation from '@navigation/MainNavigation'
 import NavigationBar from '@components/navigation/NavigationBar'
 import { useTheme } from '@utils/UseThemeHook'
 
-const App: FC = () => {
-  const [theme, handleChange] = useTheme()
+const App = (): ReactElement => {
+  const [theme, toggleTheme] = useTheme()
 
   return (
         <body data-theme={theme}>
-            <NavigationBar theme={theme} onChange={handleChange}/>
+            <NavigationBar
+                theme={theme}
+                toggleTheme={toggleTheme}
+            />
             <MainNavigation/>
         </body>
   )

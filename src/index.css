@@ -139,6 +139,10 @@ code {
   padding: 0;
 }
 
+.p-5 {
+  padding: 5px;
+}
+
 .p-10 {
   padding: 10px;
 }
@@ -183,4 +187,10 @@ code {
 
 .text-large {
   font-size: 20px;
+}
+
+/* transition */
+
+.transition-3 {
+  transition: 0.3s;
 }

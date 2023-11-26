@@ -6,15 +6,19 @@ const IconButton: FC<IconButtonProps> = ({
   icon,
   size = 'medium',
   backgroundColor = 'blackish',
-  color = 'surface'
+  color = 'surface',
+  onClick = () => {},
+  padding = 5,
+  className
 }): ReactElement => {
   return (
       <button
-          className={`p-0 aspect-1 bg-${backgroundColor} border-none p-10 color-${color} border-round`}
+          className={`p-0 aspect-1 bg-${backgroundColor} border-none p-${padding} color-${color} border-round ${className}`}
+          onClick={onClick}
       >
           <ReactSVG
               src={icon}
-              className={`d-flex w-${size} aspect-1`}
+              className={`d-flex w-${size} aspect-1 transition-3`}
           />
       </button>
   )

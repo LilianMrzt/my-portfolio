@@ -1,18 +1,17 @@
 import { useEffect, useState } from 'react'
-import { type ChangeEvent } from 'react'
 import { type ThemeType } from '@interfaces/types/ThemeType'
 import { LocalStorageKeysConstants } from '@constants/LocalStorageKeysConstants'
 import { Theme } from '@constants/Constants'
 
-type useThemeReturn = [ThemeType, (e: ChangeEvent<HTMLInputElement>) => void]
+type useThemeReturn = [ThemeType, () => void]
 
 export const useTheme = (): useThemeReturn => {
   const storedTheme = localStorage.getItem(LocalStorageKeysConstants.theme)
   const initialTheme: ThemeType = storedTheme as ThemeType ?? Theme.light
   const [theme, setTheme] = useState<ThemeType>(initialTheme)
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    const newTheme: ThemeType = e.target.checked ? Theme.dark as ThemeType : Theme.light as ThemeType
+  const toggleTheme = (): void => {
+    const newTheme: ThemeType = theme === Theme.light ? Theme.dark as ThemeType : Theme.light as ThemeType
     setTheme(newTheme)
     localStorage.setItem(LocalStorageKeysConstants.theme, newTheme)
   }
@@ -21,5 +20,5 @@ export const useTheme = (): useThemeReturn => {
     document.body.setAttribute('data-theme', theme)
   }, [theme])
 
-  return [theme, handleChange]
+  return [theme, toggleTheme]
 }
