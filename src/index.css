@@ -54,6 +54,10 @@ code {
   flex-direction: column;
 }
 
+.aspect-1 {
+  aspect-ratio: 1;
+}
+
 /* height */
 
 .h-64px {
@@ -68,6 +72,18 @@ code {
 
 .w-100 {
   width: 100%;
+}
+
+.w-small {
+  width: 16px;
+}
+
+.w-medium {
+  width: 24px;
+}
+
+.w-large {
+  width: 30px;
 }
 
 /* color */
@@ -143,6 +159,10 @@ code {
 
 .border-radius-small {
   border-radius: 5px;
+}
+
+.border-round {
+  border-radius: 50%;
 }
 
 /* cursor */

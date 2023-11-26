@@ -2,6 +2,8 @@ import React, { type FC, type ReactElement } from 'react'
 import Button from '@components/common/Button'
 import Switch from '@components/common/Switch'
 import { type NavigationBarProps } from '@interfaces/components/NavigationBarProps'
+import IconButton from '@components/common/IconButton'
+import { MoonLogo, SunLogo } from '@assets/Images'
 
 const NavigationBar: FC<NavigationBarProps> = ({ theme, onChange }): ReactElement => {
   return (
@@ -18,6 +20,8 @@ const NavigationBar: FC<NavigationBarProps> = ({ theme, onChange }): ReactElemen
                   className={'ml-10'}
               />
               <Switch checked={theme === 'dark'} changeValue={onChange}/>
+              <IconButton icon={SunLogo}/>
+              <IconButton icon={MoonLogo}/>
           </div>
       </div>
   )
