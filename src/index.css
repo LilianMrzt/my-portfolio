@@ -48,6 +48,10 @@ code {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -139,6 +143,10 @@ code {
 
 .index-1 {
   z-index: 1;
+}
+
+.index-2 {
+  z-index: 2;
 }
 
 
@@ -234,14 +242,12 @@ code {
   transition: 0.3s;
 }
 
-/* form */
+/* forms */
 
 .triangle {
   width: 0;
   height: 0;
-  position: absolute;
   z-index: 0;
-  top: 0;
   border-style: solid;
   border-width: 60vh 100vw 0 0;
   border-color: var(--secondary) transparent transparent transparent;
@@ -257,4 +263,12 @@ code {
 
 .absolute {
   position: absolute;
+}
+
+.transform-64px-top {
+  transform: translate(0, -64px);;
+}
+
+.top-0 {
+  top: 0
 }

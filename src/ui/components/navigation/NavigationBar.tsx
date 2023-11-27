@@ -24,7 +24,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
 
   return (
       <div
-          className='d-flex space-between h-64px align-center bg-secondary shadow pl-20 pr-20'
+          className='d-flex space-between h-64px align-center bg-secondary shadow pl-20 pr-20 index-2 relative'
       >
           <IconButton
               backgroundColor={'secondary'}
