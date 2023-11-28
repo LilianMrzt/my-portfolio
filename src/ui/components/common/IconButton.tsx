@@ -10,16 +10,31 @@ const IconButton: FC<IconButtonProps> = ({
     onClick = () => {},
     padding = 5,
     className,
-    border
+    border,
+    hoverEffect = true
 }): ReactElement => {
     return (
         <button
-            className={`${border && `border-${color}`} p-0 aspect-1 bg-${backgroundColor} border-none p-${padding} color-${color} border-round ${className} pointer`}
+            className={`
+                ${hoverEffect && `hover-bg-${color} hover-${backgroundColor}`} 
+                transition-3 ${border && `border-${color}`} 
+                p-0 
+                aspect-1 
+                bg-${backgroundColor} 
+                border-none 
+                p-${padding} 
+                color-${color} 
+                border-round 
+                ${className} 
+                pointer
+                align-center
+                justify-center
+            `}
             onClick={onClick}
         >
             <ReactSVG
                 src={icon}
-                className={`d-flex w-${size} aspect-1 transition-3`}
+                className={`d-flex w-${size} aspect-1`}
             />
         </button>
     )

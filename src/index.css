@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--background);
+  transition: 0.3s;
 }
 
 code {
@@ -96,6 +97,7 @@ code {
 
 .color-primary {
   color: var(--primary);
+  transition: 0.3s;
 }
 
 .hover-primary:hover {
@@ -103,38 +105,60 @@ code {
   transition: 0.3s;
 }
 
+.hover-background:hover {
+  color: var(--background);
+  transition: 0.3s;
+}
+
 .color-surface {
-  color: var(--surface)
+  color: var(--surface);
+  transition: 0.3s;
 }
 
 .color-text {
   color: var(--text);
+  transition: 0.3s;
 }
 
 .bg-background {
   background-color: var(--background);
+  transition: 0.3s;
+}
+
+.hover-bg-background:hover {
+  background-color: var(--background);
+  transition: 0.3s;
 }
 
 .bg-primary {
   background-color: var(--primary);
+  transition: 0.3s;
+}
+
+.hover-bg-primary:hover {
+  background-color: var(--primary);
+  transition: 0.3s;
 }
 
 .bg-secondary {
   background-color: var(--secondary);
+  transition: 0.3s;
 }
 
 .bg-blackish {
   background-color: var(--blackish);
+  transition: 0.3s;
 }
 
 .bg-surface {
   background-color: var(--surface);
+  transition: 0.3s;
 }
 
 /* shadow */
 
 .shadow {
-  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 0.07vw 0.2vw, rgba(0, 0, 0, 0.24) 0 0.07vw 0.14vw;
 }
 
 .index-0 {
@@ -222,7 +246,7 @@ code {
 }
 
 .border-primary {
-  border: var(--primary) solid 1px;
+  border: var(--primary) solid 0.07vw;
 }
 
 /* cursor */
@@ -234,11 +258,11 @@ code {
 /* text */
 
 .text-small {
-  font-size: 12px;
+  font-size: 0.8vw;
 }
 
 .text-medium {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
 }
 
 .text-large {
@@ -273,6 +297,7 @@ code {
   border-width: 60vh 100vw 0 0;
   border-color: var(--secondary) transparent transparent transparent;
   transform: rotate(0deg);
+  transition: 0.3s;
 }
 
 

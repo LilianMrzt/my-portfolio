@@ -17,6 +17,7 @@ const NavigationBarTab: FC<NavigationBarTabProps> = ({
                 className={'hover-primary pointer'}
                 fontWeight={'bold'}
                 color={isActive ? 'primary' : 'text'}
+                size={'medium'}
             >
                 {label}
             </Text>

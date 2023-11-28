@@ -47,7 +47,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
                 />
                 <NavigationBarTab
                     label={'A propos'}
-                    className={'ml-10 mr-10'}
+                    className={'mr-10'}
                     onClick={() => {
                         navigate(RoutesConstants.about)
                     }}
@@ -55,7 +55,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
                 />
                 <NavigationBarTab
                     label={'Compétences'}
-                    className={'ml-10 mr-10'}
+                    className={'mr-10'}
                     onClick={() => {
                         navigate(RoutesConstants.skills)
                     }}
@@ -63,7 +63,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
                 />
                 <NavigationBarTab
                     label={'Contact'}
-                    className={'ml-10 mr-10'}
+                    className={'mr-10'}
                     onClick={() => {
                         navigate(RoutesConstants.contact)
                     }}
@@ -74,7 +74,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
                     color={'primary'}
                     icon={isIconSun ? SunLogo : MoonLogo}
                     onClick={handleThemeChange}
-                    className={'ml-10'}
+                    hoverEffect={false}
                 />
             </div>
         </div>
