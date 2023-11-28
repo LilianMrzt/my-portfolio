@@ -1,6 +1,6 @@
 export const RoutesConstants = {
   home: '/',
-  about: 'about',
-  skills: 'skills',
-  contact: 'contact'
+  about: '/about',
+  skills: '/skills',
+  contact: '/contact'
 }
