@@ -7,14 +7,19 @@ const Button: FC<ButtonProps> = ({
     className,
     backgroundColor = 'blackish',
     color = 'surface',
-    onClick = () => {}
+    onClick = () => {},
+    padding = 10,
+    size
 }) => {
     return (
         <button
-            className={`${className} border-none bg-${backgroundColor} pointer border-radius-small p-10`}
+            className={`${className} p-${padding} border-none bg-${backgroundColor} pointer border-radius-small`}
             onClick={onClick}
         >
-            <Text color={color}>
+            <Text
+                color={color}
+                size={size}
+            >
                 {label}
             </Text>
         </button>

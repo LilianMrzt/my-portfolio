@@ -1,11 +1,12 @@
 import React, { type FC, type ReactElement, useState } from 'react'
 import { type NavigationBarProps } from '@interfaces/components/navigation/NavigationBarProps'
 import IconButton from '@components/common/IconButton'
-import { LetterLogo, MoonLogo, SunLogo } from '@assets/Images'
+import { MoonLogo, SunLogo } from '@assets/Images'
 import { Theme } from '@constants/Constants'
 import NavigationBarTab from '@components/navigation/NavigationBarTab'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { RoutesConstants } from '@constants/RoutesConstants'
+import Button from '@components/common/Button'
 
 const NavigationBar: FC<NavigationBarProps> = ({
     theme,
@@ -24,14 +25,14 @@ const NavigationBar: FC<NavigationBarProps> = ({
 
     return (
         <div
-            className='d-flex space-between h-64px align-center bg-secondary shadow pl-20 pr-20 index-2 relative'
+            className={'d-flex space-between h-64px align-center bg-secondary shadow pl-20 pr-20 index-2 relative'}
         >
-            <IconButton
+
+            <Button
+                label={'Portfolio.'}
+                size={'large'}
                 backgroundColor={'secondary'}
                 color={'text'}
-                icon={LetterLogo}
-                size={'large'}
-                padding={0}
                 onClick={() => { navigate(RoutesConstants.home) }}
             />
             <div

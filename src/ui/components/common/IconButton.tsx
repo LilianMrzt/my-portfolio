@@ -16,8 +16,8 @@ const IconButton: FC<IconButtonProps> = ({
     return (
         <button
             className={`
-                ${hoverEffect && `hover-bg-${color} hover-${backgroundColor}`} 
-                transition-3 ${border && `border-${color}`} 
+                ${hoverEffect && `hover-bg-${color} hover-${backgroundColor}`}
+                ${border && `border-${color}`} 
                 p-0 
                 aspect-1 
                 bg-${backgroundColor} 
