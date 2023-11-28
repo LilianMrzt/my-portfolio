@@ -9,12 +9,14 @@ const HomeScreenIconsBloc = (): ReactElement => {
               icon={Github}
               color={'primary'}
               backgroundColor={'background'}
+              border
           />
           <IconButton
               icon={LinkedIn}
               color={'primary'}
               backgroundColor={'background'}
               className={'ml-10'}
+              border
           />
       </div>
   )

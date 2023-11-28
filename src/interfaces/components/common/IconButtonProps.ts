@@ -10,4 +10,5 @@ export interface IconButtonProps {
   onClick?: () => void
   className?: string
   padding?: PaddingTypes
+  border?: boolean
 }

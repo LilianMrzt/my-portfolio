@@ -221,6 +221,10 @@ code {
   border-radius: 50%;
 }
 
+.border-primary {
+  border: var(--primary) solid 1px;
+}
+
 /* cursor */
 
 .pointer {

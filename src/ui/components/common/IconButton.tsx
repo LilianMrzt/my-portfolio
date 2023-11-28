@@ -9,11 +9,12 @@ const IconButton: FC<IconButtonProps> = ({
   color = 'surface',
   onClick = () => {},
   padding = 5,
-  className
+  className,
+  border
 }): ReactElement => {
   return (
       <button
-          className={`p-0 aspect-1 bg-${backgroundColor} border-none p-${padding} color-${color} border-round ${className} pointer`}
+          className={`${border && `border-${color}`} p-0 aspect-1 bg-${backgroundColor} border-none p-${padding} color-${color} border-round ${className} pointer`}
           onClick={onClick}
       >
           <ReactSVG
