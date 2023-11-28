@@ -67,7 +67,7 @@ code {
 /* height */
 
 .h-64px {
-  height: 64px;
+  height: 7vh;
 }
 
 .h-100 {
@@ -81,15 +81,15 @@ code {
 }
 
 .w-small {
-  width: 16px;
+  width: 1vw;
 }
 
 .w-medium {
-  width: 24px;
+  width: 1.6vw;
 }
 
 .w-large {
-  width: 40px;
+  width: 2.6vw;
 }
 
 /* color */
@@ -157,23 +157,23 @@ code {
 }
 
 .mt-10 {
-  margin-top: 10px;
+  margin-top: 1vh;
 }
 
 .ml-10 {
-  margin-left: 10px;
+  margin-left: 0.7vw;
 }
 
 .ml-50 {
-  margin-left: 50px;
+  margin-left: 3.3vw;
 }
 
 .mr-10 {
-  margin-right: 10px;
+  margin-right: 0.7vw;
 }
 
 .mr-15 {
-  margin-right: 15px;
+  margin-right: 1vw;
 }
 
 
@@ -184,27 +184,27 @@ code {
 }
 
 .p-5 {
-  padding: 5px;
+  padding: 0.35vw;
 }
 
 .p-10 {
-  padding: 10px;
+  padding: 0.7vw;
 }
 
 .pl-10 {
-  padding-left: 10px;
+  padding-left: 0.7vw;
 }
 
 .pl-20 {
-  padding-left: 20px;
+  padding-left: 1.4vw;
 }
 
 .pr-10 {
-  padding-right: 10px;
+  padding-right: 0.7vw;
 }
 
 .pr-20 {
-  padding-right: 20px;
+  padding-right: 1.4vw;
 }
 
 /* border */
@@ -238,15 +238,15 @@ code {
 }
 
 .text-medium {
-  font-size: 16px;
+  font-size: 1.2vw;
 }
 
 .text-large {
-  font-size: 20px;
+  font-size: 1.4vw;
 }
 
 .text-extra-large {
-  font-size: 60px;
+  font-size: 4vw;
 }
 
 .font-normal {
@@ -287,7 +287,7 @@ code {
 }
 
 .transform-64px-top {
-  transform: translate(0, -64px);;
+  transform: translate(0, -7vh);;
 }
 
 .top-0 {

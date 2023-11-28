@@ -4,7 +4,7 @@ import { type ImageProps } from '@interfaces/components/common/ImageProps'
 const Image: FC<ImageProps> = ({
   source,
   round = false,
-  size = '30vh'
+  size = '18vw'
 }): ReactElement => {
   return (
    <img
