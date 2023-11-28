@@ -2,34 +2,34 @@ import React, { type ReactElement } from 'react'
 import Text from '@components/common/Text'
 
 const HomeScreenIntroductionTextBloc = (): ReactElement => {
-  return (
-      <div>
-          <Text
-              size={'large'}
-              fontWeight={'bold'}
-          >
+    return (
+        <div>
+            <Text
+                size={'large'}
+                fontWeight={'bold'}
+            >
               Bonjour, je suis
-          </Text>
-          <div className={'d-flex'}>
-              <Text
-                  size={'extra-large'}
-                  fontWeight={'bold'}
-                  color={'primary'}
-              >
+            </Text>
+            <div className={'d-flex'}>
+                <Text
+                    size={'extra-large'}
+                    fontWeight={'bold'}
+                    color={'primary'}
+                >
                   Lilian
-              </Text>
-              <Text
-                  size={'extra-large'}
-                  fontWeight={'bold'}
-              >
+                </Text>
+                <Text
+                    size={'extra-large'}
+                    fontWeight={'bold'}
+                >
                   Marzet
-              </Text>
-          </div>
-          <Text>
+                </Text>
+            </div>
+            <Text>
               Développeur Fullstack
-          </Text>
-      </div>
-  )
+            </Text>
+        </div>
+    )
 }
 
 export default HomeScreenIntroductionTextBloc

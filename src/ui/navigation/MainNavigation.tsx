@@ -7,14 +7,14 @@ import SkillsScreen from '@views/SkillsScreen'
 import ContactScreen from '@views/ContactScreen'
 
 const MainNavigation: FC = () => {
-  return (
-      <Routes>
+    return (
+        <Routes>
             <Route path={RoutesConstants.home} element={<HomeScreen />}/>
             <Route path={RoutesConstants.about} element={<AboutScreen />}/>
             <Route path={RoutesConstants.skills} element={<SkillsScreen />}/>
             <Route path={RoutesConstants.contact} element={<ContactScreen />}/>
-      </Routes>
-  )
+        </Routes>
+    )
 }
 
 export default MainNavigation

@@ -5,9 +5,9 @@ import { useTheme } from '@utils/UseThemeHook'
 import './App.css'
 
 const App = (): ReactElement => {
-  const [theme, toggleTheme] = useTheme()
+    const [theme, toggleTheme] = useTheme()
 
-  return (
+    return (
         <body data-theme={theme}>
             <NavigationBar
                 theme={theme}
@@ -17,7 +17,7 @@ const App = (): ReactElement => {
                 <MainNavigation/>
             </main>
         </body>
-  )
+    )
 }
 
 export default App

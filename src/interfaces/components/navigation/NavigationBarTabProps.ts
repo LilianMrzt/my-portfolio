@@ -1,6 +1,6 @@
 export interface NavigationBarTabProps {
-  label: string
-  className?: string
-  onClick?: () => void
-  isActive?: boolean
+    label: string
+    className?: string
+    onClick?: () => void
+    isActive?: boolean
 }
