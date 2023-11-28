@@ -1,0 +1,23 @@
+import React, { type ReactElement } from 'react'
+import IconButton from '@components/common/IconButton'
+import { Github, LinkedIn } from '@assets/Images'
+
+const HomeScreenIconsBloc = (): ReactElement => {
+  return (
+      <div className={'mt-10'}>
+          <IconButton
+              icon={Github}
+              color={'primary'}
+              backgroundColor={'background'}
+          />
+          <IconButton
+              icon={LinkedIn}
+              color={'primary'}
+              backgroundColor={'background'}
+              className={'ml-10'}
+          />
+      </div>
+  )
+}
+
+export default HomeScreenIconsBloc

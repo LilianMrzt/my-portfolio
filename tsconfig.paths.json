@@ -10,6 +10,7 @@
       "@services/*": ["./services/*"],
       "@ui/*": ["./ui/*"],
       "@components/*": ["./ui/components/*"],
+      "@blocs/*": ["./ui/blocs/*"],
       "@navigation/*": ["./ui/navigation/*"],
       "@views/*": ["./ui/views/*"],
       "@utils/*": ["./utils/*"]

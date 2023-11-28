@@ -156,13 +156,26 @@ code {
   margin: 0;
 }
 
+.mt-10 {
+  margin-top: 10px;
+}
+
 .ml-10 {
   margin-left: 10px;
+}
+
+.ml-50 {
+  margin-left: 50px;
 }
 
 .mr-10 {
   margin-right: 10px;
 }
+
+.mr-15 {
+  margin-right: 15px;
+}
+
 
 /* padding */
 
@@ -226,6 +239,10 @@ code {
 
 .text-large {
   font-size: 20px;
+}
+
+.text-extra-large {
+  font-size: 60px;
 }
 
 .font-normal {
