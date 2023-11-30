@@ -1,9 +1,15 @@
-import React, { type ReactElement } from 'react'
+import React, { type FC, type ReactElement } from 'react'
 import Text from '@components/common/Text'
+import { type ScreenProps } from '@interfaces/components/ScreenProps'
 
-const SkillsScreen = (): ReactElement => {
+const SkillsScreen: FC<ScreenProps> = ({
+    id
+}): ReactElement => {
     return (
-        <div>
+        <div
+            className={'screen'}
+            id={id}
+        >
             <Text>
                 SkillsScreen
             </Text>

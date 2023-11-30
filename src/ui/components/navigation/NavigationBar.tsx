@@ -4,19 +4,17 @@ import IconButton from '@components/common/IconButton'
 import { MoonLogo, SunLogo } from '@assets/Images'
 import { Theme } from '@constants/Constants'
 import NavigationBarTab from '@components/navigation/NavigationBarTab'
-import { useLocation, useNavigate } from 'react-router-dom'
-import { RoutesConstants } from '@constants/RoutesConstants'
 import Button from '@components/common/Button'
+import { screenIds } from '@constants/ScreensConstants'
 
 const NavigationBar: FC<NavigationBarProps> = ({
     theme,
-    toggleTheme
+    toggleTheme,
+    handleClick,
+    activeSectionId,
+    setActiveSectionId
 }): ReactElement => {
     const [isIconSun, setIsIconSun] = useState(theme === Theme.dark)
-
-    const navigate = useNavigate()
-
-    const location = useLocation()
 
     const handleThemeChange = (): void => {
         setIsIconSun(!isIconSun)
@@ -25,7 +23,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
 
     return (
         <div
-            className={'d-flex space-between h-64px align-center bg-secondary shadow pl-20 pr-20 index-2 relative'}
+            className={'d-flex space-between h-64px align-center bg-secondary shadow pl-20 pr-20 index-2 fixed left-0 right-0 top-0'}
         >
 
             <Button
@@ -33,7 +31,10 @@ const NavigationBar: FC<NavigationBarProps> = ({
                 size={'large'}
                 backgroundColor={'secondary'}
                 color={'text'}
-                onClick={() => { navigate(RoutesConstants.home) }}
+                onClick={() => {
+                    handleClick(screenIds.homeScreenId)
+                    setActiveSectionId(screenIds.homeScreenId)
+                }}
             />
             <div
                 className='d-flex flex-row align-center'
@@ -42,33 +43,37 @@ const NavigationBar: FC<NavigationBarProps> = ({
                     label={'Accueil'}
                     className={'mr-10'}
                     onClick={() => {
-                        navigate(RoutesConstants.home)
+                        handleClick(screenIds.homeScreenId)
+                        setActiveSectionId(screenIds.homeScreenId)
                     }}
-                    isActive={location.pathname === RoutesConstants.home}
+                    isActive={activeSectionId === screenIds.homeScreenId}
                 />
                 <NavigationBarTab
                     label={'A propos'}
                     className={'mr-10'}
                     onClick={() => {
-                        navigate(RoutesConstants.about)
+                        handleClick(screenIds.aboutScreenId)
+                        setActiveSectionId(screenIds.aboutScreenId)
                     }}
-                    isActive={location.pathname === RoutesConstants.about}
+                    isActive={activeSectionId === screenIds.aboutScreenId}
                 />
                 <NavigationBarTab
                     label={'Compétences'}
                     className={'mr-10'}
                     onClick={() => {
-                        navigate(RoutesConstants.skills)
+                        handleClick(screenIds.skillsScreenId)
+                        setActiveSectionId(screenIds.skillsScreenId)
                     }}
-                    isActive={location.pathname === RoutesConstants.skills}
+                    isActive={activeSectionId === screenIds.skillsScreenId}
                 />
                 <NavigationBarTab
                     label={'Contact'}
                     className={'mr-10'}
                     onClick={() => {
-                        navigate(RoutesConstants.contact)
+                        handleClick(screenIds.contactScreenId)
+                        setActiveSectionId(screenIds.contactScreenId)
                     }}
-                    isActive={location.pathname === RoutesConstants.contact}
+                    isActive={activeSectionId === screenIds.contactScreenId}
                 />
                 <IconButton
                     backgroundColor={'secondary'}

@@ -1,19 +1,29 @@
-import React, { type ReactElement } from 'react'
+import React, { type FC, type ReactElement } from 'react'
 import Image from '@components/common/Image'
 import Images from '@assets/Images'
 import HomeScreenIntroductionTextBloc from '@blocs/homeScreen/HomeScreenIntroductionTextBloc'
 import HomeScreenIconsBloc from '@blocs/homeScreen/HomeScreenIconsBloc'
 import HomeScreenBackgroundDecorationBloc from '@blocs/homeScreen/HomeScreenBackgroundDecorationBloc'
+import { type ScreenProps } from '@interfaces/components/ScreenProps'
 
-const HomeScreen = (): ReactElement => {
+const HomeScreen: FC<ScreenProps> = ({
+    id
+}): ReactElement => {
     return (
-        <div className={'relative d-flex h-100 align-center justify-center'}>
-            <div className={'index-1 relative transform-64px-top d-flex align-center'}>
+        <div
+            className={'screen full-screen-height'}
+            id={id}
+        >
+            <div
+                className={'index-1 relative transform-64px-top d-flex align-center'}
+            >
                 <Image
                     source={Images.Lilian}
                     round
                 />
-                <div className={'ml-50'}>
+                <div
+                    className={'ml-50'}
+                >
                     <HomeScreenIntroductionTextBloc/>
                     <HomeScreenIconsBloc/>
                 </div>
