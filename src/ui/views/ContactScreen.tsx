@@ -6,7 +6,7 @@ const ContactScreen: FC<ScreenProps> = forwardRef<HTMLDivElement, ScreenProps>(
     ({ id }, ref): ReactElement => {
         return (
             <div
-                className={'screen bg-secondary'}
+                className={'screen'}
                 id={id}
                 ref={ref}
             >
