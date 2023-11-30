@@ -1,0 +1,21 @@
+/* width */
+
+.w-100 {
+    width: 100%;
+}
+
+.w-small {
+    width: 16px;
+}
+
+.w-medium {
+    width: 24px;
+}
+
+.w-large {
+    width: 40px;
+}
+
+.full-screen-width {
+    width: 100vw;
+}

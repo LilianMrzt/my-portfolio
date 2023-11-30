@@ -1,0 +1,17 @@
+/* border */
+
+.border-none {
+    border: none;
+}
+
+.border-radius-small {
+    border-radius: 5px;
+}
+
+.border-round {
+    border-radius: 50%;
+}
+
+.border-primary {
+    border: var(--primary) solid 0.07vw;
+}

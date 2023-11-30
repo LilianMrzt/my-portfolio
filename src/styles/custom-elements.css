@@ -1,0 +1,10 @@
+/* Custom elements */
+
+.screen {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    min-height: calc(100vh - 64px);
+    align-items: center;
+    justify-content: center;
+}

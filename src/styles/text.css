@@ -1,0 +1,25 @@
+/* text */
+
+.text-small {
+    font-size: 12px;
+}
+
+.text-medium {
+    font-size: 16px;
+}
+
+.text-large {
+    font-size: 20px;
+}
+
+.text-extra-large {
+    font-size: 90px;
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
+.font-bold {
+    font-weight: 600;
+}
