@@ -1,4 +1,4 @@
-import React, { type FC, type ReactElement } from 'react'
+import React, { type FC, forwardRef, type ReactElement } from 'react'
 import Image from '@components/common/Image'
 import Images from '@assets/Images'
 import HomeScreenIntroductionTextBloc from '@blocs/homeScreen/HomeScreenIntroductionTextBloc'
@@ -6,31 +6,34 @@ import HomeScreenIconsBloc from '@blocs/homeScreen/HomeScreenIconsBloc'
 import HomeScreenBackgroundDecorationBloc from '@blocs/homeScreen/HomeScreenBackgroundDecorationBloc'
 import { type ScreenProps } from '@interfaces/components/ScreenProps'
 
-const HomeScreen: FC<ScreenProps> = ({
-    id
-}): ReactElement => {
-    return (
-        <div
-            className={'screen full-screen-height'}
-            id={id}
-        >
+const HomeScreen: FC<ScreenProps> = forwardRef<HTMLDivElement, ScreenProps>(
+    ({ id }, ref): ReactElement => {
+        return (
             <div
-                className={'index-1 relative transform-64px-top d-flex align-center'}
+                className={'screen'}
+                id={id}
+                ref={ref}
             >
-                <Image
-                    source={Images.Lilian}
-                    round
-                />
                 <div
-                    className={'ml-50'}
+                    className={'index-1 relative transform-64px-top d-flex align-center'}
                 >
-                    <HomeScreenIntroductionTextBloc/>
-                    <HomeScreenIconsBloc/>
+                    <Image
+                        source={Images.Lilian}
+                        round
+                    />
+                    <div
+                        className={'ml-50'}
+                    >
+                        <HomeScreenIntroductionTextBloc/>
+                        <HomeScreenIconsBloc/>
+                    </div>
                 </div>
+                <HomeScreenBackgroundDecorationBloc/>
             </div>
-            <HomeScreenBackgroundDecorationBloc/>
-        </div>
-    )
-}
+        )
+    }
+)
+
+HomeScreen.displayName = 'HomeScreen'
 
 export default HomeScreen
