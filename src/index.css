@@ -77,7 +77,7 @@ code {
 /* height */
 
 .h-64px {
-  height: 7vh;
+  height: 64px;
 }
 
 .h-100 {
@@ -89,7 +89,7 @@ code {
 }
 
 .navbar-full-screen-height {
-  height: 93vh;
+  height: calc(100vh - 64px);
 }
 
 /* width */
@@ -99,15 +99,15 @@ code {
 }
 
 .w-small {
-  width: 1vw;
+  width: 16px;
 }
 
 .w-medium {
-  width: 1.6vw;
+  width: 24px;
 }
 
 .w-large {
-  width: 2.6vw;
+  width: 40px;
 }
 
 .full-screen-width {
@@ -179,7 +179,7 @@ code {
 /* shadow */
 
 .shadow {
-  box-shadow: rgba(0, 0, 0, 0.12) 0 0.07vw 0.2vw, rgba(0, 0, 0, 0.24) 0 0.07vw 0.14vw;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 2px, rgba(0, 0, 0, 0.24) 0 1px 3px;
 }
 
 .index-0 {
@@ -202,27 +202,27 @@ code {
 }
 
 .mt-10 {
-  margin-top: 1vh;
+  margin-top: 10px;
 }
 
 .ml-10 {
-  margin-left: 0.7vw;
+  margin-left: 10px;
 }
 
 .ml-50 {
-  margin-left: 3.3vw;
+  margin-left: 50px;
 }
 
 .mr-10 {
-  margin-right: 0.7vw;
+  margin-right: 10px;
 }
 
 .mr-15 {
-  margin-right: 1vw;
+  margin-right: 15px;
 }
 
-.mt-7vh {
-  margin-top: 7vh;
+.mt-64px {
+  margin-top: 64px;
 }
 
 /* padding */
@@ -232,27 +232,27 @@ code {
 }
 
 .p-5 {
-  padding: 0.35vw;
+  padding: 5px;
 }
 
 .p-10 {
-  padding: 0.7vw;
+  padding: 10px;
 }
 
 .pl-10 {
-  padding-left: 0.7vw;
+  padding-left: 10px;
 }
 
 .pl-20 {
-  padding-left: 1.4vw;
+  padding-left: 20px;
 }
 
 .pr-10 {
-  padding-right: 0.7vw;
+  padding-right: 10px;
 }
 
 .pr-20 {
-  padding-right: 1.4vw;
+  padding-right: 20px;
 }
 
 /* border */
@@ -282,19 +282,19 @@ code {
 /* text */
 
 .text-small {
-  font-size: 0.8vw;
+  font-size: 12px;
 }
 
 .text-medium {
-  font-size: 1.1vw;
+  font-size: 16px;
 }
 
 .text-large {
-  font-size: 1.4vw;
+  font-size: 20px;
 }
 
 .text-extra-large {
-  font-size: 4vw;
+  font-size: 90px;
 }
 
 .font-normal {
@@ -340,15 +340,11 @@ code {
 }
 
 .transform-64px-top {
-  transform: translate(0, -7vh);;
+  transform: translate(0, -64px);
 }
 
 .top-0 {
   top: 0;
-}
-
-.top-64px {
-  top: 7vh
 }
 
 .left-0 {
@@ -366,7 +362,7 @@ code {
   position: relative;
   display: flex;
   width: 100vw;
-  min-height: 93vh;
+  min-height: calc(100vh - 64px);
   align-items: center;
   justify-content: center;
 }

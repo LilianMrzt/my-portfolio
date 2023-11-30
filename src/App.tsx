@@ -62,7 +62,7 @@ const App = (): ReactElement => {
                 activeSectionId={activeSectionId}
                 setActiveSectionId={setActiveSectionId}
             />
-            <main className={'full-screen-height overflow-auto mt-7vh navbar-full-screen-height'}>
+            <main className={'full-screen-height overflow-auto mt-64px navbar-full-screen-height'}>
                 <HomeScreen
                     id={screenIds.homeScreenId}
                     ref={sectionRefs[screenIds.homeScreenId]}
