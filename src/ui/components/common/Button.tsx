@@ -4,16 +4,15 @@ import { type ButtonProps } from '@interfaces/components/common/ButtonProps'
 
 const Button: FC<ButtonProps> = ({
     label,
+    size,
+    fontWeight,
     className,
     backgroundColor = 'background',
     color = 'text',
-    onClick = () => {},
-    padding = 10,
-    size,
     border = 'none',
-    rounded = false,
-    fontWeight,
-    hoverEffect = true
+    hoverColor,
+    onClick = () => {},
+    rounded = false
 }) => {
     const [isHovered, setIsHovered] = useState(false)
 
@@ -28,22 +27,23 @@ const Button: FC<ButtonProps> = ({
     return (
         <button
             className={`
-                ${className}
-                p-${padding}
+                p-10
                 ${rounded && 'rounded-button'}
                 border-${border}
-                bg-${hoverEffect && isHovered ? border : backgroundColor}
+                bg-${backgroundColor}
+                hover-bg-${border} 
                 pointer 
                 border-radius-small
                 pl-20 
                 pr-20
+                ${className}
             `}
             onClick={onClick}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
             <Text
-                color={hoverEffect && isHovered ? backgroundColor : color}
+                color={hoverColor && isHovered ? hoverColor : color}
                 size={size}
                 fontWeight={fontWeight}
             >

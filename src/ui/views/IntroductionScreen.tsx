@@ -16,7 +16,7 @@ const IntroductionScreen: FC<ScreenProps> = ({
                 className={'screen'}
             >
                 <div
-                    className={'index-1 relative transform-64px-top align-center justify-center d-flex flex-column'}
+                    className={'index-1 relative transform-80px-top align-center justify-center d-flex flex-column'}
                 >
                     <Image
                         source={Images.Lilian}

@@ -1,7 +1,7 @@
 /* height */
 
-.h-64px {
-    height: 64px;
+.h-80px {
+    height: 80px;
 }
 
 .h-100 {
@@ -13,7 +13,7 @@
 }
 
 .navbar-full-screen-height {
-    height: calc(100vh - 64px);
+    height: calc(100vh - 80px);
 }
 
 .overflow-y-auto {

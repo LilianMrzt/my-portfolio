@@ -12,8 +12,8 @@
     position: fixed;
 }
 
-.transform-64px-top {
-    transform: translate(0, -64px);
+.transform-80px-top {
+    transform: translate(0, -80px);
 }
 
 .top-0 {
