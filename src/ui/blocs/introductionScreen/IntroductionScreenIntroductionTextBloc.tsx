@@ -1,7 +1,7 @@
 import React, { type ReactElement } from 'react'
 import Text from '@components/common/Text'
 
-const HomeScreenIntroductionTextBloc = (): ReactElement => {
+const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
     return (
         <div className={'mt-30'}>
             <Text
@@ -35,4 +35,4 @@ const HomeScreenIntroductionTextBloc = (): ReactElement => {
     )
 }
 
-export default HomeScreenIntroductionTextBloc
+export default IntroductionScreenIntroductionTextBloc

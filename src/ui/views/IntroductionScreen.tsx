@@ -1,8 +1,8 @@
 import React, { type FC, type ReactElement } from 'react'
 import Image from '@components/common/Image'
 import Images from '@assets/Images'
-import HomeScreenIntroductionTextBloc from '@blocs/homeScreen/HomeScreenIntroductionTextBloc'
-import HomeScreenIconsBloc from '@blocs/homeScreen/HomeScreenIconsBloc'
+import IntroductionScreenIntroductionTextBloc from '@blocs/introductionScreen/IntroductionScreenIntroductionTextBloc'
+import IntroductionScreenIconsBloc from '@blocs/introductionScreen/IntroductionScreenIconsBloc'
 import { type ScreenProps } from '@interfaces/screens/ScreenProps'
 
 const IntroductionScreen: FC<ScreenProps> = ({
@@ -23,8 +23,8 @@ const IntroductionScreen: FC<ScreenProps> = ({
                         round
                         backgroundColor={'primary'}
                     />
-                    <HomeScreenIntroductionTextBloc/>
-                    <HomeScreenIconsBloc/>
+                    <IntroductionScreenIntroductionTextBloc/>
+                    <IntroductionScreenIconsBloc/>
                 </div>
             </div>
         </div>
