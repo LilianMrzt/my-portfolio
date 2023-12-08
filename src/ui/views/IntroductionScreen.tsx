@@ -1,9 +1,12 @@
 import React, { type FC, type ReactElement } from 'react'
 import Image from '@components/common/Image'
-import Images from '@assets/Images'
+import Images, { ArrowDown } from '@assets/Images'
 import IntroductionScreenIntroductionTextBloc from '@blocs/introductionScreen/IntroductionScreenIntroductionTextBloc'
 import IntroductionScreenIconsBloc from '@blocs/introductionScreen/IntroductionScreenIconsBloc'
 import { type ScreenProps } from '@interfaces/screens/ScreenProps'
+import IconButton from '@components/common/IconButton'
+import { screenIds } from '@constants/ScreensConstants'
+import { handleClickScroll } from '@utils/ButtonUtils'
 
 const IntroductionScreen: FC<ScreenProps> = ({
     id
@@ -25,6 +28,14 @@ const IntroductionScreen: FC<ScreenProps> = ({
                     />
                     <IntroductionScreenIntroductionTextBloc/>
                     <IntroductionScreenIconsBloc/>
+                    <IconButton
+                        icon={ArrowDown}
+                        color={'primary'}
+                        backgroundColor={'background'}
+                        size={'large'}
+                        className={'mt-30'}
+                        onClick={() => { handleClickScroll(screenIds.aboutScreenId) }}
+                    />
                 </div>
             </div>
         </div>
