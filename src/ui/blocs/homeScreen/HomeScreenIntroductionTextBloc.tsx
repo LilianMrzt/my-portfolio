@@ -3,7 +3,7 @@ import Text from '@components/common/Text'
 
 const HomeScreenIntroductionTextBloc = (): ReactElement => {
     return (
-        <div>
+        <div className={'mt-30'}>
             <Text
                 size={'large'}
                 fontWeight={'bold'}
@@ -26,7 +26,9 @@ const HomeScreenIntroductionTextBloc = (): ReactElement => {
                   Marzet
                 </Text>
             </div>
-            <Text>
+            <Text
+                size={'large'}
+            >
               Développeur Fullstack
             </Text>
         </div>

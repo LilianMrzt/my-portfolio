@@ -4,7 +4,7 @@ import { Github, LinkedIn } from '@assets/Images'
 
 const HomeScreenIconsBloc = (): ReactElement => {
     return (
-        <div className={'mt-10'}>
+        <div className={'mt-30 w-100'}>
             <IconButton
                 icon={Github}
                 color={'primary'}

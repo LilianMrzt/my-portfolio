@@ -16,19 +16,15 @@ const IntroductionScreen: FC<ScreenProps> = ({
                 className={'screen'}
             >
                 <div
-                    className={'index-1 relative transform-64px-top d-flex align-center'}
+                    className={'index-1 relative transform-64px-top align-center justify-center d-flex flex-column'}
                 >
                     <Image
                         source={Images.Lilian}
                         round
                         backgroundColor={'primary'}
                     />
-                    <div
-                        className={'ml-50'}
-                    >
-                        <HomeScreenIntroductionTextBloc/>
-                        <HomeScreenIconsBloc/>
-                    </div>
+                    <HomeScreenIntroductionTextBloc/>
+                    <HomeScreenIconsBloc/>
                 </div>
             </div>
         </div>
