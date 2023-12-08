@@ -21,6 +21,7 @@ const IntroductionScreen: FC<ScreenProps> = ({
                     <Image
                         source={Images.Lilian}
                         round
+                        backgroundColor={'primary'}
                     />
                     <div
                         className={'ml-50'}
