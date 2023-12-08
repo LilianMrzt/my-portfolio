@@ -32,7 +32,7 @@ code {
 
 :root {
   --background: #F8F8FF;
-  --primary: #f4661b;
+  --primary: #4169E1;
   --text: #000000;
   --blackish: #272727;
   --surface: #ffffff;
@@ -41,7 +41,7 @@ code {
 
 [data-theme='dark'] {
   --background: #272727;
-  --primary: #f4661b;
+  --primary: #4169E1;
   --text: #ffffff;
   --blackish: #F8F8FF;
   --surface: #000000;
