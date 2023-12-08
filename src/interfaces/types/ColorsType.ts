@@ -5,4 +5,5 @@ export type ColorsType =
     | 'text'
     | 'background'
     | 'secondary'
+    | 'border'
     | string

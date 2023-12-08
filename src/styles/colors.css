@@ -20,6 +20,10 @@
     transition: 0.3s;
 }
 
+.color-border {
+    color: var(--border);
+    transition: 0.3s;
+}
 
 /* backgroundColor */
 

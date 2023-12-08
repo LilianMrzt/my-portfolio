@@ -1,14 +1,14 @@
 import React, { type ReactElement } from 'react'
-import Text from '@components/common/Text'
+import TextField from '@components/common/TextField'
 
 const ContactScreen = (): ReactElement => {
     return (
         <div
             className={'banner-screen'}
         >
-            <Text>
-                ContactScreen
-            </Text>
+            <TextField
+                placeholder={'Email'}
+            />
         </div>
     )
 }

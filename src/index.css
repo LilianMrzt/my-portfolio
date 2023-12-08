@@ -36,7 +36,8 @@ code {
   --text: #000000;
   --blackish: #272727;
   --surface: #ffffff;
-  --secondary: #E3E2DF
+  --secondary: #E3E2DF;
+  --border: #d3d3d3;
 }
 
 [data-theme='dark'] {
@@ -46,4 +47,5 @@ code {
   --blackish: #F8F8FF;
   --surface: #000000;
   --secondary: #3b3b3b;
+  --border: #d3d3d3;
 }
