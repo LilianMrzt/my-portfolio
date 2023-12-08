@@ -4,6 +4,4 @@ export interface NavigationBarProps {
     theme: ThemeType
     toggleTheme: () => void
     handleClick: (id: string) => void
-    setActiveSectionId: any
-    activeSectionId: string
 }

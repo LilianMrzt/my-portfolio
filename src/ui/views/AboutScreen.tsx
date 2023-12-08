@@ -1,6 +1,6 @@
 import React, { type FC, forwardRef, type ReactElement } from 'react'
 import Text from '@components/common/Text'
-import { type ScreenProps } from '@interfaces/components/ScreenProps'
+import { type ScreenProps } from '@interfaces/screens/ScreenProps'
 
 const AboutScreen: FC<ScreenProps> = forwardRef<HTMLDivElement, ScreenProps>(
     ({ id }, ref): ReactElement => {

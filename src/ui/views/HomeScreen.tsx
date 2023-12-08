@@ -3,16 +3,27 @@ import Image from '@components/common/Image'
 import Images from '@assets/Images'
 import HomeScreenIntroductionTextBloc from '@blocs/homeScreen/HomeScreenIntroductionTextBloc'
 import HomeScreenIconsBloc from '@blocs/homeScreen/HomeScreenIconsBloc'
-import HomeScreenBackgroundDecorationBloc from '@blocs/homeScreen/HomeScreenBackgroundDecorationBloc'
-import { type ScreenProps } from '@interfaces/components/ScreenProps'
+import NavigationBar from '@components/navigation/NavigationBar'
+import { type HomeScreenProps } from '@interfaces/screens/HomeScreenProps'
 
-const HomeScreen: FC<ScreenProps> = forwardRef<HTMLDivElement, ScreenProps>(
-    ({ id }, ref): ReactElement => {
-        return (
+const HomeScreen: FC<HomeScreenProps> = forwardRef<HTMLDivElement, HomeScreenProps>(({
+    id,
+    theme,
+    toggleTheme,
+    handleClickScroll
+}, ref): ReactElement => {
+    return (
+        <div
+            id={id}
+            ref={ref}
+        >
+            <NavigationBar
+                theme={theme}
+                toggleTheme={toggleTheme}
+                handleClick={handleClickScroll}
+            />
             <div
                 className={'screen'}
-                id={id}
-                ref={ref}
             >
                 <div
                     className={'index-1 relative transform-64px-top d-flex align-center'}
@@ -28,10 +39,10 @@ const HomeScreen: FC<ScreenProps> = forwardRef<HTMLDivElement, ScreenProps>(
                         <HomeScreenIconsBloc/>
                     </div>
                 </div>
-                <HomeScreenBackgroundDecorationBloc/>
             </div>
-        )
-    }
+        </div>
+    )
+}
 )
 
 HomeScreen.displayName = 'HomeScreen'

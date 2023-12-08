@@ -10,9 +10,7 @@ import { screenIds } from '@constants/ScreensConstants'
 const NavigationBar: FC<NavigationBarProps> = ({
     theme,
     toggleTheme,
-    handleClick,
-    activeSectionId,
-    setActiveSectionId
+    handleClick
 }): ReactElement => {
     const [isIconSun, setIsIconSun] = useState(theme === Theme.dark)
 
@@ -23,17 +21,15 @@ const NavigationBar: FC<NavigationBarProps> = ({
 
     return (
         <div
-            className={'d-flex space-between h-64px align-center bg-secondary shadow pl-20 pr-20 index-2 fixed left-0 right-0 top-0'}
+            className={'d-flex space-between h-64px align-center pl-20 pr-20 index-2'}
         >
-
             <Button
                 label={'Portfolio.'}
                 size={'large'}
-                backgroundColor={'secondary'}
+                backgroundColor={'background'}
                 color={'text'}
                 onClick={() => {
                     handleClick(screenIds.homeScreenId)
-                    setActiveSectionId(screenIds.homeScreenId)
                 }}
             />
             <div
@@ -44,39 +40,31 @@ const NavigationBar: FC<NavigationBarProps> = ({
                     className={'mr-10'}
                     onClick={() => {
                         handleClick(screenIds.homeScreenId)
-                        setActiveSectionId(screenIds.homeScreenId)
                     }}
-                    isActive={activeSectionId === screenIds.homeScreenId}
                 />
                 <NavigationBarTab
                     label={'A propos'}
                     className={'mr-10'}
                     onClick={() => {
                         handleClick(screenIds.aboutScreenId)
-                        setActiveSectionId(screenIds.aboutScreenId)
                     }}
-                    isActive={activeSectionId === screenIds.aboutScreenId}
                 />
                 <NavigationBarTab
                     label={'Compétences'}
                     className={'mr-10'}
                     onClick={() => {
                         handleClick(screenIds.skillsScreenId)
-                        setActiveSectionId(screenIds.skillsScreenId)
                     }}
-                    isActive={activeSectionId === screenIds.skillsScreenId}
                 />
                 <NavigationBarTab
                     label={'Contact'}
                     className={'mr-10'}
                     onClick={() => {
                         handleClick(screenIds.contactScreenId)
-                        setActiveSectionId(screenIds.contactScreenId)
                     }}
-                    isActive={activeSectionId === screenIds.contactScreenId}
                 />
                 <IconButton
-                    backgroundColor={'secondary'}
+                    backgroundColor={'background'}
                     color={'primary'}
                     icon={isIconSun ? SunLogo : MoonLogo}
                     onClick={handleThemeChange}

@@ -10,7 +10,7 @@ const NavigationBarTab: FC<NavigationBarTabProps> = ({
 }): ReactElement => {
     return (
         <button
-            className={`${className} bg-secondary border-none`}
+            className={`${className} bg-background border-none`}
             onClick={onClick}
         >
             <Text

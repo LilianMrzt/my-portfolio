@@ -1,5 +1,4 @@
-import React, { type ReactElement, useEffect, useRef, useState } from 'react'
-import NavigationBar from '@components/navigation/NavigationBar'
+import React, { type ReactElement, useRef } from 'react'
 import { useTheme } from '@utils/UseThemeHook'
 import './App.css'
 import HomeScreen from '@views/HomeScreen'
@@ -10,7 +9,6 @@ import { screenIds } from '@constants/ScreensConstants'
 
 const App = (): ReactElement => {
     const [theme, toggleTheme] = useTheme()
-    const [activeSectionId, setActiveSectionId] = useState(screenIds.homeScreenId)
 
     const handleClickScroll = (id: string): void => {
         const element = document.getElementById(id)
@@ -26,46 +24,15 @@ const App = (): ReactElement => {
         [screenIds.contactScreenId]: useRef(null)
     }
 
-    useEffect(() => {
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    console.log((entry.target.id))
-                    setActiveSectionId(entry.target.id)
-                }
-            })
-        }, observerOptions)
-
-        Object.values(screenIds).forEach((id) => {
-            if (sectionRefs[id].current) {
-                observer.observe(sectionRefs[id].current as any)
-            }
-        })
-
-        return () => {
-            observer.disconnect()
-        }
-    }, [sectionRefs])
-
     return (
         <body data-theme={theme}>
-            <NavigationBar
-                theme={theme}
-                toggleTheme={toggleTheme}
-                handleClick={handleClickScroll}
-                activeSectionId={activeSectionId}
-                setActiveSectionId={setActiveSectionId}
-            />
-            <main className={'full-screen-height overflow-y-auto mt-64px navbar-full-screen-height'}>
+            <main className={''}>
                 <HomeScreen
                     id={screenIds.homeScreenId}
                     ref={sectionRefs[screenIds.homeScreenId]}
+                    theme={theme}
+                    toggleTheme={toggleTheme}
+                    handleClickScroll={handleClickScroll}
                 />
                 <AboutScreen
                     id={screenIds.aboutScreenId}

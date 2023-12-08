@@ -4,7 +4,7 @@
     position: relative;
     display: flex;
     width: 100vw;
-    min-height: calc(100vh - 64px);
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
 }
