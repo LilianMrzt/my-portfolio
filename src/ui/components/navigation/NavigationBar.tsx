@@ -6,6 +6,8 @@ import { Theme } from '@constants/Constants'
 import NavigationBarTab from '@components/navigation/NavigationBarTab'
 import Button from '@components/common/Button'
 import { screenIds } from '@constants/ScreensConstants'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { RoutesConstants } from '@constants/RoutesConstants'
 
 const NavigationBar: FC<NavigationBarProps> = ({
     theme,
@@ -19,6 +21,9 @@ const NavigationBar: FC<NavigationBarProps> = ({
         toggleTheme()
     }
 
+    const navigate = useNavigate()
+    const location = useLocation()
+
     return (
         <div
             className={'d-flex space-between h-64px align-center pl-20 pr-20 index-2'}
@@ -27,39 +32,43 @@ const NavigationBar: FC<NavigationBarProps> = ({
                 label={'Portfolio.'}
                 size={'large'}
                 onClick={() => {
-                    handleClick(screenIds.homeScreenId)
+                    navigate(RoutesConstants.HOME_SCREEN_ROUTE)
                 }}
                 hoverEffect={false}
             />
             <div
                 className='d-flex flex-row align-center'
             >
-                <NavigationBarTab
-                    label={'Accueil'}
-                    className={'mr-10'}
-                    onClick={() => {
-                        handleClick(screenIds.homeScreenId)
-                    }}
-                />
-                <NavigationBarTab
-                    label={'A propos'}
-                    className={'mr-10'}
-                    onClick={() => {
-                        handleClick(screenIds.aboutScreenId)
-                    }}
-                />
-                <NavigationBarTab
-                    label={'Compétences'}
-                    className={'mr-10'}
-                    onClick={() => {
-                        handleClick(screenIds.skillsScreenId)
-                    }}
-                />
+                {location.pathname === RoutesConstants.HOME_SCREEN_ROUTE && (
+                    <>
+                        <NavigationBarTab
+                            label={'Accueil'}
+                            className={'mr-10'}
+                            onClick={() => {}}
+                            isActive
+                        />
+                        <NavigationBarTab
+                            label={'A propos'}
+                            className={'mr-10'}
+                            onClick={() => {
+                                handleClick(screenIds.aboutScreenId)
+                            }}
+                        />
+                        <NavigationBarTab
+                            label={'Compétences'}
+                            className={'mr-10'}
+                            onClick={() => {
+                                handleClick(screenIds.skillsScreenId)
+                            }}
+                        />
+                    </>
+                )}
+
                 <Button
                     label={'Me contacter'}
                     size={'medium'}
                     onClick={() => {
-                        handleClick(screenIds.homeScreenId)
+                        navigate(RoutesConstants.CONTACT_SCREEN_ROUTE)
                     }}
                     border={'primary'}
                     rounded

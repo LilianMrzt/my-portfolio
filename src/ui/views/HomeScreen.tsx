@@ -1,50 +1,23 @@
-import React, { type FC, forwardRef, type ReactElement } from 'react'
-import Image from '@components/common/Image'
-import Images from '@assets/Images'
-import HomeScreenIntroductionTextBloc from '@blocs/homeScreen/HomeScreenIntroductionTextBloc'
-import HomeScreenIconsBloc from '@blocs/homeScreen/HomeScreenIconsBloc'
-import NavigationBar from '@components/navigation/NavigationBar'
-import { type HomeScreenProps } from '@interfaces/screens/HomeScreenProps'
+import React, { type ReactElement } from 'react'
+import IntroductionScreen from '@views/IntroductionScreen'
+import { screenIds } from '@constants/ScreensConstants'
+import AboutScreen from '@views/AboutScreen'
+import SkillsScreen from '@views/SkillsScreen'
 
-const HomeScreen: FC<HomeScreenProps> = forwardRef<HTMLDivElement, HomeScreenProps>(({
-    id,
-    theme,
-    toggleTheme,
-    handleClickScroll
-}, ref): ReactElement => {
+const HomeScreen = (): ReactElement => {
     return (
-        <div
-            id={id}
-            ref={ref}
-        >
-            <NavigationBar
-                theme={theme}
-                toggleTheme={toggleTheme}
-                handleClick={handleClickScroll}
+        <div>
+            <IntroductionScreen
+                id={screenIds.homeScreenId}
             />
-            <div
-                className={'screen'}
-            >
-                <div
-                    className={'index-1 relative transform-64px-top d-flex align-center'}
-                >
-                    <Image
-                        source={Images.Lilian}
-                        round
-                    />
-                    <div
-                        className={'ml-50'}
-                    >
-                        <HomeScreenIntroductionTextBloc/>
-                        <HomeScreenIconsBloc/>
-                    </div>
-                </div>
-            </div>
+            <AboutScreen
+                id={screenIds.aboutScreenId}
+            />
+            <SkillsScreen
+                id={screenIds.skillsScreenId}
+            />
         </div>
     )
 }
-)
-
-HomeScreen.displayName = 'HomeScreen'
 
 export default HomeScreen

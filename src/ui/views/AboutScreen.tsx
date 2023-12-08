@@ -1,23 +1,20 @@
-import React, { type FC, forwardRef, type ReactElement } from 'react'
+import React, { type FC, type ReactElement } from 'react'
 import Text from '@components/common/Text'
 import { type ScreenProps } from '@interfaces/screens/ScreenProps'
 
-const AboutScreen: FC<ScreenProps> = forwardRef<HTMLDivElement, ScreenProps>(
-    ({ id }, ref): ReactElement => {
-        return (
-            <div
-                className={'screen'}
-                id={id}
-                ref={ref}
-            >
-                <Text>
+const AboutScreen: FC<ScreenProps> = ({
+    id
+}): ReactElement => {
+    return (
+        <div
+            className={'screen'}
+            id={id}
+        >
+            <Text>
                 AboutScreen
-                </Text>
-            </div>
-        )
-    }
-)
-
-AboutScreen.displayName = 'AboutScreen'
+            </Text>
+        </div>
+    )
+}
 
 export default AboutScreen

@@ -1,11 +1,8 @@
-import React, { type ReactElement, useRef } from 'react'
+import React, { type ReactElement } from 'react'
 import { useTheme } from '@utils/UseThemeHook'
 import './App.css'
-import HomeScreen from '@views/HomeScreen'
-import AboutScreen from '@views/AboutScreen'
-import SkillsScreen from '@views/SkillsScreen'
-import ContactScreen from '@views/ContactScreen'
-import { screenIds } from '@constants/ScreensConstants'
+import NavigationBar from '@components/navigation/NavigationBar'
+import MainNavigation from '@navigation/MainNavigation'
 
 const App = (): ReactElement => {
     const [theme, toggleTheme] = useTheme()
@@ -17,38 +14,14 @@ const App = (): ReactElement => {
         }
     }
 
-    const sectionRefs = {
-        [screenIds.homeScreenId]: useRef(null),
-        [screenIds.aboutScreenId]: useRef(null),
-        [screenIds.skillsScreenId]: useRef(null),
-        [screenIds.contactScreenId]: useRef(null)
-    }
-
     return (
         <body data-theme={theme}>
-            <main className={''}>
-                <HomeScreen
-                    id={screenIds.homeScreenId}
-                    ref={sectionRefs[screenIds.homeScreenId]}
-                    theme={theme}
-                    toggleTheme={toggleTheme}
-                    handleClickScroll={handleClickScroll}
-                />
-                <AboutScreen
-                    id={screenIds.aboutScreenId}
-                    ref={sectionRefs[screenIds.aboutScreenId]}
-
-                />
-                <SkillsScreen
-                    id={screenIds.skillsScreenId}
-                    ref={sectionRefs[screenIds.skillsScreenId]}
-                />
-                <ContactScreen
-                    id={screenIds.contactScreenId}
-                    ref={sectionRefs[screenIds.contactScreenId]}
-                />
-
-            </main>
+            <NavigationBar
+                theme={theme}
+                toggleTheme={toggleTheme}
+                handleClick={handleClickScroll}
+            />
+            <MainNavigation/>
         </body>
     )
 }
