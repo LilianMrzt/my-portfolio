@@ -15,6 +15,7 @@ const HomeScreenIntroductionTextBloc = (): ReactElement => {
                     size={'extra-large'}
                     fontWeight={'bold'}
                     color={'primary'}
+                    className={'mr-10'}
                 >
                   Lilian
                 </Text>

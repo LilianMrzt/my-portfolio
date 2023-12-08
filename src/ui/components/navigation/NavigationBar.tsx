@@ -61,21 +61,20 @@ const NavigationBar: FC<NavigationBarProps> = ({
                                 handleClick(screenIds.skillsScreenId)
                             }}
                         />
+                        <Button
+                            label={'Me contacter'}
+                            size={'medium'}
+                            onClick={() => {
+                                navigate(RoutesConstants.CONTACT_SCREEN_ROUTE)
+                            }}
+                            border={'primary'}
+                            rounded
+                            className={'mr-10'}
+                            fontWeight={'bold'}
+                            hoverEffect
+                        />
                     </>
                 )}
-
-                <Button
-                    label={'Me contacter'}
-                    size={'medium'}
-                    onClick={() => {
-                        navigate(RoutesConstants.CONTACT_SCREEN_ROUTE)
-                    }}
-                    border={'primary'}
-                    rounded
-                    className={'mr-10'}
-                    fontWeight={'bold'}
-                    hoverEffect
-                />
                 <IconButton
                     backgroundColor={'background'}
                     color={'primary'}

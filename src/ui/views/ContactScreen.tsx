@@ -4,7 +4,7 @@ import Text from '@components/common/Text'
 const ContactScreen = (): ReactElement => {
     return (
         <div
-            className={'screen'}
+            className={'banner-screen'}
         >
             <Text>
                 ContactScreen
