@@ -12,7 +12,7 @@ const Text: FC<TextProps> = ({
         <p
             className={`p-0 m-0 color-${color} text-${size} ${className} font-${fontWeight}`}
         >
-            {children}&nbsp;
+            {children}
         </p>
     )
 }

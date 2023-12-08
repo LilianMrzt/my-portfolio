@@ -1,24 +1,51 @@
-import React, { type FC } from 'react'
+import React, { type FC, useState } from 'react'
 import Text from '@components/common/Text'
 import { type ButtonProps } from '@interfaces/components/common/ButtonProps'
 
 const Button: FC<ButtonProps> = ({
     label,
     className,
-    backgroundColor = 'blackish',
-    color = 'surface',
+    backgroundColor = 'background',
+    color = 'text',
     onClick = () => {},
     padding = 10,
-    size
+    size,
+    border = 'none',
+    rounded = false,
+    fontWeight,
+    hoverEffect = true
 }) => {
+    const [isHovered, setIsHovered] = useState(false)
+
+    const handleMouseEnter = (): void => {
+        setIsHovered(true)
+    }
+
+    const handleMouseLeave = (): void => {
+        setIsHovered(false)
+    }
+
     return (
         <button
-            className={`${className} p-${padding} border-none bg-${backgroundColor} pointer border-radius-small`}
+            className={`
+                ${className}
+                p-${padding}
+                ${rounded && 'rounded-button'}
+                border-${border}
+                bg-${hoverEffect && isHovered ? border : backgroundColor}
+                pointer 
+                border-radius-small
+                pl-20 
+                pr-20
+            `}
             onClick={onClick}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
         >
             <Text
-                color={color}
+                color={hoverEffect && isHovered ? backgroundColor : color}
                 size={size}
+                fontWeight={fontWeight}
             >
                 {label}
             </Text>

@@ -12,6 +12,10 @@
     border-radius: 50%;
 }
 
+.rounded-button {
+    border-radius: 50px;
+}
+
 .border-primary {
-    border: var(--primary) solid 0.07vw;
+    border: var(--primary) solid 2px;
 }

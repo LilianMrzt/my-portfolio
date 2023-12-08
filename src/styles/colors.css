@@ -1,17 +1,7 @@
-/* colors */
+/* color */
 
 .color-primary {
     color: var(--primary);
-    transition: 0.3s;
-}
-
-.hover-primary:hover {
-    color: var(--primary);
-    transition: 0.3s;
-}
-
-.hover-background:hover {
-    color: var(--background);
     transition: 0.3s;
 }
 
@@ -25,22 +15,20 @@
     transition: 0.3s;
 }
 
+.color-background {
+    color: var(--background);
+    transition: 0.3s;
+}
+
+
+/* backgroundColor */
+
 .bg-background {
     background-color: var(--background);
     transition: 0.3s;
 }
 
-.hover-bg-background:hover {
-    background-color: var(--background);
-    transition: 0.3s;
-}
-
 .bg-primary {
-    background-color: var(--primary);
-    transition: 0.3s;
-}
-
-.hover-bg-primary:hover {
     background-color: var(--primary);
     transition: 0.3s;
 }
@@ -57,5 +45,27 @@
 
 .bg-surface {
     background-color: var(--surface);
+    transition: 0.3s;
+}
+
+/* hover */
+
+.hover-primary:hover {
+    color: var(--primary);
+    transition: 0.3s;
+}
+
+.hover-background:hover {
+    color: var(--background);
+    transition: 0.3s;
+}
+
+.hover-bg-background:hover {
+    background-color: var(--background);
+    transition: 0.3s;
+}
+
+.hover-bg-primary:hover {
+    background-color: var(--primary);
     transition: 0.3s;
 }

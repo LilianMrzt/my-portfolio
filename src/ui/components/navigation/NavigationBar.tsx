@@ -26,11 +26,10 @@ const NavigationBar: FC<NavigationBarProps> = ({
             <Button
                 label={'Portfolio.'}
                 size={'large'}
-                backgroundColor={'background'}
-                color={'text'}
                 onClick={() => {
                     handleClick(screenIds.homeScreenId)
                 }}
+                hoverEffect={false}
             />
             <div
                 className='d-flex flex-row align-center'
@@ -56,12 +55,17 @@ const NavigationBar: FC<NavigationBarProps> = ({
                         handleClick(screenIds.skillsScreenId)
                     }}
                 />
-                <NavigationBarTab
-                    label={'Contact'}
-                    className={'mr-10'}
+                <Button
+                    label={'Me contacter'}
+                    size={'medium'}
                     onClick={() => {
-                        handleClick(screenIds.contactScreenId)
+                        handleClick(screenIds.homeScreenId)
                     }}
+                    border={'primary'}
+                    rounded
+                    className={'mr-10'}
+                    fontWeight={'bold'}
+                    hoverEffect
                 />
                 <IconButton
                     backgroundColor={'background'}
