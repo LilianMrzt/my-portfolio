@@ -1,4 +1,4 @@
-import React, { type FC, type ReactElement, type ChangeEvent } from 'react'
+import React, { type FC, type ReactElement, type ChangeEvent, useCallback } from 'react'
 import { type TextFieldProps } from '@interfaces/components/common/TextFieldProps'
 import Text from '@components/common/Text'
 
@@ -11,8 +11,20 @@ const TextField: FC<TextFieldProps> = ({
     className,
     value,
     setValue,
-    label
+    label,
+    multiline = false
 }): ReactElement => {
+    const CustomTextField = useCallback(
+        ({ ...props }): ReactElement => {
+            if (multiline) {
+                return <textarea {...props} />
+            } else {
+                return <input type="text" {...props} />
+            }
+        },
+        [multiline]
+    )
+
     const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
         setValue(event.target.value)
     }
@@ -26,7 +38,7 @@ const TextField: FC<TextFieldProps> = ({
             >
                 {label}
             </Text>
-            <input
+            <CustomTextField
                 placeholder={placeholder}
                 value={value}
                 onChange={handleChange}
@@ -40,7 +52,8 @@ const TextField: FC<TextFieldProps> = ({
                 resize-none
                 box-shadow-none
                 font-arial
-                  flex-1
+                flex-1
+                ${multiline && 'mh-200'}
             `}
             />
         </div>

@@ -11,4 +11,5 @@ export interface TextFieldProps {
     value: string
     setValue: Dispatch<string>
     label: string
+    multiline?: boolean
 }

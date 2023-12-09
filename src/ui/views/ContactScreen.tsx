@@ -1,6 +1,5 @@
 import React, { type ReactElement, useState } from 'react'
 import TextField from '@components/common/TextField'
-import TextArea from '@components/common/TextArea'
 import Button from '@components/common/Button'
 import Text from '@components/common/Text'
 
@@ -42,12 +41,13 @@ const ContactScreen = (): ReactElement => {
                     setValue={setObject}
                     label={'Objet'}
                 />
-                <TextArea
+                <TextField
                     placeholder={'Votre message'}
                     className={'w-100'}
                     value={content}
                     setValue={setContent}
                     label={'Message'}
+                    multiline
                 />
                 <Button
                     label={'Envoyer'}
