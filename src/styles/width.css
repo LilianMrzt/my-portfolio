@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+.w-50 {
+    width: 50%;
+}
+
 .w-small {
     width: 24px;
 }

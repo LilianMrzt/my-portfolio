@@ -16,7 +16,7 @@ const TextField: FC<TextFieldProps> = ({
     }
 
     return (
-        <input
+        <textarea
             placeholder={placeholder}
             value={value}
             onChange={handleChange}
@@ -30,6 +30,7 @@ const TextField: FC<TextFieldProps> = ({
                 resize-none
                 box-shadow-none
                 font-arial
+                mh-200
                 ${className}
             `}
         />

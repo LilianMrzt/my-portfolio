@@ -27,3 +27,7 @@
 .right-0 {
     right: 0;
 }
+
+.resize-none {
+    resize: none;
+}

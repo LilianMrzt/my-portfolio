@@ -1,4 +1,5 @@
 import { type ColorsType } from '@interfaces/types/ColorsType'
+import { type Dispatch } from 'react'
 
 export interface TextFieldProps {
     backgroundColor?: ColorsType
@@ -6,4 +7,7 @@ export interface TextFieldProps {
     focusedBorderColor?: ColorsType
     color?: ColorsType
     placeholder: string
+    className?: string
+    value: string
+    setValue: Dispatch<string>
 }
