@@ -10,7 +10,7 @@ export interface ButtonProps {
     color?: ColorsType
     onClick?: () => void
     size?: SizesType
-    border?: string
+    border?: ColorsType
     rounded?: boolean
     fontWeight?: FontWeightType
 }

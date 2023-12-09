@@ -10,4 +10,5 @@ export interface TextFieldProps {
     className?: string
     value: string
     setValue: Dispatch<string>
+    label: string
 }

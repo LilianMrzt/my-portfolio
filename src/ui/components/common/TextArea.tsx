@@ -1,5 +1,6 @@
 import React, { type FC, type ReactElement, type ChangeEvent } from 'react'
 import { type TextFieldProps } from '@interfaces/components/common/TextFieldProps'
+import Text from '@components/common/Text'
 
 const TextField: FC<TextFieldProps> = ({
     backgroundColor = 'background',
@@ -9,18 +10,27 @@ const TextField: FC<TextFieldProps> = ({
     placeholder,
     className,
     value,
-    setValue
+    setValue,
+    label
 }): ReactElement => {
     const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
         setValue(event.target.value)
     }
 
     return (
-        <textarea
-            placeholder={placeholder}
-            value={value}
-            onChange={handleChange}
-            className={`
+        <div
+            className={`${className} d-flex flex-column`}
+        >
+            <Text
+                className={'mb-5'}
+            >
+                {label}
+            </Text>
+            <textarea
+                placeholder={placeholder}
+                value={value}
+                onChange={handleChange}
+                className={`
                 bg-${backgroundColor} 
                 p-10
                 border-radius-small 
@@ -31,9 +41,10 @@ const TextField: FC<TextFieldProps> = ({
                 box-shadow-none
                 font-arial
                 mh-200
-                ${className}
+                flex-1
             `}
-        />
+            />
+        </div>
     )
 }
 

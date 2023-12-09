@@ -21,10 +21,10 @@
 }
 
 .border-border {
-    border: var(--border) solid 2px;
+    border: var(--border) solid 1px;
 }
 
 .focused-border-primary:focus {
-    border: var(--primary) solid 2px;
+    border: var(--primary) solid 1px;
     outline: none;
 }
