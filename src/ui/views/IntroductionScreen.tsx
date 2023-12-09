@@ -16,10 +16,10 @@ const IntroductionScreen: FC<ScreenProps> = ({
             id={id}
         >
             <div
-                className={'screen'}
+                className={'banner-screen'}
             >
                 <div
-                    className={'index-1 relative transform-80px-top align-center justify-center d-flex flex-column'}
+                    className={'index-1 relative align-center justify-center d-flex flex-column'}
                 >
                     <Image
                         source={Images.Lilian}

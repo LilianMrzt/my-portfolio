@@ -7,7 +7,7 @@ const AboutScreen: FC<ScreenProps> = ({
 }): ReactElement => {
     return (
         <div
-            className={'screen'}
+            className={'screen w-100 bg-secondary'}
             id={id}
         >
             <Text>
