@@ -7,7 +7,7 @@ const SkillsScreen: FC<ScreenProps> = ({
 }): ReactElement => {
     return (
         <div
-            className={'screen'}
+            className={'screen mh-100'}
             id={id}
         >
             <Text>
