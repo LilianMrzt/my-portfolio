@@ -8,12 +8,23 @@ const Text: FC<TextProps> = ({
     className,
     fontWeight = 'normal'
 }): ReactElement => {
+    const lines = children.split('\n')
+
+    if (lines.length > 1) {
+        console.log(lines.length)
+    }
+
     return (
-        <p
-            className={`p-0 m-0 color-${color} text-${size} ${className} font-${fontWeight}`}
-        >
-            {children}
-        </p>
+        <>
+            {lines.map((line, index) => (
+                <p
+                    key={index}
+                    className={`p-0 m-0 color-${color} text-${size} ${className} font-${fontWeight} ${index !== lines.length - 1 && 'mb-10'}`}
+                >
+                    {line}
+                </p>
+            ))}
+        </>
     )
 }
 

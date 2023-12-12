@@ -39,14 +39,16 @@ code {
   --surface: #ffffff;
   --secondary: #E3E2DF;
   --border: #d3d3d3;
+  --shadow: #0000004D;
 }
 
 [data-theme='dark'] {
   --background: #272727;
-  --primary: #4169E1;
+  --primary: #0F52BA;
   --text: #ffffff;
   --blackish: #F8F8FF;
   --surface: #000000;
   --secondary: #3b3b3b;
   --border: #d3d3d3;
+  --shadow: #ffffff4D;
 }
