@@ -43,3 +43,7 @@
 .aspect-1 {
     aspect-ratio: 1;
 }
+
+.wrap {
+    flex-wrap: wrap;
+}

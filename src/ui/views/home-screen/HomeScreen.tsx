@@ -4,6 +4,7 @@ import { screenIds } from '@constants/ScreensConstants'
 import AboutSection from '@views/home-screen/AboutSection'
 import SkillsSection from '@views/home-screen/SkillsSection'
 import Footer from '@components/navigation/Footer'
+import MyWorkSection from '@views/home-screen/MyWorkSection'
 
 const HomeScreen = (): ReactElement => {
     return (
@@ -17,6 +18,7 @@ const HomeScreen = (): ReactElement => {
             <SkillsSection
                 id={screenIds.skillsScreenId}
             />
+            <MyWorkSection/>
             <Footer/>
         </div>
     )

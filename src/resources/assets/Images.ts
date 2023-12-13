@@ -7,6 +7,7 @@ import ComputerIcon from '@resources/assets/ComputerIcon.svg'
 import ReactIcon from '@resources/assets/ReactIcon.svg'
 import ToolsIcon from '@resources/assets/ToolsIcon.svg'
 import DatabaseIcon from '@resources/assets/DatabaseIcon.svg'
+import StrapiIcon from '@resources/assets/StrapiIcon.svg'
 
 export default {
     Lilian: require('./Lilian.png')
@@ -21,5 +22,6 @@ export {
     ComputerIcon,
     ReactIcon,
     ToolsIcon,
-    DatabaseIcon
+    DatabaseIcon,
+    StrapiIcon
 }
