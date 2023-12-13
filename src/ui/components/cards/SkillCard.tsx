@@ -2,7 +2,7 @@ import React, { type FC, type Key, type ReactElement } from 'react'
 import Text from '@components/common/Text'
 import { type SkillCardProps } from '@interfaces/components/cards/SkillCardProps'
 import { DatabaseIcon, ReactIcon, ToolsIcon } from '@assets/Images'
-import { ReactSVG } from 'react-svg'
+import Icon from '@components/common/Icon'
 
 const SkillCard: FC<SkillCardProps> = ({
     content
@@ -24,9 +24,11 @@ const SkillCard: FC<SkillCardProps> = ({
         <div
             className={'p-20 d-flex flex-1 flex-column align-center pt-40'}
         >
-            <ReactSVG
+            <Icon
                 src={getIcon(content?.icon)}
-                className={'w-large mb-20 color-text'}
+                size={'large'}
+                color={'text'}
+                className={'mb-20'}
             />
             <Text
                 size={'large'}

@@ -1,6 +1,6 @@
 import React, { type FC, type ReactElement } from 'react'
 import { type IconButtonProps } from '@interfaces/components/common/IconButtonProps'
-import { ReactSVG } from 'react-svg'
+import Icon from '@components/common/Icon'
 
 const IconButton: FC<IconButtonProps> = ({
     icon,
@@ -32,9 +32,10 @@ const IconButton: FC<IconButtonProps> = ({
             `}
             onClick={onClick}
         >
-            <ReactSVG
+            <Icon
                 src={icon}
-                className={`d-flex w-${size} aspect-1`}
+                className={'aspect-1 d-flex'}
+                size={size}
             />
         </button>
     )

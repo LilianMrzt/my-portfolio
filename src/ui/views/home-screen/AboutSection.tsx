@@ -1,8 +1,8 @@
 import React, { type FC, type ReactElement } from 'react'
 import { type ScreenProps } from '@interfaces/screens/ScreenProps'
 import AboutMeBloc from '@blocs/aboutScreen/AboutMeBloc'
-import { ReactSVG } from 'react-svg'
 import { ComputerIcon } from '@assets/Images'
+import Icon from '@components/common/Icon'
 
 const AboutSection: FC<ScreenProps> = ({
     id
@@ -13,9 +13,11 @@ const AboutSection: FC<ScreenProps> = ({
             id={id}
         >
             <div className={'d-flex h-200 align-end'}>
-                <ReactSVG
+                <Icon
                     src={ComputerIcon}
-                    className={'d-flex aspect-1 m-0 p-0 color-text'}
+                    size={'undefined'}
+                    color={'text'}
+                    className={'d-flex'}
                 />
             </div>
             <AboutMeBloc/>

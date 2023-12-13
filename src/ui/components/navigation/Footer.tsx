@@ -2,7 +2,7 @@ import React, { type ReactElement } from 'react'
 import IconButton from '@components/common/IconButton'
 import { Github, LinkedIn, ReactIcon } from '@assets/Images'
 import Text from '@components/common/Text'
-import { ReactSVG } from 'react-svg'
+import Icon from '@components/common/Icon'
 
 const Footer = (): ReactElement => {
     return (
@@ -40,7 +40,12 @@ const Footer = (): ReactElement => {
                 >
                     Site réalisé avec ReactJS
                 </Text>
-                <ReactSVG src={ReactIcon} className={'w-small color-surface ml-10'}/>
+                <Icon
+                    src={ReactIcon}
+                    size={'small'}
+                    color={'surface'}
+                    className={'ml-10'}
+                />
             </div>
         </footer>
     )

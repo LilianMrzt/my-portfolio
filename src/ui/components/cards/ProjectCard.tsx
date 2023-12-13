@@ -3,7 +3,7 @@ import { type ProjectCardProps } from '@interfaces/components/cards/ProjectCardP
 import Text from '@components/common/Text'
 import Button from '@components/common/Button'
 import { ReactIcon, StrapiIcon } from '@assets/Images'
-import { ReactSVG } from 'react-svg'
+import Icon from '@components/common/Icon'
 
 const ProjectCard: FC<ProjectCardProps> = ({
     project
@@ -39,10 +39,10 @@ const ProjectCard: FC<ProjectCardProps> = ({
             />
             <div className={'d-flex gap-30'}>
                 {icons().map((icon: any, index: Key) => (
-                    <ReactSVG
+                    <Icon
                         key={index}
                         src={icon}
-                        className={'w-medium'}
+                        color={'primary'}
                     />
                 ))}
             </div>
