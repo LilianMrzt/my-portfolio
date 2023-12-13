@@ -3,6 +3,7 @@ import IntroductionScreen from '@views/IntroductionScreen'
 import { screenIds } from '@constants/ScreensConstants'
 import AboutScreen from '@views/AboutScreen'
 import SkillsScreen from '@views/SkillsScreen'
+import Footer from '@components/navigation/Footer'
 
 const HomeScreen = (): ReactElement => {
     return (
@@ -16,6 +17,7 @@ const HomeScreen = (): ReactElement => {
             <SkillsScreen
                 id={screenIds.skillsScreenId}
             />
+            <Footer/>
         </div>
     )
 }

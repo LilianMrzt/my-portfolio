@@ -10,7 +10,7 @@ const IconButton: FC<IconButtonProps> = ({
     onClick = () => {},
     padding = 5,
     className,
-    border,
+    border = false,
     hoverEffect = true
 }): ReactElement => {
     return (

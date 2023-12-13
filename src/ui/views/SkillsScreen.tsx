@@ -13,7 +13,7 @@ const SkillsScreen: FC<ScreenProps> = ({
     }, [])
     return (
         <div
-            className={'screen mh-100 pt-80'}
+            className={'screen pt-80 mb-60'}
             id={id}
         >
             <div

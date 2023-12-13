@@ -20,6 +20,10 @@
     border: var(--primary) solid 2px;
 }
 
+.border-surface {
+    border: var(--surface) solid 2px;
+}
+
 .border-border {
     border: var(--border) solid 1px;
 }

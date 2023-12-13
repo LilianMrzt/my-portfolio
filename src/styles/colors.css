@@ -69,6 +69,11 @@
     transition: 0.3s;
 }
 
+.hover-bg-surface:hover {
+    background-color: var(--surface);
+    transition: 0.3s;
+}
+
 .hover-bg-primary:hover {
     background-color: var(--primary);
     transition: 0.3s;
