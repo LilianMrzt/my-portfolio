@@ -1,20 +1,20 @@
 import React, { type ReactElement } from 'react'
-import IntroductionScreen from '@views/IntroductionScreen'
+import IntroductionSection from '@views/home-screen/IntroductionSection'
 import { screenIds } from '@constants/ScreensConstants'
-import AboutScreen from '@views/AboutScreen'
-import SkillsScreen from '@views/SkillsScreen'
+import AboutSection from '@views/home-screen/AboutSection'
+import SkillsSection from '@views/home-screen/SkillsSection'
 import Footer from '@components/navigation/Footer'
 
 const HomeScreen = (): ReactElement => {
     return (
         <div>
-            <IntroductionScreen
+            <IntroductionSection
                 id={screenIds.homeScreenId}
             />
-            <AboutScreen
+            <AboutSection
                 id={screenIds.aboutScreenId}
             />
-            <SkillsScreen
+            <SkillsSection
                 id={screenIds.skillsScreenId}
             />
             <Footer/>

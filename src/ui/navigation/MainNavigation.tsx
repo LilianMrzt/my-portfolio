@@ -1,8 +1,8 @@
 import React, { type ReactElement } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { RoutesConstants } from '@constants/RoutesConstants'
-import ContactScreen from '@views/ContactScreen'
-import HomeScreen from '@views/HomeScreen'
+import ContactScreen from '@views/contact-screen/ContactScreen'
+import HomeScreen from '@views/home-screen/HomeScreen'
 
 const MainNavigation = (): ReactElement => {
     return (

@@ -4,7 +4,7 @@ import AboutMeBloc from '@blocs/aboutScreen/AboutMeBloc'
 import { ReactSVG } from 'react-svg'
 import { ComputerIcon } from '@assets/Images'
 
-const AboutScreen: FC<ScreenProps> = ({
+const AboutSection: FC<ScreenProps> = ({
     id
 }): ReactElement => {
     return (
@@ -23,4 +23,4 @@ const AboutScreen: FC<ScreenProps> = ({
     )
 }
 
-export default AboutScreen
+export default AboutSection

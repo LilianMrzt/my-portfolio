@@ -8,7 +8,7 @@ import IconButton from '@components/common/IconButton'
 import { screenIds } from '@constants/ScreensConstants'
 import { handleClickScroll } from '@utils/ButtonUtils'
 
-const IntroductionScreen: FC<ScreenProps> = ({
+const IntroductionSection: FC<ScreenProps> = ({
     id
 }): ReactElement => {
     return (
@@ -42,4 +42,4 @@ const IntroductionScreen: FC<ScreenProps> = ({
     )
 }
 
-export default IntroductionScreen
+export default IntroductionSection

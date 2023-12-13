@@ -3,7 +3,7 @@ import { type ScreenProps } from '@interfaces/screens/ScreenProps'
 import SkillCard from '@components/cards/SkillCard'
 import SkillsFixtures from '@constants/fixtures/SkillsFixtures.json'
 
-const SkillsScreen: FC<ScreenProps> = ({
+const SkillsSection: FC<ScreenProps> = ({
     id
 }): ReactElement => {
     const [skillCardsContent, setSkillCardContent] = useState<any>([])
@@ -30,4 +30,4 @@ const SkillsScreen: FC<ScreenProps> = ({
     )
 }
 
-export default SkillsScreen
+export default SkillsSection
