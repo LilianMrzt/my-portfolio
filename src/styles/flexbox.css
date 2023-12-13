@@ -24,6 +24,10 @@
     justify-content: end;
 }
 
+.justify-between {
+    justify-content: space-between;
+}
+
 .flex-row {
     flex-direction: row;
 }

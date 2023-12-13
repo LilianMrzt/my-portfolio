@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "content": {
+      "title": "Front-end",
+      "icon": "ReactIcon",
+      "introductionSentence": "Le front-end est une partie du projet que j'affectionne particulièrement.",
+      "section": {
+        "title": "Languages et technos:",
+        "sectionItems": [
+          "React",
+          "React Native",
+          "Typescript",
+          "Javascript"
+        ]
+      }
+    }
+  },
+  {
+    "id": 2,
+    "content": {
+      "title": "Back-end",
+      "icon": "DatabaseIcon",
+      "introductionSentence": "Qu'est-ce qu'un projet sans toute la logique serveur qui vient derrière?",
+      "section": {
+        "title": "Languages et technos:",
+        "sectionItems": [
+          "PHP",
+          "Symfony",
+          "PostGreSQL",
+          "NodeJS"
+        ]
+      }
+    }
+  },
+  {
+    "id": 3,
+    "content": {
+      "title": "Outils",
+      "icon": "ToolsIcon",
+      "introductionSentence": "Un projet ne se déroule bien qu'avec une mâitrise des bons outils.",
+      "section": {
+        "title": "Les outils que je maîtrise:",
+        "sectionItems": [
+          "GitLab",
+          "Bitbucket",
+          "Jira",
+          "Confluence",
+          "IntelliJ / PhpStorm"
+        ]
+      }
+    }
+  }
+]

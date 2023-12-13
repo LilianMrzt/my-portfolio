@@ -6,7 +6,8 @@ const Text: FC<TextProps> = ({
     color = 'text',
     size = 'medium',
     className,
-    fontWeight = 'normal'
+    fontWeight = 'normal',
+    textAlign = 'justify'
 }): ReactElement => {
     const lines = children.split('\n')
 
@@ -19,7 +20,7 @@ const Text: FC<TextProps> = ({
             {lines.map((line, index) => (
                 <p
                     key={index}
-                    className={`p-0 m-0 color-${color} text-${size} ${className} font-${fontWeight} ${index !== lines.length - 1 && 'mb-10'}`}
+                    className={`p-0 m-0 color-${color} text-${size} ${className} font-${fontWeight} ${index !== lines.length - 1 && 'mb-10'} text-${textAlign}`}
                 >
                     {line}
                 </p>
