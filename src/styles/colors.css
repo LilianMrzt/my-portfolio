@@ -52,6 +52,11 @@
     transition: 0.3s;
 }
 
+.bg-transparent {
+    background-color: transparent;
+    transition: 0.3s;
+}
+
 /* hover */
 
 .hover-primary:hover {

@@ -1,13 +1,12 @@
-import React, { type FC, type Key, type ReactElement } from 'react'
+import React, { type FC, type ReactElement, useState } from 'react'
 import { type ProjectCardProps } from '@interfaces/components/cards/ProjectCardProps'
 import Text from '@components/common/Text'
 import Button from '@components/common/Button'
 import { ReactIcon, StrapiIcon } from '@assets/Images'
 import Icon from '@components/common/Icon'
+import './project-card.css' // Import the CSS file for styling
 
-const ProjectCard: FC<ProjectCardProps> = ({
-    project
-}): ReactElement => {
+const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
     const icons = (): any => {
         const technologiesIcons = []
         if (project.technos.includes('React Native')) {
@@ -19,32 +18,39 @@ const ProjectCard: FC<ProjectCardProps> = ({
         return technologiesIcons
     }
 
+    const [isHovered, setIsHovered] = useState(false)
+
     return (
         <div
-            className={'d-flex flex-column align-center justify-center h-280px w-400px border-radius-small shadow'}
+            className={`project-card ${isHovered ? 'hovered' : ''}`}
+            onMouseEnter={() => { setIsHovered(true) }}
+            onMouseLeave={() => { setIsHovered(false) }}
         >
-            <Text
-                size={'large'}
-            >
-                {project.label}
-            </Text>
-            <Button
-                label={project.buttonLabel}
-                border={'primary'}
-                rounded
-                color={'primary'}
-                hoverColor={'background'}
-                fontWeight={'bold'}
-                className={'mt-30 mb-20'}
-            />
-            <div className={'d-flex gap-30'}>
-                {icons().map((icon: any, index: Key) => (
-                    <Icon
-                        key={index}
-                        src={icon}
-                        color={'primary'}
-                    />
-                ))}
+            <div className="h-100 w-100 overflow-hidden">
+                <img src={project?.image} alt={project.label} />
+            </div>
+            <div className={`hover-content ${isHovered ? 'fade-in' : 'fade-out'}`}>
+                <Text
+                    size={'large'}
+                    fontWeight={'bold'}
+                >
+                    {project.label}
+                </Text>
+                <Button
+                    label={project.buttonLabel}
+                    border={'primary'}
+                    rounded
+                    color={'primary'}
+                    hoverColor={'background'}
+                    fontWeight={'bold'}
+                    className={'mt-30 mb-20'}
+                    backgroundColor={'transparent'}
+                />
+                <div className={'d-flex gap-30'}>
+                    {icons().map((icon: any, index: number) => (
+                        <Icon key={index} src={icon} color={'primary'} />
+                    ))}
+                </div>
             </div>
         </div>
     )

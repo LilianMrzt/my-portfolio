@@ -28,6 +28,10 @@
     overflow-y: auto;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 .mh-200 {
     min-height: 200px;
 }

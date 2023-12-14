@@ -4,7 +4,8 @@
     "content": {
       "label": "Villiers volley - Mobile",
       "buttonLabel": "Voir le projet",
-      "technos": ["React Native", "Strapi"]
+      "technos": ["React Native", "Strapi"],
+      "image": "https://www.adorama.com/alc/wp-content/uploads/2018/11/landscape-photography-tips-yosemite-valley-feature.jpg"
     }
   },
   {
@@ -12,7 +13,8 @@
     "content": {
       "label": "Test",
       "buttonLabel": "Voir le projet",
-      "technos": ["React Native"]
+      "technos": ["React Native"],
+      "image": "https://switzerland-tour.com/storage/media/4-ForArticles/swiss-mountains.jpg"
     }
   },
   {
@@ -20,15 +22,8 @@
     "content": {
       "label": "Test 2",
       "buttonLabel": "Voir le projet",
-      "technos": ["React Native"]
-    }
-  },
-  {
-    "id": 4,
-    "content": {
-      "label": "Test 3",
-      "buttonLabel": "Voir le projet",
-      "technos": ["Strapi"]
+      "technos": ["React Native"],
+      "image": "https://images.alphacoders.com/134/1341414.png"
     }
   }
 ]
