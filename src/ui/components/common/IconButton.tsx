@@ -1,6 +1,7 @@
-import React, { type FC, type ReactElement } from 'react'
+import React, { type FC, type ReactElement, useCallback } from 'react'
 import { type IconButtonProps } from '@interfaces/components/common/IconButtonProps'
 import Icon from '@components/common/Icon'
+import { Link } from 'react-router-dom'
 
 const IconButton: FC<IconButtonProps> = ({
     icon,
@@ -11,10 +12,22 @@ const IconButton: FC<IconButtonProps> = ({
     padding = 5,
     className,
     border = false,
-    hoverEffect = true
+    hoverEffect = true,
+    link
 }): ReactElement => {
+    const CustomIconButton = useCallback(
+        ({ ...props }): ReactElement => {
+            if (link) {
+                return <Link to={link} target="_blank" {...props} />
+            } else {
+                return <button {...props} />
+            }
+        },
+        [link]
+    )
+
     return (
-        <button
+        <CustomIconButton
             className={`
                 ${hoverEffect && `hover-bg-${color} hover-${backgroundColor}`}
                 ${border && `border-${color}`} 
@@ -37,7 +50,7 @@ const IconButton: FC<IconButtonProps> = ({
                 className={'aspect-1 d-flex'}
                 size={size}
             />
-        </button>
+        </CustomIconButton>
     )
 }
 

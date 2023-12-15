@@ -13,4 +13,5 @@ export interface ButtonProps {
     border?: ColorsType
     rounded?: boolean
     fontWeight?: FontWeightType
+    link?: string
 }

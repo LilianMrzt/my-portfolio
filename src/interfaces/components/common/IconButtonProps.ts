@@ -12,4 +12,5 @@ export interface IconButtonProps {
     padding?: PaddingTypes
     border?: boolean
     hoverEffect?: boolean
+    link?: string
 }

@@ -3,6 +3,7 @@ import ProjectCard from '@components/cards/ProjectCard'
 import ProjectsFixtures from '@constants/fixtures/ProjectsFixtures.json'
 import Text from '@components/common/Text'
 import Button from '@components/common/Button'
+import { ExternalLinks } from '@constants/Constants'
 
 const MyWorkSection = (): ReactElement => {
     const [projects, setProjects] = useState<any>([])
@@ -40,6 +41,7 @@ const MyWorkSection = (): ReactElement => {
                 fontWeight={'bold'}
                 className={'mt-30 mb-20 mb-60'}
                 backgroundColor={'transparent'}
+                link={ExternalLinks.gitHub}
             />
         </div>
     )

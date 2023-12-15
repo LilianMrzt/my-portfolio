@@ -3,6 +3,7 @@ import IconButton from '@components/common/IconButton'
 import { Github, LinkedIn, ReactIcon } from '@assets/Images'
 import Text from '@components/common/Text'
 import Icon from '@components/common/Icon'
+import { ExternalLinks } from '@constants/Constants'
 
 const Footer = (): ReactElement => {
     return (
@@ -18,12 +19,14 @@ const Footer = (): ReactElement => {
                     backgroundColor={'primary'}
                     border
                     className={'mr-15'}
+                    link={ExternalLinks.gitHub}
                 />
                 <IconButton
                     icon={LinkedIn}
                     color={'surface'}
                     backgroundColor={'primary'}
                     border
+                    link={ExternalLinks.linkedIn}
                 />
             </div>
             <Text

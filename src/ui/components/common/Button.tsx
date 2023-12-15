@@ -1,6 +1,7 @@
-import React, { type FC, useState } from 'react'
+import React, { type FC, type ReactElement, useCallback, useState } from 'react'
 import Text from '@components/common/Text'
 import { type ButtonProps } from '@interfaces/components/common/ButtonProps'
+import { Link } from 'react-router-dom'
 
 const Button: FC<ButtonProps> = ({
     label,
@@ -12,8 +13,20 @@ const Button: FC<ButtonProps> = ({
     border = 'none',
     hoverColor,
     onClick = () => {},
-    rounded = false
+    rounded = false,
+    link
 }) => {
+    const CustomButton = useCallback(
+        ({ ...props }): ReactElement => {
+            if (link) {
+                return <Link to={link} target="_blank" {...props} />
+            } else {
+                return <button {...props} />
+            }
+        },
+        [link]
+    )
+
     const [isHovered, setIsHovered] = useState(false)
 
     const handleMouseEnter = (): void => {
@@ -25,13 +38,14 @@ const Button: FC<ButtonProps> = ({
     }
 
     return (
-        <button
+        <CustomButton
             className={`
                 p-10
                 ${rounded && 'rounded-button'}
                 border-${border}
                 bg-${backgroundColor}
                 hover-bg-${border} 
+                decoration-none
                 pointer 
                 border-radius-small
                 pl-20 
@@ -49,7 +63,7 @@ const Button: FC<ButtonProps> = ({
             >
                 {label}
             </Text>
-        </button>
+        </CustomButton>
     )
 }
 

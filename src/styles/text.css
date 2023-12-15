@@ -43,3 +43,7 @@
 .text-end {
     text-align: end;
 }
+
+.decoration-none {
+    text-decoration: none;
+}
