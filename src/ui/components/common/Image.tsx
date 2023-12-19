@@ -11,7 +11,7 @@ const Image: FC<ImageProps> = ({
         <img
             src={source}
             alt={source}
-            className={`${round && 'border-round'} shadow aspect-1 bg-${backgroundColor}`}
+            className={`${round && 'border-round'} aspect-1 bg-${backgroundColor} object-cover`}
             style={{
                 width: size
             }}

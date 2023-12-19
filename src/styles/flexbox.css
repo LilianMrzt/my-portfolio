@@ -4,6 +4,10 @@
     display: flex;
 }
 
+.d-inline-flex {
+    display: inline-flex;
+}
+
 .space-between {
     justify-content: space-between;
 }
@@ -46,4 +50,8 @@
 
 .wrap {
     flex-wrap: wrap;
+}
+
+.nowrap {
+    white-space: nowrap;
 }

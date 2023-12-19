@@ -3,3 +3,7 @@
 .transition-3 {
     transition: 0.3s;
 }
+
+.transform-3 {
+    transition: transform 0.3s;
+}

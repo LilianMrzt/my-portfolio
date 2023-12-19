@@ -5,6 +5,7 @@ import AboutSection from '@views/home-screen/AboutSection'
 import SkillsSection from '@views/home-screen/SkillsSection'
 import Footer from '@components/navigation/Footer'
 import MyWorkSection from '@views/home-screen/MyWorkSection'
+import TestimonialsSections from '@views/home-screen/TestimonialsSections'
 
 const HomeScreen = (): ReactElement => {
     return (
@@ -19,6 +20,7 @@ const HomeScreen = (): ReactElement => {
                 id={screenIds.skillsScreenId}
             />
             <MyWorkSection/>
+            <TestimonialsSections/>
             <Footer/>
         </div>
     )

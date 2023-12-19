@@ -47,3 +47,7 @@
 .decoration-none {
     text-decoration: none;
 }
+
+.wrap {
+    white-space: pre-wrap;
+}
