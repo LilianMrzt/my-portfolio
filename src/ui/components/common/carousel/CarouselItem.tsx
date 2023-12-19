@@ -7,8 +7,8 @@ const CarouselItem: FC<CarouselItemProps> = ({
     slide
 }): ReactElement => {
     return (
-        <div className="d-inline-flex wrap">
-            <div className={'p-20 d-flex flex-column align-center'}>
+        <div className="d-inline-flex wrap h-100">
+            <div className={'p-20 d-flex flex-column align-center justify-between'}>
                 <Image
                     source={slide.picture}
                     round
@@ -17,9 +17,10 @@ const CarouselItem: FC<CarouselItemProps> = ({
                 />
                 <Text
                     size={'large'}
-                    className={'mt-30'}
+                    className={'mt-30 mb-20'}
+                    textAlign={'center'}
                 >
-                    {slide.testimony}
+                    {`"${slide.testimony}"`}
                 </Text>
                 <Text
                     size={'large'}

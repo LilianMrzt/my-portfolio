@@ -19,25 +19,29 @@ const Carousel: FC<CarouselProps> = ({
     }
 
     return (
-        <div className={'d-flex overflow-hidden flex-column w-700px justify-center'}>
-            <div
-                className={'transform-3 nowrap w-700px'}
-                style={{ transform: `translate(-${activeIndex * 100}%)` }}
-            >
-                {data?.map((item: any, index: number) => (
-                    <CarouselItem key={index} slide={item}/>
-                ))}
-            </div>
-            <div className={'d-flex space-between'}>
-                <IconButton
-                    icon={ArrowLeftIcon}
-                    color={'primary'}
-                    hoverEffect={false}
-                    backgroundColor={'background'}
-                    onClick={() => { updateIndex(activeIndex - 1) }}
-                />
-                <div className={'d-flex align-center'}>
-                    {data?.map((data: any, index: number) => (
+        <div
+            className={'d-flex gap-30'}
+        >
+            <IconButton
+                icon={ArrowLeftIcon}
+                color={'primary'}
+                hoverEffect={false}
+                backgroundColor={'background'}
+                onClick={() => { updateIndex(activeIndex - 1) }}
+                size={'small'}
+            />
+            <div className={'d-flex overflow-hidden flex-column w-700px justify-center'}>
+
+                <div
+                    className={'transform-6 nowrap w-700px'}
+                    style={{ transform: `translate(-${activeIndex * 100}%)` }}
+                >
+                    {data?.map((item: any, index: number) => (
+                        <CarouselItem key={index} slide={item}/>
+                    ))}
+                </div>
+                <div className={'d-flex gap-10 justify-center'}>
+                    {data?.map((_: any, index: number) => (
                         <IconButton
                             key={index}
                             icon={RadioButtonIcon}
@@ -49,14 +53,15 @@ const Carousel: FC<CarouselProps> = ({
                         />
                     ))}
                 </div>
-                <IconButton
-                    icon={ArrowRightIcon}
-                    color={'primary'}
-                    hoverEffect={false}
-                    backgroundColor={'background'}
-                    onClick={() => { updateIndex(activeIndex + 1) }}
-                />
             </div>
+            <IconButton
+                icon={ArrowRightIcon}
+                color={'primary'}
+                hoverEffect={false}
+                backgroundColor={'background'}
+                onClick={() => { updateIndex(activeIndex + 1) }}
+                size={'small'}
+            />
         </div>
     )
 }
