@@ -2,7 +2,8 @@ import React, { type FC, type ReactElement, useState } from 'react'
 import { type CarouselProps } from '@interfaces/components/common/CarouselProps'
 import CarouselItem from '@components/common/carousel/CarouselItem'
 import IconButton from '@components/common/IconButton'
-import { ArrowLeftIcon, ArrowRightIcon, RadioButtonIcon } from '@assets/Images'
+import { ArrowLeftIcon, ArrowRightIcon } from '@assets/Images'
+import CarouselDotIndicator from '@components/common/carousel/CarouselDotIndicator'
 
 const Carousel: FC<CarouselProps> = ({
     data
@@ -42,14 +43,10 @@ const Carousel: FC<CarouselProps> = ({
                 </div>
                 <div className={'d-flex gap-10 justify-center'}>
                     {data?.map((_: any, index: number) => (
-                        <IconButton
+                        <CarouselDotIndicator
                             key={index}
-                            icon={RadioButtonIcon}
-                            color={index === activeIndex ? 'primary' : 'text'}
-                            hoverEffect={false}
-                            backgroundColor={'background'}
-                            onClick={() => { updateIndex(index) }}
-                            size={'small'}
+                            isActive={index === activeIndex}
+                            setActive={() => { updateIndex(index) }}
                         />
                     ))}
                 </div>
