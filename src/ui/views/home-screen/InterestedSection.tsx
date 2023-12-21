@@ -16,16 +16,10 @@ const InterestedSection = (): ReactElement => {
             </Text>
             <Button
                 label={'Me contacter'}
-                size={'medium'}
                 onClick={() => {
                     navigate(RoutesConstants.CONTACT_SCREEN_ROUTE)
                 }}
-                border={'primary'}
-                rounded
                 className={'mr-10'}
-                fontWeight={'bold'}
-                color={'primary'}
-                hoverColor={'background'}
             />
         </div>
     )

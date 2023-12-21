@@ -51,10 +51,6 @@ const ContactScreen = (): ReactElement => {
                 />
                 <Button
                     label={'Envoyer'}
-                    border={'primary'}
-                    color={'primary'}
-                    hoverColor={'background'}
-                    rounded
                 />
             </div>
         </div>

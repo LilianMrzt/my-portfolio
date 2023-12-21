@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom'
 
 const Button: FC<ButtonProps> = ({
     label,
-    size,
-    fontWeight,
+    size = 'medium',
+    fontWeight = 'bold',
     className,
     backgroundColor = 'background',
-    color = 'text',
-    border = 'none',
-    hoverColor,
+    color = 'primary',
+    border = 'primary',
+    hoverColor = 'background',
     onClick = () => {},
-    rounded = false,
+    rounded = true,
     link
 }) => {
     const CustomButton = useCallback(

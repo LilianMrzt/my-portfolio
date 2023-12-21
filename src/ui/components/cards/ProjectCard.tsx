@@ -38,11 +38,6 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
                 </Text>
                 <Button
                     label={project.buttonLabel}
-                    border={'primary'}
-                    rounded
-                    color={'primary'}
-                    hoverColor={'background'}
-                    fontWeight={'bold'}
                     className={'mt-30 mb-20'}
                     backgroundColor={'transparent'}
                 />

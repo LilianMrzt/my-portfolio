@@ -27,10 +27,13 @@ const NavigationBar: FC<NavigationBarProps> = ({
         >
             <Button
                 label={'Portfolio.'}
-                size={'large'}
                 onClick={() => {
                     navigate(RoutesConstants.HOME_SCREEN_ROUTE)
                 }}
+                border={'none'}
+                color={'text'}
+                fontWeight={'normal'}
+                size={'large'}
             />
             <div
                 className='d-flex flex-row align-center'
@@ -39,16 +42,10 @@ const NavigationBar: FC<NavigationBarProps> = ({
                     <>
                         <Button
                             label={'Me contacter'}
-                            size={'medium'}
                             onClick={() => {
                                 navigate(RoutesConstants.CONTACT_SCREEN_ROUTE)
                             }}
-                            border={'primary'}
-                            rounded
                             className={'mr-10'}
-                            fontWeight={'bold'}
-                            color={'primary'}
-                            hoverColor={'background'}
                         />
                     </>
                 )}

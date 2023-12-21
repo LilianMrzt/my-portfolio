@@ -34,13 +34,7 @@ const MyWorkSection = (): ReactElement => {
             </div>
             <Button
                 label={'Voir mon Github'}
-                border={'primary'}
-                rounded
-                color={'primary'}
-                hoverColor={'background'}
-                fontWeight={'bold'}
                 className={'mt-30 mb-20 mb-60'}
-                backgroundColor={'transparent'}
                 link={ExternalLinks.gitHub}
             />
         </div>
