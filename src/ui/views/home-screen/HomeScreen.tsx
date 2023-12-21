@@ -6,6 +6,7 @@ import SkillsSection from '@views/home-screen/SkillsSection'
 import Footer from '@components/navigation/Footer'
 import MyWorkSection from '@views/home-screen/MyWorkSection'
 import TestimonialsSections from '@views/home-screen/TestimonialsSections'
+import InterestedSection from '@views/home-screen/InterestedSection'
 
 const HomeScreen = (): ReactElement => {
     return (
@@ -21,6 +22,7 @@ const HomeScreen = (): ReactElement => {
             />
             <MyWorkSection/>
             <TestimonialsSections/>
+            <InterestedSection/>
             <Footer/>
         </div>
     )
