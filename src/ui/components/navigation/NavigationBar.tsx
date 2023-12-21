@@ -34,6 +34,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
                 color={'text'}
                 fontWeight={'normal'}
                 size={'large'}
+                hoverColor={'text'}
             />
             <div
                 className='d-flex flex-row align-center'
