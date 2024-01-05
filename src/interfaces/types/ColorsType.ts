@@ -1,8 +1,9 @@
 export type ColorsType =
-    | 'primary'
-    | 'surface'
-    | 'text'
     | 'background'
+    | 'primary'
     | 'secondary'
-    | 'border'
+    | 'tertiary'
+    | 'text'
+    | 'surface'
+    | 'shadow'
     | string

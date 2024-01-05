@@ -35,8 +35,8 @@ code {
   --background: #EBF1FF;
   --primary: #3342F2;
   --secondary: #6C82FB;
-  --text: #232323;
   --tertiary: #000033;
+  --text: #232323;
   --surface: #F6F6F6;
   --shadow: #0000004D;
 
@@ -48,6 +48,6 @@ code {
   --secondary: #3342F2;
   --tertairy: #06090D;
   --text: #ffffff;
-  --shadow: #ffffff4D;
   --surface: #ffffff;
+  --shadow: #ffffff4D;
 }
