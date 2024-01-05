@@ -12,7 +12,6 @@
 .banner-screen {
     position: relative;
     display: flex;
-    width: 100vw;
     min-height: calc(100vh - 80px);
     align-items: center;
     justify-content: center;

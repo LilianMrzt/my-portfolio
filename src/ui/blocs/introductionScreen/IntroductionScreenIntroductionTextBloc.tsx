@@ -3,29 +3,36 @@ import Text from '@components/common/Text'
 
 const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
     return (
-        <div className={'mt-30'}>
+        <div className={'w-100'}>
             <Text
-                fontWeight={'bold'}
+                size={'24px'}
+                font={'poppins'}
             >
               Bonjour, je suis
             </Text>
             <div className={'d-flex'}>
                 <Text
                     fontWeight={'bold'}
-                    color={'primary'}
-                    className={'mr-10'}
+                    color={'tertiary'}
+                    size={'140px'}
                 >
-                  Lilian
-                </Text>
-                <Text
-                    fontWeight={'bold'}
-                >
-                  Marzet
+                  Lilian Marzet
                 </Text>
             </div>
             <Text
+                size={'24px'}
+                color={'primary'}
+                fontWeight={'bold'}
+                font={'poppins'}
             >
               Développeur Fullstack
+            </Text>
+            <Text
+                size={'24px'}
+                font={'poppins'}
+                className={'w-65 mt-30'}
+            >
+                Je suis un jeune développeur enthousiaste et passioné par le monde du développement, avec une expertise de moins d’un an dans l’industrie.
             </Text>
         </div>
     )

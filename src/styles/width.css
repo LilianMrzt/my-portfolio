@@ -12,6 +12,10 @@
     width: 75%;
 }
 
+.w-65 {
+    width: 65%;
+}
+
 .w-16px {
     width: 16px;
 }
@@ -34,4 +38,8 @@
 
 .w-700px {
     width: 700px;
+}
+
+.mw-1920 {
+    max-width: 1920px;
 }

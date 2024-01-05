@@ -24,6 +24,10 @@
     padding-left: 20px;
 }
 
+.p-100px {
+    padding: 100px;
+}
+
 .pr-10 {
     padding-right: 10px;
 }

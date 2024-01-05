@@ -10,19 +10,19 @@ import InterestedSection from '@views/home-screen/InterestedSection'
 
 const HomeScreen = (): ReactElement => {
     return (
-        <div>
-            <IntroductionSection
-                id={screenIds.homeScreenId}
-            />
-            <AboutSection
-                id={screenIds.aboutScreenId}
-            />
-            <SkillsSection
-                id={screenIds.skillsScreenId}
-            />
-            <MyWorkSection/>
-            <TestimonialsSections/>
-            <InterestedSection/>
+        <div className={'d-flex flex-column full-screen-width align-center'}>
+            <div className={'mw-1920 d-flex flex-column align-center bg-background'}>
+                <IntroductionSection/>
+                <AboutSection
+                    id={screenIds.aboutScreenId}
+                />
+                <SkillsSection
+                    id={screenIds.skillsScreenId}
+                />
+                <MyWorkSection/>
+                <TestimonialsSections/>
+                <InterestedSection/>
+            </div>
             <Footer/>
         </div>
     )
