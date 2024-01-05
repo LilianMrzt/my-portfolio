@@ -30,7 +30,6 @@ const SkillCard: FC<SkillCardProps> = ({
                 className={'mb-20'}
             />
             <Text
-                fontWeight={'bold'}
                 className={'mb-20'}
             >
                 {content?.title}
@@ -42,7 +41,6 @@ const SkillCard: FC<SkillCardProps> = ({
                 {content.introductionSentence}
             </Text>
             <Text
-                fontWeight={'bold'}
                 className={'mb-20'}
                 color={'primary'}
             >

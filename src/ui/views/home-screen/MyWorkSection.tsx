@@ -15,7 +15,6 @@ const MyWorkSection = (): ReactElement => {
     return (
         <div className={'pt-40 d-flex flex-column align-center'}>
             <Text
-                fontWeight={'bold'}
                 className={'mb-10'}
             >
                 Mes projets

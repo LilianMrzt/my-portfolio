@@ -6,7 +6,7 @@ const Text: FC<TextProps> = ({
     color = 'text',
     size = 'small',
     className,
-    fontWeight = 'normal',
+    fontWeight = '400',
     textAlign = 'justify',
     font = 'khand'
 }): ReactElement => {

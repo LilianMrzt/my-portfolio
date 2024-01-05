@@ -21,9 +21,7 @@ const CarouselItem: FC<CarouselItemProps> = ({
                 >
                     {`"${slide.testimony}"`}
                 </Text>
-                <Text
-                    fontWeight={'bold'}
-                >
+                <Text>
                     {slide.name}
                 </Text>
                 <Text>{`${slide.job}, ${slide.company}`}</Text>

@@ -13,7 +13,6 @@ const TestimonialsSections = (): ReactElement => {
     return (
         <div className={'d-flex flex-column align-center pb-40'}>
             <Text
-                fontWeight={'bold'}
                 className={'mb-10'}
             >
                 Témoignages

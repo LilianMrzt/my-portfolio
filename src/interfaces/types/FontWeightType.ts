@@ -1,3 +1,5 @@
 export type FontWeightType =
-    | 'normal'
-    | 'bold'
+    | '400'
+    | '500'
+    | '600'
+    | '700'

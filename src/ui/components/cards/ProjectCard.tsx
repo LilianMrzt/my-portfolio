@@ -30,9 +30,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
                 <img src={project?.image} alt={project.label} />
             </div>
             <div className={`hover-content ${isHovered ? 'fade-in' : 'fade-out'}`}>
-                <Text
-                    fontWeight={'bold'}
-                >
+                <Text>
                     {project.label}
                 </Text>
                 <Button

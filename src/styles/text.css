@@ -19,18 +19,32 @@
 }
 
 
-
-
-
-
+/** fontweight */
 
 .font-normal {
     font-weight: normal;
 }
 
-.font-bold {
+.font-400 {
+    font-weight: 400;
+}
+
+.font-500 {
+    font-weight: 500;
+}
+
+.font-600 {
     font-weight: 600;
 }
+
+.font-700 {
+    font-weight: 700;
+}
+
+
+
+
+
 
 .font-arial {
     font-family: Arial, serif;

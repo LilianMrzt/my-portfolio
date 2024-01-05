@@ -12,7 +12,7 @@ const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
             </Text>
             <div className={'d-flex'}>
                 <Text
-                    fontWeight={'bold'}
+                    fontWeight={'700'}
                     color={'tertiary'}
                     size={'140px'}
                 >
@@ -22,7 +22,7 @@ const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
             <Text
                 size={'24px'}
                 color={'primary'}
-                fontWeight={'bold'}
+                fontWeight={'500'}
                 font={'poppins'}
             >
               Développeur Fullstack
