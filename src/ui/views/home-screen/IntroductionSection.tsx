@@ -32,7 +32,6 @@ const IntroductionSection: FC<ScreenProps> = ({
                         icon={ArrowDown}
                         color={'primary'}
                         backgroundColor={'background'}
-                        size={'large'}
                         className={'mt-30'}
                         onClick={() => { handleClickScroll(screenIds.aboutScreenId) }}
                     />

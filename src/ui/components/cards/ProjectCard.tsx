@@ -31,7 +31,6 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
             </div>
             <div className={`hover-content ${isHovered ? 'fade-in' : 'fade-out'}`}>
                 <Text
-                    size={'large'}
                     fontWeight={'bold'}
                 >
                     {project.label}

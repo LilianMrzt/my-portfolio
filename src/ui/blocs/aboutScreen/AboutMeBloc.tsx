@@ -15,7 +15,6 @@ const AboutMeBloc = (): ReactElement => {
         >
             <div className={'absolute bg-background w-50 p-20 border-radius-small shadow'}>
                 <Text
-                    size={'large'}
                     className={'mb-20'}
                     color={'primary'}
                 >

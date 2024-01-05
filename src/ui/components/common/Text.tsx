@@ -4,23 +4,20 @@ import { type TextProps } from '@interfaces/components/common/TextProps'
 const Text: FC<TextProps> = ({
     children,
     color = 'text',
-    size = 'medium',
+    size = 'small',
     className,
     fontWeight = 'normal',
-    textAlign = 'justify'
+    textAlign = 'justify',
+    font = 'khand'
 }): ReactElement => {
     const lines = children.split('\n')
-
-    if (lines.length > 1) {
-        console.log(lines.length)
-    }
 
     return (
         <>
             {lines.map((line, index) => (
                 <p
                     key={index}
-                    className={`p-0 m-0 color-${color} text-${size} ${className} font-${fontWeight} ${index !== lines.length - 1 && 'mb-10'} text-${textAlign}`}
+                    className={`font-${font} p-0 m-0 color-${color} text-${size} ${className} font-${fontWeight} ${index !== lines.length - 1 && 'mb-10'} text-${textAlign}`}
                 >
                     {line}
                 </p>

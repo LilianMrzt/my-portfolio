@@ -5,7 +5,7 @@ import { type IconProps } from '@interfaces/components/common/IconProps'
 const Icon: FC<IconProps> = ({
     src,
     color,
-    size = 'medium',
+    size = '24px',
     className
 }): ReactElement => {
     return (

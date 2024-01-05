@@ -29,7 +29,7 @@ const Carousel: FC<CarouselProps> = ({
                 hoverEffect={false}
                 backgroundColor={'background'}
                 onClick={() => { updateIndex(activeIndex - 1) }}
-                size={'small'}
+                size={'16px'}
             />
             <div className={'d-flex overflow-hidden flex-column w-700px justify-center'}>
 
@@ -57,7 +57,7 @@ const Carousel: FC<CarouselProps> = ({
                 hoverEffect={false}
                 backgroundColor={'background'}
                 onClick={() => { updateIndex(activeIndex + 1) }}
-                size={'small'}
+                size={'16px'}
             />
         </div>
     )

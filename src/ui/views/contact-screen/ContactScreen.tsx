@@ -15,13 +15,11 @@ const ContactScreen = (): ReactElement => {
             <div className={'w-50 d-flex flex-column gap-30 align-center'}>
                 <div className={'text-center'}>
                     <Text
-                        size={'large'}
                         className={'mb'}
                     >
                         Merci de prendre le temps de me contacter!
                     </Text>
                     <Text
-                        size={'large'}
                         className={'mb'}
                     >
                         Comment puis-je vous aider?

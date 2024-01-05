@@ -1,20 +1,28 @@
 /* text */
 
-.text-small {
-    font-size: 12px;
-}
+/** font size */
 
-.text-medium {
+.text-16px {
     font-size: 16px;
 }
 
-.text-large {
-    font-size: 20px;
+.text-24px {
+    font-size: 24px;
 }
 
-.text-extra-large {
-    font-size: 90px;
+.text-40px {
+    font-size: 40px;
 }
+
+.text-140px {
+    font-size: 140px;
+}
+
+
+
+
+
+
 
 .font-normal {
     font-weight: normal;
@@ -26,6 +34,14 @@
 
 .font-arial {
     font-family: Arial, serif;
+}
+
+.font-khand {
+    font-family: 'Khand', sans-serif;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
 }
 
 .text-center {

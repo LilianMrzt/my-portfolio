@@ -16,14 +16,12 @@ const CarouselItem: FC<CarouselItemProps> = ({
                     size={'150px'}
                 />
                 <Text
-                    size={'large'}
                     className={'mt-30 mb-20'}
                     textAlign={'center'}
                 >
                     {`"${slide.testimony}"`}
                 </Text>
                 <Text
-                    size={'large'}
                     fontWeight={'bold'}
                 >
                     {slide.name}

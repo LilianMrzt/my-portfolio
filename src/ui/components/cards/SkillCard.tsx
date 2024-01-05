@@ -26,12 +26,10 @@ const SkillCard: FC<SkillCardProps> = ({
         >
             <Icon
                 src={getIcon(content?.icon)}
-                size={'large'}
                 color={'text'}
                 className={'mb-20'}
             />
             <Text
-                size={'large'}
                 fontWeight={'bold'}
                 className={'mb-20'}
             >

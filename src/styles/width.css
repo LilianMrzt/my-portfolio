@@ -12,15 +12,15 @@
     width: 75%;
 }
 
-.w-small {
+.w-16px {
     width: 16px;
 }
 
-.w-medium {
-    width: 30px;
+.w-24px {
+    width: 24px;
 }
 
-.w-large {
+.w-40px {
     width: 40px;
 }
 

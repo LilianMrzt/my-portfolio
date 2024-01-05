@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Button: FC<ButtonProps> = ({
     label,
-    size = 'medium',
+    size = '16px',
     fontWeight = 'bold',
     className,
     backgroundColor = 'background',

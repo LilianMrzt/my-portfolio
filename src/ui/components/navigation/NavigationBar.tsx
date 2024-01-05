@@ -33,7 +33,6 @@ const NavigationBar: FC<NavigationBarProps> = ({
                 border={'none'}
                 color={'text'}
                 fontWeight={'normal'}
-                size={'large'}
                 hoverColor={'text'}
             />
             <div

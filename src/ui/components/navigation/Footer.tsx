@@ -39,13 +39,11 @@ const Footer = (): ReactElement => {
             >
                 <Text
                     color={'surface'}
-                    size={'small'}
                 >
                     Site réalisé avec ReactJS
                 </Text>
                 <Icon
                     src={ReactIcon}
-                    size={'small'}
                     color={'surface'}
                     className={'ml-10'}
                 />

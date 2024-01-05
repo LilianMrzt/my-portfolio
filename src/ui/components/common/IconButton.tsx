@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const IconButton: FC<IconButtonProps> = ({
     icon,
-    size = 'medium',
+    size = '24px',
     backgroundColor = 'background',
     color = 'surface',
     onClick = () => {},

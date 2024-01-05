@@ -5,14 +5,12 @@ const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
     return (
         <div className={'mt-30'}>
             <Text
-                size={'large'}
                 fontWeight={'bold'}
             >
               Bonjour, je suis
             </Text>
             <div className={'d-flex'}>
                 <Text
-                    size={'extra-large'}
                     fontWeight={'bold'}
                     color={'primary'}
                     className={'mr-10'}
@@ -20,14 +18,12 @@ const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
                   Lilian
                 </Text>
                 <Text
-                    size={'extra-large'}
                     fontWeight={'bold'}
                 >
                   Marzet
                 </Text>
             </div>
             <Text
-                size={'large'}
             >
               Développeur Fullstack
             </Text>
