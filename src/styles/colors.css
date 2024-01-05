@@ -5,6 +5,16 @@
     transition: 0.3s;
 }
 
+.color-secondary {
+    color: var(--secondary);
+    transition: 0.3s;
+}
+
+.color-tertiary {
+    color: var(--tertiary);
+    transition: 0.3s;
+}
+
 .color-surface {
     color: var(--surface);
     transition: 0.3s;

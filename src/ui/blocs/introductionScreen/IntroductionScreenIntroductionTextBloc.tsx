@@ -1,5 +1,7 @@
 import React, { type ReactElement } from 'react'
 import Text from '@components/common/Text'
+import Icon from '@components/common/Icon'
+import { StarIcon } from '@assets/Images'
 
 const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
     return (
@@ -10,15 +12,21 @@ const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
             >
               Bonjour, je suis
             </Text>
-            <div className={'d-flex'}>
+            <div className={'d-flex align-center'}>
                 <Text
                     fontWeight={'700'}
-                    color={'tertiary'}
-                    size={'140px'}
+                    color={'text'}
+                    size={'120px'}
                     letterSpacing={'2px'}
                 >
                   Lilian Marzet
                 </Text>
+                <Icon
+                    src={StarIcon}
+                    size={'40px'}
+                    className={'ml-20'}
+                    color={'primary'}
+                />
             </div>
             <Text
                 size={'24px'}

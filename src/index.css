@@ -44,10 +44,10 @@ code {
 
 [data-theme='dark'] {
   --background: #0D1015;
-  --primary: #6C82FB;
+  --primary: #A8BDFD;
   --secondary: #3342F2;
-  --tertairy: #06090D;
-  --text: #ffffff;
+  --tertiary: #06090D;
+  --text: #EBF1FF;
   --surface: #ffffff;
   --shadow: #ffffff4D;
 }
