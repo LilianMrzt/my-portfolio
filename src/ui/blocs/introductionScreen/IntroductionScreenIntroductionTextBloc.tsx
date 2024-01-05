@@ -15,6 +15,7 @@ const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
                     fontWeight={'700'}
                     color={'tertiary'}
                     size={'140px'}
+                    letterSpacing={'2px'}
                 >
                   Lilian Marzet
                 </Text>

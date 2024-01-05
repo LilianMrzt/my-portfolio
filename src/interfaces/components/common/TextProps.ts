@@ -12,4 +12,5 @@ export interface TextProps {
     fontWeight?: FontWeightType
     textAlign?: TextAlignType
     font?: FontTypes
+    letterSpacing?: 'undefined' | '2px'
 }
