@@ -4,7 +4,7 @@ import Text from '@components/common/Text'
 
 const TextField: FC<TextFieldProps> = ({
     backgroundColor = 'background',
-    borderColor = 'border',
+    borderColor = 'secondary',
     focusedBorderColor = 'primary',
     color = 'text',
     placeholder,

@@ -20,11 +20,6 @@
     transition: 0.3s;
 }
 
-.color-border {
-    color: var(--border);
-    transition: 0.3s;
-}
-
 /* backgroundColor */
 
 .bg-background {
@@ -39,11 +34,6 @@
 
 .bg-secondary {
     background-color: var(--secondary);
-    transition: 0.3s;
-}
-
-.bg-blackish {
-    background-color: var(--blackish);
     transition: 0.3s;
 }
 

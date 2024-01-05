@@ -32,23 +32,22 @@ code {
 }
 
 :root {
-  --background: #F8F8FF;
-  --primary: #0F52BA;
-  --text: #000000;
-  --blackish: #272727;
-  --surface: #ffffff;
-  --secondary: #E3E2DF;
-  --border: #d3d3d3;
+  --background: #EBF1FF;
+  --primary: #3342F2;
+  --secondary: #6C82FB;
+  --text: #232323;
+  --tertiary: #000033;
+  --surface: #F6F6F6;
   --shadow: #0000004D;
+
 }
 
 [data-theme='dark'] {
-  --background: #272727;
-  --primary: #0D49A7;
+  --background: #0D1015;
+  --primary: #6C82FB;
+  --secondary: #3342F2;
+  --tertairy: #06090D;
   --text: #ffffff;
-  --blackish: #F8F8FF;
-  --surface: #ffffff;
-  --secondary: #3b3b3b;
-  --border: #d3d3d3;
   --shadow: #ffffff4D;
+  --surface: #ffffff;
 }
