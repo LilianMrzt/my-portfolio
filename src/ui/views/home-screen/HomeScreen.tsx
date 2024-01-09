@@ -1,6 +1,6 @@
 import React, { type ReactElement } from 'react'
 import IntroductionSection from '@views/home-screen/IntroductionSection'
-import { screenIds } from '@constants/ScreensConstants'
+import { sectionIds } from '@constants/ScreensConstants'
 import AboutSection from '@views/home-screen/AboutSection'
 import SkillsSection from '@views/home-screen/SkillsSection'
 import Footer from '@components/navigation/Footer'
@@ -13,13 +13,9 @@ const HomeScreen = (): ReactElement => {
         <div className={'d-flex flex-column full-screen-width align-center'}>
             <div className={'mw-1920 d-flex flex-column align-center bg-background'}>
                 <IntroductionSection/>
-                <MyWorkSection/>
-                <AboutSection
-                    id={screenIds.aboutScreenId}
-                />
-                <SkillsSection
-                    id={screenIds.skillsScreenId}
-                />
+                <MyWorkSection id={sectionIds.ProjectSectionId}/>
+                <AboutSection />
+                <SkillsSection/>
                 <TestimonialsSections/>
                 <InterestedSection/>
             </div>

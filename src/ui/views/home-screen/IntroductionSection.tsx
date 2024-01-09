@@ -3,7 +3,7 @@ import { ArrowDown } from '@assets/Images'
 import IntroductionScreenIntroductionTextBloc from '@blocs/introductionScreen/IntroductionScreenIntroductionTextBloc'
 import IntroductionScreenIconsBloc from '@blocs/introductionScreen/IntroductionScreenIconsBloc'
 import IconButton from '@components/common/IconButton'
-import { screenIds } from '@constants/ScreensConstants'
+import { sectionIds } from '@constants/ScreensConstants'
 import { handleClickScroll } from '@utils/ButtonUtils'
 
 const IntroductionSection = (): ReactElement => {
@@ -22,7 +22,7 @@ const IntroductionSection = (): ReactElement => {
                     backgroundColor={'background'}
                     padding={10}
                     className={'mt-30'}
-                    onClick={() => { handleClickScroll(screenIds.aboutScreenId) }}
+                    onClick={() => { handleClickScroll(sectionIds.ProjectSectionId) }}
                 />
             </div>
         </div>

@@ -1,16 +1,12 @@
-import React, { type FC, type ReactElement } from 'react'
-import { type ScreenProps } from '@interfaces/screens/ScreenProps'
+import React, { type ReactElement } from 'react'
 import AboutMeBloc from '@blocs/aboutScreen/AboutMeBloc'
 import { ComputerIcon } from '@assets/Images'
 import Icon from '@components/common/Icon'
 
-const AboutSection: FC<ScreenProps> = ({
-    id
-}): ReactElement => {
+const AboutSection = (): ReactElement => {
     return (
         <div
             className={'screen pt-40px'}
-            id={id}
         >
             <div className={'d-flex h-200px align-end'}>
                 <Icon

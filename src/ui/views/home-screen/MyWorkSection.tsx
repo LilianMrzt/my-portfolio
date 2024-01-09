@@ -1,11 +1,14 @@
-import React, { type Key, type ReactElement, useEffect, useState } from 'react'
+import React, { type FC, type Key, type ReactElement, useEffect, useState } from 'react'
 import ProjectCard from '@components/cards/ProjectCard'
 import ProjectsFixtures from '@constants/fixtures/ProjectsFixtures.json'
 import Text from '@components/common/Text'
 import Button from '@components/common/Button'
 import { ExternalLinks } from '@constants/Constants'
+import { type ScreenProps } from '@interfaces/screens/ScreenProps'
 
-const MyWorkSection = (): ReactElement => {
+const MyWorkSection: FC<ScreenProps> = ({
+    id
+}): ReactElement => {
     const [projects, setProjects] = useState<any>([])
 
     useEffect(() => {
@@ -13,7 +16,10 @@ const MyWorkSection = (): ReactElement => {
     }, [])
 
     return (
-        <div className={'w-100'}>
+        <div
+            className={'w-100'}
+            id={id}
+        >
             <div className={'pt-40px d-flex flex-column align-start p-100px'}>
                 <Text
                     className={'mb-20'}

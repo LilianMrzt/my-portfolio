@@ -1,11 +1,8 @@
-import React, { type FC, type Key, type ReactElement, useEffect, useState } from 'react'
-import { type ScreenProps } from '@interfaces/screens/ScreenProps'
+import React, { type Key, type ReactElement, useEffect, useState } from 'react'
 import SkillCard from '@components/cards/SkillCard'
 import SkillsFixtures from '@constants/fixtures/SkillsFixtures.json'
 
-const SkillsSection: FC<ScreenProps> = ({
-    id
-}): ReactElement => {
+const SkillsSection = (): ReactElement => {
     const [skillCardsContent, setSkillCardContent] = useState<any>([])
 
     useEffect(() => {
@@ -14,7 +11,6 @@ const SkillsSection: FC<ScreenProps> = ({
     return (
         <div
             className={'screen pt-80 mb-60'}
-            id={id}
         >
             <div
                 className={'d-flex w-75 justify-between shadow border-radius-small'}

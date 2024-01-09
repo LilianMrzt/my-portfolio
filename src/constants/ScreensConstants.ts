@@ -1,6 +1,3 @@
-export const screenIds = {
-    homeScreenId: 'homeScreen',
-    aboutScreenId: 'aboutScreen',
-    skillsScreenId: 'skillsScreen',
-    contactScreenId: 'contactScreen'
+export const sectionIds = {
+    ProjectSectionId: 'projectSection'
 }
