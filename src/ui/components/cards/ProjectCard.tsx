@@ -2,9 +2,12 @@ import React, { type FC, type ReactElement, useState } from 'react'
 import { type ProjectCardProps } from '@interfaces/components/cards/ProjectCardProps'
 import Text from '@components/common/Text'
 import ProjectLanguageTag from '@components/common/projects/ProjectLanguageTag'
+import { useTheme } from '@utils/UseTheme'
+import { Theme } from '@constants/Constants'
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
     const [isHovered, setIsHovered] = useState(false)
+    const { theme } = useTheme()
 
     return (
         <div
@@ -16,6 +19,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
                 <Text
                     fontWeight={'700'}
                     size={'24px'}
+                    color={theme === Theme.light ? 'text' : 'background'}
                 >
                     {project.label}
                 </Text>

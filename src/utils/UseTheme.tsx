@@ -19,6 +19,10 @@ export const ThemeProvider: FC<any> = ({ children }) => {
         }
     }, [])
 
+    useEffect(() => {
+        document.body.setAttribute('data-theme', theme)
+    }, [theme])
+
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
             {children}
