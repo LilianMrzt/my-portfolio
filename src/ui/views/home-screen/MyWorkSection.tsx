@@ -34,17 +34,22 @@ const MyWorkSection: FC<ScreenProps> = ({
                 >
                     Voici quelques projets sur lesquels je travaille sur mon temps personnel.
                 </Text>
-                <div className={'pt-40px d-flex flex-row justify-center gap-30 wrap align-center'}>
+                <div className={'pt-40px d-flex w-100 flex-row justify-center gap-30 wrap align-center'}>
                     {projects?.map((project: any, index: Key) => (
                         <ProjectCard
                             key={index}
                             project={project.content}
                         />
                     ))}
+                    {
+                        projects.length === 2 && (
+                            <div className={'w-400px'}/>
+                        )
+                    }
                 </div>
                 <Button
                     label={'Voir mon Github'}
-                    className={'mt-30 mb-20 mb-60'}
+                    className={'mt-30 mb-20 mb-60 align-self-center'}
                     link={ExternalLinks.gitHub}
                 />
             </div>
