@@ -32,6 +32,14 @@
     width: 100vw;
 }
 
+.w-200px {
+    width: 200px;
+}
+
+.w-300px {
+    width: 300px;
+}
+
 .w-400px {
     width: 400px;
 }

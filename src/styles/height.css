@@ -36,6 +36,11 @@
     min-height: 200px;
 }
 
-.h-200 {
+.h-200px {
     height: 200px;
 }
+
+.h-350px {
+    height: 300px;
+}
+

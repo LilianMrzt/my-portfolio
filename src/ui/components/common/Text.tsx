@@ -4,7 +4,7 @@ import { type TextProps } from '@interfaces/components/common/TextProps'
 const Text: FC<TextProps> = ({
     children,
     color = 'text',
-    size = 'small',
+    size = '16',
     className,
     fontWeight = '400',
     textAlign = 'justify',

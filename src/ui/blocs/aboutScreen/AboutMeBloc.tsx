@@ -11,7 +11,7 @@ const AboutMeBloc = (): ReactElement => {
 
     return (
         <div
-            className={'pt-40 d-flex flex-column bg-primary h-200 w-100 relative align-center mb-60'}
+            className={'pt-40px d-flex flex-column bg-primary h-200px w-100 relative align-center mb-60'}
         >
             <div className={'absolute bg-background w-50 p-20 border-radius-small shadow'}>
                 <Text

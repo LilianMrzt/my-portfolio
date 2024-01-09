@@ -22,7 +22,7 @@ const SkillCard: FC<SkillCardProps> = ({
 
     return (
         <div
-            className={'p-20 d-flex flex-1 flex-column align-center pt-40'}
+            className={'p-20 d-flex flex-1 flex-column align-center pt-40px'}
         >
             <Icon
                 src={getIcon(content?.icon)}

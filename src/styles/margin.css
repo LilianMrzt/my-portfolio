@@ -47,3 +47,7 @@
 .mb-5 {
     margin-bottom: 5px;
 }
+
+.vertical-align-top {
+    vertical-align: top;
+}

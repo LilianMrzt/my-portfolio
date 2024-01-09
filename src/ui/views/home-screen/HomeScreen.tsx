@@ -13,13 +13,13 @@ const HomeScreen = (): ReactElement => {
         <div className={'d-flex flex-column full-screen-width align-center'}>
             <div className={'mw-1920 d-flex flex-column align-center bg-background'}>
                 <IntroductionSection/>
+                <MyWorkSection/>
                 <AboutSection
                     id={screenIds.aboutScreenId}
                 />
                 <SkillsSection
                     id={screenIds.skillsScreenId}
                 />
-                <MyWorkSection/>
                 <TestimonialsSections/>
                 <InterestedSection/>
             </div>

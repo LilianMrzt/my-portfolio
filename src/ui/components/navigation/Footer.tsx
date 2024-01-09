@@ -8,7 +8,7 @@ import { ExternalLinks } from '@constants/Constants'
 const Footer = (): ReactElement => {
     return (
         <footer
-            className={'h-200 bg-primary p-20 d-flex flex-column gap-30 justify-center align-center'}
+            className={'h-200px bg-primary p-20 d-flex flex-column gap-30 justify-center align-center'}
         >
             <div
                 className={'d-flex w-100 justify-center'}

@@ -16,6 +16,10 @@
     align-items: center;
 }
 
+.align-start {
+    align-items: start;
+}
+
 .align-end {
     align-items: end;
 }
@@ -54,4 +58,8 @@
 
 .nowrap {
     white-space: nowrap;
+}
+
+.align-self-center {
+    align-self: center;
 }

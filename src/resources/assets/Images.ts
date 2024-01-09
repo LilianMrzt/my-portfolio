@@ -7,7 +7,6 @@ import ComputerIcon from '@resources/assets/ComputerIcon.svg'
 import ReactIcon from '@resources/assets/ReactIcon.svg'
 import ToolsIcon from '@resources/assets/ToolsIcon.svg'
 import DatabaseIcon from '@resources/assets/DatabaseIcon.svg'
-import StrapiIcon from '@resources/assets/StrapiIcon.svg'
 import ArrowLeftIcon from '@resources/assets/ArrowLeftIcon.svg'
 import ArrowRightIcon from '@resources/assets/ArrowRightIcon.svg'
 import StarIcon from '@resources/assets/StarIcon.svg'
@@ -26,7 +25,6 @@ export {
     ReactIcon,
     ToolsIcon,
     DatabaseIcon,
-    StrapiIcon,
     ArrowLeftIcon,
     ArrowRightIcon,
     StarIcon

@@ -9,10 +9,10 @@ const AboutSection: FC<ScreenProps> = ({
 }): ReactElement => {
     return (
         <div
-            className={'screen pt-40'}
+            className={'screen pt-40px'}
             id={id}
         >
-            <div className={'d-flex h-200 align-end'}>
+            <div className={'d-flex h-200px align-end'}>
                 <Icon
                     src={ComputerIcon}
                     size={'undefined'}

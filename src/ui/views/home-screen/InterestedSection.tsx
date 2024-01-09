@@ -8,7 +8,7 @@ const InterestedSection = (): ReactElement => {
     const navigate = useNavigate()
 
     return (
-        <div className={'pt-40 d-flex flex-column align-center pb-40'}>
+        <div className={'pt-40px d-flex flex-column align-center pb-40'}>
             <Text
                 className={'pb-40'}
             >
