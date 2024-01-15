@@ -1,59 +1,81 @@
 import React, { type FC, type Key, type ReactElement } from 'react'
 import Text from '@components/common/Text'
 import { type SkillCardProps } from '@interfaces/components/cards/SkillCardProps'
-import { DatabaseIcon, ReactIcon, ToolsIcon } from '@assets/Images'
+import { BackEnd, FrontEnd, Tools } from '@assets/Images'
 import Icon from '@components/common/Icon'
+import Tag from '@components/common/projects/Tag'
+import { useTheme } from '@utils/UseTheme'
+import { Theme } from '@constants/Constants'
 
 const SkillCard: FC<SkillCardProps> = ({
     content
 }): ReactElement => {
+    const { theme } = useTheme()
+    const isDarkTheme = theme === Theme.dark
+
     const getIcon = (iconName: string): string => {
         switch (iconName) {
             case 'ReactIcon':
-                return ReactIcon
+                return FrontEnd
             case 'ToolsIcon':
-                return ToolsIcon
+                return Tools
             case 'DatabaseIcon':
-                return DatabaseIcon
+                return BackEnd
             default:
-                return ToolsIcon
+                return FrontEnd
         }
     }
 
     return (
         <div
-            className={'p-20 d-flex flex-1 flex-column align-center pt-40px'}
+            className={'mw-1512 w-400px h-400px aspect-1 bg-surface border-radius-35px shadow flex-column'}
         >
-            <Icon
-                src={getIcon(content?.icon)}
-                color={'text'}
-                className={'mb-20'}
-            />
-            <Text
-                className={'mb-20'}
-            >
-                {content?.title}
-            </Text>
-            <Text
-                textAlign={'center'}
-                className={'mb-20'}
-            >
-                {content.introductionSentence}
-            </Text>
-            <Text
-                className={'mb-20'}
-                color={'primary'}
-            >
-                {content?.section?.title ?? ''}
-            </Text>
-            {content?.section?.sectionItems?.map((item: any, index: Key) => (
+            <div className={'p-40px d-flex flex-1 flex-column align-start space-between'}>
+                <Icon
+                    src={getIcon(content?.icon)}
+                    color={'text'}
+                    className={'mb-20'}
+                    size={'40px'}
+                />
                 <Text
-                    key={index}
-                    className={'mb-10'}
+                    className={'mb-20'}
+                    color={isDarkTheme ? 'secondary' : 'primary'}
+                    size={'24px'}
+                    fontWeight={'700'}
+                    font={'poppins'}
                 >
-                    {item}
+                    {content?.title}
                 </Text>
-            ))}
+                <Text
+                    textAlign={'start'}
+                    className={'mb-20'}
+                    size={'16px'}
+                    fontWeight={'400'}
+                    font={'poppins'}
+                    color={isDarkTheme ? 'background' : 'text'}
+                >
+                    {content.introductionSentence}
+                </Text>
+                <div>
+                    <Text
+                        className={'mb-20'}
+                        color={isDarkTheme ? 'secondary' : 'primary'}
+                        font={'poppins'}
+                    >
+                        {content?.section?.title ?? ''}
+                    </Text>
+                    <div className={'d-flex gap-10 wrap'}>
+                        {content?.section?.sectionItems?.map((item: any, index: Key) => (
+                            <Tag
+                                key={index}
+                                label={item}
+                                size={'16px'}
+                            />
+                        ))}
+                    </div>
+                </div>
+
+            </div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { type Key, type ReactElement, useEffect, useState } from 'react'
 import SkillCard from '@components/cards/SkillCard'
 import SkillsFixtures from '@constants/fixtures/SkillsFixtures.json'
+import Text from '@components/common/Text'
 
 const SkillsSection = (): ReactElement => {
     const [skillCardsContent, setSkillCardContent] = useState<any>([])
@@ -9,18 +10,29 @@ const SkillsSection = (): ReactElement => {
         setSkillCardContent(SkillsFixtures)
     }, [])
     return (
-        <div
-            className={'screen pt-80 mb-60'}
-        >
+        <div className={'screen w-100'}>
             <div
-                className={'d-flex w-75 justify-between shadow border-radius-small'}
+                className={'mw-1512 p-100px d-flex flex-column align-start justify-between'}
             >
-                {skillCardsContent.map((content: any, index: Key) => (
-                    <SkillCard
-                        key={index}
-                        content={content.content}
-                    />
-                ))}
+                <Text
+                    fontWeight={'700'}
+                    size={'40px'}
+                    color={'primary'}
+                    textAlign={'start'}
+                    className={'mb-40'}
+                >
+                    Mes projets
+                </Text>
+                <div
+                    className={'d-flex flex-row w-100 flex-1 justify-center gap-30 wrap border-radius-small'}
+                >
+                    {skillCardsContent.map((content: any, index: Key) => (
+                        <SkillCard
+                            key={index}
+                            content={content.content}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     )

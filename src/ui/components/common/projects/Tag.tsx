@@ -1,11 +1,12 @@
 import React, { type FC, type ReactElement } from 'react'
-import { type ProjectLanguageTagProps } from '@interfaces/components/common/projects/ProjectLanguageTagProps'
+import { type TagProps } from '@interfaces/components/common/projects/TagProps'
 import Text from '@components/common/Text'
 import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
 
-const ProjectLanguageTag: FC<ProjectLanguageTagProps> = ({
-    label
+const Tag: FC<TagProps> = ({
+    label,
+    size = '12px'
 }): ReactElement => {
     const { theme } = useTheme()
     return (
@@ -13,7 +14,7 @@ const ProjectLanguageTag: FC<ProjectLanguageTagProps> = ({
             <Text
                 color={theme === Theme.light ? 'background' : 'text'}
                 font={'poppins'}
-                size={'12px'}
+                size={size}
             >
                 {label}
             </Text>
@@ -21,4 +22,4 @@ const ProjectLanguageTag: FC<ProjectLanguageTagProps> = ({
     )
 }
 
-export default ProjectLanguageTag
+export default Tag

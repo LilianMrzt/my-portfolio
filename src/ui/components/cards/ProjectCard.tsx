@@ -1,7 +1,7 @@
 import React, { type FC, type ReactElement, useState } from 'react'
 import { type ProjectCardProps } from '@interfaces/components/cards/ProjectCardProps'
 import Text from '@components/common/Text'
-import ProjectLanguageTag from '@components/common/projects/ProjectLanguageTag'
+import Tag from '@components/common/projects/Tag'
 import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
 
@@ -25,7 +25,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
                 </Text>
                 <div className={'d-flex gap-10'}>
                     {project.technos.map((techno: any, index: number) => (
-                        <ProjectLanguageTag key={index} label={techno}/>
+                        <Tag key={index} label={techno}/>
                     ))}
                 </div>
             </div>

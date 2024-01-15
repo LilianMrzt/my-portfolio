@@ -18,8 +18,8 @@ const AboutMeSection = (): ReactElement => {
 
     return (
         <div className={'bg-tertiary w-100 d-flex flex-column border-radius-top-left-50px border-radius-top-right-50px align-center'}>
-            <div className={'d-flex mw-1512 p-80px gap-80'}>
-                <div className={'d-flex flex-1 flex-column gap-30 align-start justify-center'}>
+            <div className={'d-flex mw-1512 p-80px align-center'}>
+                <div className={'d-flex flex-1 flex-column p-100px gap-30 align-start justify-center'}>
                     <Text
                         color={isDarkTheme ? 'primary' : 'background'}
                         size={'40px'}
