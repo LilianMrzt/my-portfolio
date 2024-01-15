@@ -12,6 +12,14 @@
     border-radius: 35px;
 }
 
+.border-radius-top-left-50px {
+    border-top-left-radius: 50px;
+}
+
+.border-radius-top-right-50px {
+    border-top-right-radius: 50px;
+}
+
 .border-round {
     border-radius: 50%;
 }

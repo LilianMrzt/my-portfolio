@@ -47,6 +47,11 @@
     transition: 0.3s;
 }
 
+.bg-tertiary {
+    background-color: var(--tertiary);
+    transition: 0.3s;
+}
+
 .bg-surface {
     background-color: var(--surface);
     transition: 0.3s;

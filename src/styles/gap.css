@@ -1,7 +1,11 @@
+.gap-10 {
+    gap: 10px;
+}
+
 .gap-30 {
     gap: 30px;
 }
 
-.gap-10 {
-    gap: 10px;
+.gap-80 {
+    gap: 80px;
 }

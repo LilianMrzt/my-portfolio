@@ -44,10 +44,14 @@
     width: 400px;
 }
 
+.w-600px {
+    width: 600px;
+}
+
 .w-700px {
     width: 700px;
 }
 
-.mw-1920 {
-    max-width: 1920px;
+.mw-1512 {
+    max-width: 1512px;
 }

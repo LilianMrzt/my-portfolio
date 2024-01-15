@@ -9,7 +9,7 @@ import Button from '@components/common/Button'
 const IntroductionSection = (): ReactElement => {
     return (
         <div
-            className={'banner-screen w-100'}
+            className={'mw-1512 banner-screen w-100'}
         >
             <div
                 className={'index-1 w-100 relative align-center justify-start d-flex flex-column p-100px'}
@@ -18,15 +18,6 @@ const IntroductionSection = (): ReactElement => {
                 <IntroductionScreenIconsBloc/>
                 <Button
                     icon={ArrowDown}
-                    color={'primary'}
-                    backgroundColor={'background'}
-                    className={'mt-30'}
-                    onClick={() => { handleClickScroll(sectionIds.ProjectSectionId) }}
-                    padding={20}
-                    animationFromCenter
-                />
-                <Button
-                    label={'ArrowDown'}
                     color={'primary'}
                     backgroundColor={'background'}
                     className={'mt-30'}

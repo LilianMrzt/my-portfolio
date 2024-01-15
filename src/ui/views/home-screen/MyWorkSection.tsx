@@ -17,7 +17,7 @@ const MyWorkSection: FC<ScreenProps> = ({
 
     return (
         <div
-            className={'w-100'}
+            className={'w-100 mw-1512 '}
             id={id}
         >
             <div className={'pt-40px d-flex flex-column align-start p-100px'}>
