@@ -1,6 +1,5 @@
 import React, { type FC, type ReactElement, useState } from 'react'
 import { type NavigationBarProps } from '@interfaces/components/navigation/NavigationBarProps'
-import IconButton from '@components/common/IconButton'
 import { MoonLogo, SunLogo } from '@assets/Images'
 import { Theme } from '@constants/Constants'
 import Button from '@components/common/Button'
@@ -32,7 +31,8 @@ const NavigationBar: FC<NavigationBarProps> = ({
                 }}
                 border={'none'}
                 color={'text'}
-                hoverColor={'text'}
+                backgroundColor={'background'}
+                effect={'none'}
             />
             <div
                 className='d-flex flex-row align-center'
@@ -48,12 +48,11 @@ const NavigationBar: FC<NavigationBarProps> = ({
                         />
                     </>
                 )}
-                <IconButton
+                <Button
                     backgroundColor={'background'}
                     color={'primary'}
                     icon={isIconSun ? SunLogo : MoonLogo}
                     onClick={handleThemeChange}
-                    hoverEffect={false}
                 />
             </div>
         </div>

@@ -57,6 +57,11 @@
     transition: 0.3s;
 }
 
+.bg-shadow {
+    background-color: var(--shadow);
+    transition: 0.3s;
+}
+
 /* hover */
 
 .hover-primary:hover {

@@ -1,25 +1,29 @@
 import React, { type ReactElement } from 'react'
-import IconButton from '@components/common/IconButton'
 import { Github, LinkedIn } from '@assets/Images'
 import { ExternalLinks } from '@constants/Constants'
+import Button from '@components/common/Button'
 
 const IntroductionScreenIconsBloc = (): ReactElement => {
     return (
-        <div className={'d-flex mt-30 w-100'}>
-            <IconButton
+        <div className={'d-flex mt-30 w-100 align-start'}>
+            <Button
                 icon={Github}
                 color={'primary'}
                 backgroundColor={'background'}
-                border
                 className={'mr-15'}
                 link={ExternalLinks.gitHub}
+                effect={'hover'}
+                hoverColor={'background'}
+                border={'primary'}
             />
-            <IconButton
+            <Button
                 icon={LinkedIn}
                 color={'primary'}
                 backgroundColor={'background'}
-                border
                 link={ExternalLinks.linkedIn}
+                effect={'hover'}
+                hoverColor={'background'}
+                border={'primary'}
             />
         </div>
     )

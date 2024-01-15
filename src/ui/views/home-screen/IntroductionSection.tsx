@@ -2,9 +2,9 @@ import React, { type ReactElement } from 'react'
 import { ArrowDown } from '@assets/Images'
 import IntroductionScreenIntroductionTextBloc from '@blocs/introductionScreen/IntroductionScreenIntroductionTextBloc'
 import IntroductionScreenIconsBloc from '@blocs/introductionScreen/IntroductionScreenIconsBloc'
-import IconButton from '@components/common/IconButton'
 import { sectionIds } from '@constants/ScreensConstants'
 import { handleClickScroll } from '@utils/ButtonUtils'
+import Button from '@components/common/Button'
 
 const IntroductionSection = (): ReactElement => {
     return (
@@ -16,13 +16,23 @@ const IntroductionSection = (): ReactElement => {
             >
                 <IntroductionScreenIntroductionTextBloc/>
                 <IntroductionScreenIconsBloc/>
-                <IconButton
+                <Button
                     icon={ArrowDown}
                     color={'primary'}
                     backgroundColor={'background'}
-                    padding={10}
                     className={'mt-30'}
                     onClick={() => { handleClickScroll(sectionIds.ProjectSectionId) }}
+                    padding={20}
+                    animationFromCenter
+                />
+                <Button
+                    label={'ArrowDown'}
+                    color={'primary'}
+                    backgroundColor={'background'}
+                    className={'mt-30'}
+                    onClick={() => { handleClickScroll(sectionIds.ProjectSectionId) }}
+                    padding={20}
+                    animationFromCenter
                 />
             </div>
         </div>

@@ -32,22 +32,29 @@ code {
 }
 
 :root {
-  --background: #EBF1FF;
-  --primary: #3342F2;
-  --secondary: #6C82FB;
-  --tertiary: #000033;
-  --text: #232323;
-  --surface: #ffffff;
-  --shadow: #0000004D;
 
 }
 
 [data-theme='dark'] {
   --background: #0D1015;
+  --backgroundDarken: #0D1015DD;
   --primary: #A8BDFD;
   --secondary: #3342F2;
   --tertiary: #06090D;
   --text: #EBF1FF;
+  --ripple: #EBF1FF1A;
   --surface: #ffffff;
   --shadow: #ffffff4D;
+}
+
+[data-theme='light'] {
+  --background: #EBF1FF;
+  --backgroundDarken: #EBF1FF1A;
+  --primary: #3342F2;
+  --secondary: #6C82FB;
+  --tertiary: #000033;
+  --text: #232323;
+  --ripple: #2323231A;
+  --surface: #ffffff;
+  --shadow: #0000004D;
 }
