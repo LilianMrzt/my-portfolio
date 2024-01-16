@@ -10,16 +10,17 @@ const InterestedSection = (): ReactElement => {
     return (
         <div className={'pt-40px d-flex flex-column align-center pb-40'}>
             <Text
-                className={'pb-40'}
+                fontWeight={'700'}
+                size={'60px'}
+                color={'primary'}
             >
-                Mon profil vous a convaincu? Vous souhaitez me poser plus de questions?
+                COLLABORONS ENSEMBLE!
             </Text>
             <Button
                 label={'Me contacter'}
                 onClick={() => {
                     navigate(RoutesConstants.CONTACT_SCREEN_ROUTE)
                 }}
-                className={'mr-10'}
             />
         </div>
     )
