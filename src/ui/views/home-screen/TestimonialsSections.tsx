@@ -21,7 +21,7 @@ const TestimonialsSections = (): ReactElement => {
                         textAlign={'start'}
                         className={'mb-10'}
                     >
-                        Témoignages
+                        TÉMOIGNAGES
                     </Text>
                     <Text
                         size={'16px'}

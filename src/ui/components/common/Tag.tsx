@@ -10,7 +10,7 @@ const Tag: FC<TagProps> = ({
 }): ReactElement => {
     const { theme } = useTheme()
     return (
-        <div className={'bg-secondary pt-2px pb-2px pl-5px pr-5px border-radius-small'}>
+        <div className={'bg-secondary pt-2px pb-2px pl-5px pr-5px border-radius-5px'}>
             <Text
                 color={theme === Theme.light ? 'background' : 'text'}
                 font={'poppins'}

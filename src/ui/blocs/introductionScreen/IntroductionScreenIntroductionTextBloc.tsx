@@ -2,8 +2,12 @@ import React, { type ReactElement } from 'react'
 import Text from '@components/common/Text'
 import Icon from '@components/common/Icon'
 import { StarIcon } from '@assets/Images'
+import { useTheme } from '@utils/UseTheme'
+import { Theme } from '@constants/Constants'
 
 const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
+    const { theme } = useTheme()
+    const isDarkMode = theme === Theme.dark
     return (
         <div className={'w-100'}>
             <Text
@@ -25,7 +29,7 @@ const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
                     src={StarIcon}
                     size={'40px'}
                     className={'ml-20'}
-                    color={'primary'}
+                    color={isDarkMode ? 'secondary' : 'primary'}
                 />
             </div>
             <Text

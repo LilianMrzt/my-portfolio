@@ -17,7 +17,7 @@ const Button: FC<ButtonProps> = ({
     onClick = () => {},
     rounded = true,
     link,
-    animationFromCenter = false,
+    animationFromCenter = true,
     effect = 'darken',
     icon,
     padding

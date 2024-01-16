@@ -3,7 +3,7 @@ import IntroductionSection from '@views/home-screen/IntroductionSection'
 import { sectionIds } from '@constants/ScreensConstants'
 import SkillsSection from '@views/home-screen/SkillsSection'
 import Footer from '@components/navigation/Footer'
-import MyWorkSection from '@views/home-screen/MyWorkSection'
+import ProjectsSection from '@views/home-screen/ProjectsSection'
 import TestimonialsSections from '@views/home-screen/TestimonialsSections'
 import InterestedSection from '@views/home-screen/InterestedSection'
 import AboutMeSection from '@views/home-screen/AboutMeSection'
@@ -13,7 +13,7 @@ const HomeScreen = (): ReactElement => {
         <div className={'d-flex flex-column full-screen-width align-center'}>
             <div className={'d-flex flex-column align-center bg-background'}>
                 <IntroductionSection/>
-                <MyWorkSection id={sectionIds.ProjectSectionId}/>
+                <ProjectsSection id={sectionIds.ProjectSectionId}/>
                 <AboutMeSection />
                 <SkillsSection/>
                 <TestimonialsSections/>

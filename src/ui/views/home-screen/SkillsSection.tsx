@@ -21,7 +21,7 @@ const SkillsSection = (): ReactElement => {
                     textAlign={'start'}
                     className={'mb-40'}
                 >
-                    Mes projets
+                    MES COMPÉTENCES
                 </Text>
                 <div
                     className={'d-flex flex-row w-100 flex-1 justify-center gap-30 wrap border-radius-small'}

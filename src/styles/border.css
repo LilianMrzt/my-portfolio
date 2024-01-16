@@ -4,6 +4,10 @@
     border: none;
 }
 
+.border-radius-5px {
+    border-radius: 5px;
+}
+
 .border-radius-small {
     border-radius: 10px;
 }

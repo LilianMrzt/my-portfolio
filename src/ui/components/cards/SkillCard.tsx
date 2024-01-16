@@ -3,7 +3,7 @@ import Text from '@components/common/Text'
 import { type SkillCardProps } from '@interfaces/components/cards/SkillCardProps'
 import { BackEnd, FrontEnd, Tools } from '@assets/Images'
 import Icon from '@components/common/Icon'
-import Tag from '@components/common/projects/Tag'
+import Tag from '@components/common/Tag'
 import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
 

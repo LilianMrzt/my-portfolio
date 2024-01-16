@@ -6,7 +6,7 @@ import Button from '@components/common/Button'
 import { ExternalLinks } from '@constants/Constants'
 import { type ScreenProps } from '@interfaces/screens/ScreenProps'
 
-const MyWorkSection: FC<ScreenProps> = ({
+const ProjectsSection: FC<ScreenProps> = ({
     id
 }): ReactElement => {
     const [projects, setProjects] = useState<any>([])
@@ -27,7 +27,7 @@ const MyWorkSection: FC<ScreenProps> = ({
                     size={'40px'}
                     color={'primary'}
                 >
-                    Mes projets
+                    MES PROJETS
                 </Text>
                 <Text
                     font={'poppins'}
@@ -57,4 +57,4 @@ const MyWorkSection: FC<ScreenProps> = ({
     )
 }
 
-export default MyWorkSection
+export default ProjectsSection

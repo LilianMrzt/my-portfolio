@@ -1,7 +1,7 @@
 import React, { type FC, type ReactElement, useState } from 'react'
 import { type ProjectCardProps } from '@interfaces/components/cards/ProjectCardProps'
 import Text from '@components/common/Text'
-import Tag from '@components/common/projects/Tag'
+import Tag from '@components/common/Tag'
 import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
 

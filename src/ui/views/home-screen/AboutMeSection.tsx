@@ -39,6 +39,8 @@ const AboutMeSection = (): ReactElement => {
                         label={'En savoir plus'}
                         color={isDarkTheme ? 'secondary' : 'primary'}
                         backgroundColor={'surface'}
+                        onClick={() => {}}
+                        animationFromCenter
                     />
                 </div>
                 <Picture/>
