@@ -1,51 +1,46 @@
 import React, { type ReactElement } from 'react'
-import IconButton from '@components/common/IconButton'
 import { Github, LinkedIn, ReactIcon } from '@assets/Images'
 import Text from '@components/common/Text'
 import Icon from '@components/common/Icon'
 import { ExternalLinks } from '@constants/Constants'
+import Button from '@components/common/Button'
 
 const Footer = (): ReactElement => {
     return (
         <footer
-            className={'h-200px bg-primary p-20 d-flex flex-column gap-30 justify-center align-center'}
+            className={'h-80px w-100 bg-background pb-40 d-flex flex-row gap-30 justify-between align-center'}
         >
-            <div
-                className={'d-flex w-100 justify-center'}
-            >
-                <IconButton
-                    icon={Github}
-                    color={'surface'}
-                    backgroundColor={'primary'}
-                    border
-                    className={'mr-15'}
-                    link={ExternalLinks.gitHub}
-                />
-                <IconButton
-                    icon={LinkedIn}
-                    color={'surface'}
-                    backgroundColor={'primary'}
-                    border
-                    link={ExternalLinks.linkedIn}
-                />
-            </div>
-            <Text
-                color={'surface'}
-            >
-                Réalisé par Lilian Marzet
-            </Text>
-            <div
-                className={'d-flex align-center'}
-            >
+            <div className={'d-flex gap-10 pl-40px'}>
                 <Text
-                    color={'surface'}
+                    color={'primary'}
+                    font={'poppins'}
+                    fontWeight={'400'}
                 >
                     Site réalisé avec ReactJS
                 </Text>
                 <Icon
                     src={ReactIcon}
-                    color={'surface'}
-                    className={'ml-10'}
+                    color={'primary'}
+                />
+            </div>
+            <div
+                className={'d-flex gap-10 pr-40px'}
+            >
+                <Button
+                    icon={Github}
+                    color={'primary'}
+                    backgroundColor={'background'}
+                    border={'primary'}
+                    link={ExternalLinks.gitHub}
+                    effect={'hover'}
+                />
+                <Button
+                    icon={LinkedIn}
+                    color={'primary'}
+                    backgroundColor={'background'}
+                    border={'primary'}
+                    link={ExternalLinks.linkedIn}
+                    effect={'hover'}
                 />
             </div>
         </footer>
