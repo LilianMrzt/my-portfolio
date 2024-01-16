@@ -24,8 +24,16 @@
     width: 24px;
 }
 
+.w-30px {
+    width: 30px;
+}
+
 .w-40px {
     width: 40px;
+}
+
+.w-60px {
+    width: 60px;
 }
 
 .full-screen-width {

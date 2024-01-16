@@ -1,9 +1,8 @@
 import React, { type FC, type ReactElement, useState } from 'react'
 import { type CarouselProps } from '@interfaces/components/common/CarouselProps'
 import CarouselItem from '@components/common/carousel/CarouselItem'
-import IconButton from '@components/common/IconButton'
-import { ArrowLeftIcon, ArrowRightIcon } from '@assets/Images'
-import CarouselDotIndicator from '@components/common/carousel/CarouselDotIndicator'
+import CarouselIndicator from '@components/common/carousel/CarouselIndicator'
+import CarouselArrows from '@components/common/carousel/CarouselArrows'
 
 const Carousel: FC<CarouselProps> = ({
     data
@@ -21,18 +20,9 @@ const Carousel: FC<CarouselProps> = ({
 
     return (
         <div
-            className={'d-flex gap-30'}
+            className={'d-flex flex-column gap-30'}
         >
-            <IconButton
-                icon={ArrowLeftIcon}
-                color={'primary'}
-                hoverEffect={false}
-                backgroundColor={'background'}
-                onClick={() => { updateIndex(activeIndex - 1) }}
-                size={'16px'}
-            />
-            <div className={'d-flex overflow-hidden flex-column w-700px justify-center'}>
-
+            <div className={'d-flex shadow overflow-hidden flex-column w-700px border-radius-35px bg-surface justify-center'}>
                 <div
                     className={'transform-6 nowrap w-700px'}
                     style={{ transform: `translate(-${activeIndex * 100}%)` }}
@@ -41,9 +31,15 @@ const Carousel: FC<CarouselProps> = ({
                         <CarouselItem key={index} slide={item}/>
                     ))}
                 </div>
+            </div>
+            <div className={'d-flex flex-row align-center space-between'}>
+                <CarouselArrows
+                    activeIndex={activeIndex}
+                    updateIndex={updateIndex}
+                />
                 <div className={'d-flex gap-10 justify-center'}>
                     {data?.map((_: any, index: number) => (
-                        <CarouselDotIndicator
+                        <CarouselIndicator
                             key={index}
                             isActive={index === activeIndex}
                             setActive={() => { updateIndex(index) }}
@@ -51,14 +47,7 @@ const Carousel: FC<CarouselProps> = ({
                     ))}
                 </div>
             </div>
-            <IconButton
-                icon={ArrowRightIcon}
-                color={'primary'}
-                hoverEffect={false}
-                backgroundColor={'background'}
-                onClick={() => { updateIndex(activeIndex + 1) }}
-                size={'16px'}
-            />
+
         </div>
     )
 }

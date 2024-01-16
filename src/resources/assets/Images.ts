@@ -10,6 +10,7 @@ import StarIcon from '@resources/assets/StarIcon.svg'
 import Tools from '@resources/assets/Tools.svg'
 import FrontEnd from '@resources/assets/FrontEnd.svg'
 import BackEnd from '@resources/assets/BackEnd.svg'
+import Quote from '@resources/assets/Quote.svg'
 
 export default {
     Lilian: require('./Lilian.png')
@@ -27,5 +28,6 @@ export {
     StarIcon,
     Tools,
     FrontEnd,
-    BackEnd
+    BackEnd,
+    Quote
 }

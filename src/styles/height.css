@@ -1,5 +1,9 @@
 /* height */
 
+.h-6px {
+    height: 6px;
+}
+
 .h-80px {
     height: 80px;
 }
