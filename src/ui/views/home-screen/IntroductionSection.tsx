@@ -5,6 +5,7 @@ import IntroductionScreenIconsBloc from '@blocs/introductionScreen/IntroductionS
 import { sectionIds } from '@constants/ScreensConstants'
 import { handleClickScroll } from '@utils/ButtonUtils'
 import Button from '@components/common/Button'
+import BlocThomas from '@ui/Thomas/Blocs/BlocThomas'
 
 const IntroductionSection = (): ReactElement => {
     return (
@@ -25,6 +26,7 @@ const IntroductionSection = (): ReactElement => {
                     padding={20}
                     animationFromCenter
                 />
+                <BlocThomas/>
             </div>
         </div>
     )
