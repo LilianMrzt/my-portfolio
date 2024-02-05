@@ -1,20 +1,15 @@
-import React, { type ReactElement, useEffect, useState } from 'react'
+import React, { type ReactElement } from 'react'
 import Text from '@components/common/Text'
-import AboutMeFixtures from '@constants/fixtures/AboutMeFixtures.json'
 import Picture from '@components/cards/Picture'
 import Button from '@components/common/Button'
 import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
+import { useData } from '@utils/UseData'
 
 const AboutMeSection = (): ReactElement => {
-    const [aboutMe, setAboutMe] = useState('')
-
     const { theme } = useTheme()
     const isDarkTheme = theme === Theme.dark
-
-    useEffect(() => {
-        setAboutMe(AboutMeFixtures.content)
-    }, [])
+    const { data } = useData()
 
     return (
         <div className={'bg-tertiary w-100 d-flex flex-column border-radius-top-left-50px border-radius-top-right-50px align-center'}>
@@ -32,7 +27,7 @@ const AboutMeSection = (): ReactElement => {
                             color={'surface'}
                             font={'poppins'}
                         >
-                            {aboutMe}
+                            {data?.aboutMe}
                         </Text>
                     </div>
                     <Button
