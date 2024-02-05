@@ -1,9 +1,10 @@
 import React, { createContext, type FC, useContext, useState } from 'react'
+import { type HomePageInterface } from '@interfaces/api/HomePageInterface'
 
 const DataContext = createContext({})
 
 const DataProvider: FC<any> = ({ children }): any => {
-    const [data, setData] = useState({})
+    const [data, setData] = useState<HomePageInterface>()
 
     return (
         <DataContext.Provider value={{ data, setData }}>
