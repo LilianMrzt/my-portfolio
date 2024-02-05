@@ -4,6 +4,7 @@ import './index.css'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from '@utils/UseTheme'
+import DataProvider from '@utils/UseData'
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -12,9 +13,11 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <ThemeProvider>
-            <BrowserRouter>
-                <App />
-            </BrowserRouter>
+            <DataProvider>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </DataProvider>
         </ThemeProvider>
     </React.StrictMode>
 )

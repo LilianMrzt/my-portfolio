@@ -4,10 +4,13 @@ import Icon from '@components/common/Icon'
 import { StarIcon } from '@assets/Images'
 import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
+import { useData } from '@utils/UseData'
 
 const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
     const { theme } = useTheme()
     const isDarkMode = theme === Theme.dark
+    const { data } = useData()
+
     return (
         <div className={'w-100'}>
             <Text
@@ -45,7 +48,7 @@ const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
                 font={'poppins'}
                 className={'w-65 mt-30'}
             >
-                Je suis un jeune développeur enthousiaste et passioné par le monde du développement, avec une expertise de moins d’un an dans l’industrie.
+                {data?.introduction}
             </Text>
         </div>
     )

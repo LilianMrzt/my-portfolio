@@ -5,7 +5,7 @@ import { type TextAlignType } from '@interfaces/types/TextAlignType'
 import { type FontTypes } from '@interfaces/types/FontTypes'
 
 export interface TextProps {
-    children: string
+    children?: string
     color?: ColorsType
     size?: SizesType
     className?: string

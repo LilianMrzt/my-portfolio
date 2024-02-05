@@ -11,7 +11,7 @@ const Text: FC<TextProps> = ({
     font = 'khand',
     letterSpacing
 }): ReactElement => {
-    const lines = children.split('\n')
+    const lines = children ? children.split('\n') : ['']
 
     return (
         <>
