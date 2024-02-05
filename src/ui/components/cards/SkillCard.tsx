@@ -54,7 +54,7 @@ const SkillCard: FC<SkillCardProps> = ({
                     font={'poppins'}
                     color={isDarkTheme ? 'background' : 'text'}
                 >
-                    {content.introductionSentence}
+                    {content?.introductionSentence ?? ''}
                 </Text>
                 <div>
                     <Text
@@ -62,10 +62,10 @@ const SkillCard: FC<SkillCardProps> = ({
                         color={isDarkTheme ? 'secondary' : 'primary'}
                         font={'poppins'}
                     >
-                        {content?.section?.title ?? ''}
+                        {content?.skillsIntroduction ?? ''}
                     </Text>
                     <div className={'d-flex gap-10 wrap'}>
-                        {content?.section?.sectionItems?.map((item: any, index: Key) => (
+                        {content?.skills?.map((item: any, index: Key) => (
                             <Tag
                                 key={index}
                                 label={item}

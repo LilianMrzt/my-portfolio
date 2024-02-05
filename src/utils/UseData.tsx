@@ -1,9 +1,9 @@
-import React, { createContext, type FC, useContext, useState } from 'react'
+import React, { createContext, type FC, type ReactElement, useContext, useState } from 'react'
 import { type HomePageInterface } from '@interfaces/api/HomePageInterface'
 
 const DataContext = createContext({})
 
-const DataProvider: FC<any> = ({ children }): any => {
+const DataProvider: FC<any> = ({ children }): ReactElement => {
     const [data, setData] = useState<HomePageInterface>()
 
     return (
