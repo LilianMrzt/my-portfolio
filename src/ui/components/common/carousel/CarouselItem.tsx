@@ -14,15 +14,15 @@ const CarouselItem: FC<CarouselItemProps> = ({
     const isDarkTheme = theme === Theme.dark
 
     return (
-        <div className="d-inline-flex w-700px wrap h-100">
-            <div className={'p-20 d-flex flex-column flex-1 align-start justify-between'}>
+        <div className="d-inline-flex w-700px wrap">
+            <div className={'p-20 d-flex flex-column flex-1 align-start justify-between h-300px'}>
                 <Icon
                     src={Quote}
                     size={'60px'}
                     color={isDarkTheme ? 'secondary' : 'primary'}
                 />
                 <Text
-                    className={'mt-30 mb-20'}
+                    className={'mb-20'}
                     textAlign={'justify'}
                     fontWeight={'400'}
                     font={'poppins'}
