@@ -28,7 +28,7 @@ const CarouselItem: FC<CarouselItemProps> = ({
                     font={'poppins'}
                     color={isDarkTheme ? 'background' : 'text'}
                 >
-                    {slide.testimony}
+                    {slide.testimonial}
                 </Text>
                 <div className={'d-flex align-center gap-10'}>
                     <Image
@@ -43,7 +43,7 @@ const CarouselItem: FC<CarouselItemProps> = ({
                             font={'poppins'}
                             color={isDarkTheme ? 'secondary' : 'primary'}
                         >
-                            {slide.name}
+                            {slide.person}
                         </Text>
                         <Text
                             fontWeight={'400'}

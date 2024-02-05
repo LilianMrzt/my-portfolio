@@ -1,14 +1,10 @@
-import React, { type ReactElement, useEffect, useState } from 'react'
+import React, { type ReactElement } from 'react'
 import Carousel from '@components/common/carousel/Carousel'
-import TestimonialsFixtures from '@constants/fixtures/TestimonialsFixtures.json'
 import Text from '@components/common/Text'
+import { useData } from '@utils/UseData'
 
 const TestimonialsSections = (): ReactElement => {
-    const [testimonials, setTestimonials] = useState<any>([])
-
-    useEffect(() => {
-        setTestimonials(TestimonialsFixtures)
-    }, [])
+    const { data } = useData()
 
     return (
         <div className={'w-100 mw-1512'}>
@@ -32,7 +28,7 @@ const TestimonialsSections = (): ReactElement => {
                         Qu&apos;ont pensé les personnes avec qui j&apos;ai travaillé?
                     </Text>
                 </div>
-                <Carousel data={testimonials}/>
+                <Carousel data={data?.testimonials}/>
             </div>
         </div>
     )
