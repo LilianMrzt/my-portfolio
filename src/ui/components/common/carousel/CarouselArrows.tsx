@@ -5,7 +5,8 @@ import { type CarouselArrowsProps } from '@interfaces/components/common/carousel
 
 const CarouselArrows: FC<CarouselArrowsProps> = ({
     updateIndex,
-    activeIndex
+    activeIndex,
+    dataLength
 }): ReactElement => {
     return (
         <div className={'d-flex gap-10'}>
@@ -14,7 +15,11 @@ const CarouselArrows: FC<CarouselArrowsProps> = ({
                 color={'primary'}
                 effect={'darken'}
                 backgroundColor={'background'}
-                onClick={() => { updateIndex(activeIndex - 1) }}
+                onClick={() => {
+                    if (dataLength > 1) {
+                        updateIndex(activeIndex - 1)
+                    }
+                }}
                 size={'16px'}
                 border={'primary'}
                 rounded={false}
@@ -24,7 +29,11 @@ const CarouselArrows: FC<CarouselArrowsProps> = ({
                 color={'primary'}
                 effect={'darken'}
                 backgroundColor={'background'}
-                onClick={() => { updateIndex(activeIndex + 1) }}
+                onClick={() => {
+                    if (dataLength > 1) {
+                        updateIndex(activeIndex + 1)
+                    }
+                }}
                 size={'16px'}
                 border={'primary'}
                 rounded={false}
