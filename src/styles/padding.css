@@ -60,6 +60,10 @@
     padding-right: 40px;
 }
 
+.pr-80px {
+    padding-right: 80px;
+}
+
 .pt-40px {
     padding-top: 40px;
 }
@@ -68,7 +72,7 @@
     padding-bottom: 40px;
 }
 
-.pt-80 {
+.pt-80px {
     padding-top: 80px;
 }
 
@@ -78,4 +82,8 @@
 
 .pb-2px {
     padding-bottom: 2px;
+}
+
+.pb-80px {
+    padding-bottom: 80px;
 }

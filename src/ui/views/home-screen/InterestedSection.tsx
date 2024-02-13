@@ -14,7 +14,7 @@ const InterestedSection = (): ReactElement => {
     const isDarkMode = theme === Theme.dark
 
     return (
-        <div className={'pt-80 d-flex flex-column align-center pb-40'}>
+        <div className={'pt-80px d-flex flex-column align-center pb-40'}>
             <Text
                 fontWeight={'700'}
                 size={'60px'}
