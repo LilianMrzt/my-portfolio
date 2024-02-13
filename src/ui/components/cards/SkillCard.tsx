@@ -32,7 +32,7 @@ const SkillCard: FC<SkillCardProps> = ({
         >
             <div className={'p-40px d-flex flex-1 flex-column align-start space-between'}>
                 <Icon
-                    src={getIcon(content?.icon)}
+                    src={getIcon(content?.cardIcon)}
                     color={'text'}
                     className={'mb-20'}
                     size={'40px'}
@@ -44,7 +44,7 @@ const SkillCard: FC<SkillCardProps> = ({
                     fontWeight={'700'}
                     font={'poppins'}
                 >
-                    {content?.title}
+                    {content?.cardTitle ?? ''}
                 </Text>
                 <Text
                     textAlign={'start'}

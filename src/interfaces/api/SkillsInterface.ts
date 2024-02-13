@@ -1,6 +1,6 @@
 export interface SkillsInterface {
-    title: string
-    icon: string
+    cardTitle: string
+    cardIcon: string
     introductionSentence: string
     skillsIntroduction: string
     skills: string[]
