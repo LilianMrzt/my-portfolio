@@ -1,6 +1,6 @@
 export const fetchData = async (): Promise<void> => {
     try {
-        const response = await fetch('http://localhost:3001/api/', {
+        const response = await fetch('http://localhost:8080/api/home', {
             method: 'GET'
         })
         return await response.json()

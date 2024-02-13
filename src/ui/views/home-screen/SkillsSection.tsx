@@ -25,7 +25,7 @@ const SkillsSection = (): ReactElement => {
                         <div
                             className={'d-flex flex-row w-100 flex-1 justify-center gap-30 wrap border-radius-small'}
                         >
-                            {data.skills.map((content: any, index: Key) => (
+                            {data.skillsInfos.map((content: any, index: Key) => (
                                 <SkillCard
                                     key={index}
                                     content={content}

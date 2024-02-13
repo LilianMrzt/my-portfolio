@@ -6,5 +6,5 @@ export interface HomePageInterface {
     introduction: string
     aboutMe: string
     testimonials: TestimonialInterface[]
-    skills: SkillsInterface[]
+    skillsInfos: SkillsInterface[]
 }
