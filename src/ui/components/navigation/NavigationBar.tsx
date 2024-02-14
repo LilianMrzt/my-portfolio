@@ -42,7 +42,7 @@ const NavigationBar: FC<NavigationBarProps> = ({
                         <Button
                             label={'Me contacter'}
                             onClick={() => {
-                                navigate(RoutesConstants.CONTACT_SCREEN_ROUTE)
+                                window.open('mailto:lilian.marzet@gmail.com')
                             }}
                             className={'mr-10'}
                         />
