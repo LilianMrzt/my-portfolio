@@ -5,6 +5,7 @@ import Button from '@components/common/Button'
 import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
 import { useData } from '@utils/UseData'
+import { downloadFile } from '@services/DownloadFile'
 
 const AboutMeSection = (): ReactElement => {
     const { theme } = useTheme()
@@ -31,10 +32,10 @@ const AboutMeSection = (): ReactElement => {
                         </Text>
                     </div>
                     <Button
-                        label={'En savoir plus'}
+                        label={'Télécharger mon CV'}
                         color={isDarkTheme ? 'secondary' : 'primary'}
                         backgroundColor={'surface'}
-                        onClick={() => {}}
+                        onClick={downloadFile}
                         animationFromCenter
                     />
                 </div>

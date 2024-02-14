@@ -10,7 +10,7 @@ export interface ButtonProps {
     backgroundColor?: ColorsType
     hoverColor?: ColorsType
     color?: ColorsType
-    onClick?: () => void
+    onClick?: () => any
     size?: SizesType
     border?: ColorsType
     rounded?: boolean
