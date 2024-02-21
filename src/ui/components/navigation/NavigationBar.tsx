@@ -3,7 +3,7 @@ import { type NavigationBarProps } from '@interfaces/components/navigation/Navig
 import { MoonLogo, SunLogo } from '@assets/Images'
 import { Theme } from '@constants/Constants'
 import Button from '@components/common/Button'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { RoutesConstants } from '@constants/RoutesConstants'
 
 const NavigationBar: FC<NavigationBarProps> = ({
@@ -18,7 +18,6 @@ const NavigationBar: FC<NavigationBarProps> = ({
     }
 
     const navigate = useNavigate()
-    const location = useLocation()
 
     return (
         <div
@@ -37,17 +36,13 @@ const NavigationBar: FC<NavigationBarProps> = ({
             <div
                 className='d-flex flex-row align-center'
             >
-                {location.pathname === RoutesConstants.HOME_SCREEN_ROUTE && (
-                    <>
-                        <Button
-                            label={'Me contacter'}
-                            onClick={() => {
-                                window.open('mailto:lilian.marzet@gmail.com')
-                            }}
-                            className={'mr-10'}
-                        />
-                    </>
-                )}
+                <Button
+                    label={'Me contacter'}
+                    onClick={() => {
+                        window.open('mailto:lilian.marzet@gmail.com')
+                    }}
+                    className={'mr-10'}
+                />
                 <Button
                     backgroundColor={'background'}
                     color={'primary'}
