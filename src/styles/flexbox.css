@@ -28,6 +28,10 @@
     justify-content: center;
 }
 
+.justify-start {
+    justify-content: start;
+}
+
 .justify-end {
     justify-content: end;
 }

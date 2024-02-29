@@ -35,7 +35,7 @@ const CarouselItem: FC<CarouselItemProps> = ({
                         source={slide.picture}
                         round
                         backgroundColor={'primary'}
-                        size={'60px'}
+                        width={'60px'}
                     />
                     <div>
                         <Text

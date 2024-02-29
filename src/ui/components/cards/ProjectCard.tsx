@@ -18,8 +18,8 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
             onMouseLeave={() => { setIsHovered(false) }}
         >
             <Link
-                to={`/projects/${createUrl(project.label)}`}
-                state={{ canBeAccessed: true }}
+                to={`/projects/${createUrl(project.name)}`}
+                state={{ canBeAccessed: true, project }}
                 className={'decoration-none'}
             >
                 <div className={'p-40px'}>
@@ -28,7 +28,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
                         size={'24px'}
                         color={theme === Theme.light ? 'text' : 'background'}
                     >
-                        {project.label}
+                        {project.name}
                     </Text>
                     <div className={'d-flex gap-10'}>
                         {project.technos.map((techno: any, index: number) => (
@@ -37,7 +37,11 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
                     </div>
                 </div>
                 <div className={'pl-40px pr-40px'}>
-                    <img src={project?.image} alt={project.label} className="vertical-align-top border-radius-35px shadow align-self-center h-200px object-cover w-100" />
+                    <img
+                        src={project?.image}
+                        alt={project.name}
+                        className="vertical-align-top border-radius-35px shadow align-self-center h-200px object-cover w-100"
+                    />
                 </div>
             </Link>
         </div>
