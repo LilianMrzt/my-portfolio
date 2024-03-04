@@ -92,3 +92,7 @@
 .wrap {
     white-space: pre-wrap;
 }
+
+.line-h-1 {
+    line-height: 1.1;
+}

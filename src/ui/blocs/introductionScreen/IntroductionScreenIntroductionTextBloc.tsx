@@ -5,17 +5,20 @@ import { StarIcon } from '@assets/Images'
 import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
 import { useData } from '@utils/UseData'
+import { useScreenSize } from '@utils/UseScreenSize'
 
 const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
     const { theme } = useTheme()
     const isDarkMode = theme === Theme.dark
     const { data } = useData()
+    const { screenWidth } = useScreenSize()
 
     return (
         <div className={'w-100'}>
             <Text
                 size={'24px'}
                 font={'poppins'}
+                className={screenWidth > 850 ? 'mb-40' : 'mb-10'}
             >
               Bonjour, je suis
             </Text>
@@ -23,8 +26,9 @@ const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
                 <Text
                     fontWeight={'700'}
                     color={'text'}
-                    size={'120px'}
+                    size={screenWidth > 850 ? '120px' : '60px'}
                     letterSpacing={'2px'}
+                    lineHeight={1}
                 >
                   Lilian Marzet
                 </Text>
@@ -46,7 +50,7 @@ const IntroductionScreenIntroductionTextBloc = (): ReactElement => {
             <Text
                 size={'24px'}
                 font={'poppins'}
-                className={'w-65 mt-30'}
+                className={`${screenWidth > 850 && 'w-65'} mt-30`}
             >
                 {data?.introduction}
             </Text>

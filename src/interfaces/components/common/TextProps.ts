@@ -13,4 +13,5 @@ export interface TextProps {
     textAlign?: TextAlignType
     font?: FontTypes
     letterSpacing?: 'undefined' | '2px'
+    lineHeight?: number
 }

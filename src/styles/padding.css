@@ -48,6 +48,12 @@
     padding: 100px;
 }
 
+@media (max-width: 850px) {
+    .p-100px {
+        padding: 20px;
+    }
+}
+
 .pr-10 {
     padding-right: 10px;
 }
