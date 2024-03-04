@@ -6,15 +6,17 @@ import Icon from '@components/common/Icon'
 import { Quote } from '@assets/Images'
 import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
+import { useScreenSize } from '@utils/UseScreenSize'
 
 const CarouselItem: FC<CarouselItemProps> = ({
     slide
 }): ReactElement => {
     const { theme } = useTheme()
     const isDarkTheme = theme === Theme.dark
+    const { screenWidth } = useScreenSize()
 
     return (
-        <div className="d-inline-flex w-700px wrap">
+        <div className={`d-inline-flex ${screenWidth > 850 ? screenWidth > 1149 ? 'w-700px' : 'w-600px' : 'w-350px'} wrap`}>
             <div className={'p-20 d-flex flex-column flex-1 align-start justify-between h-300px'}>
                 <Icon
                     src={Quote}

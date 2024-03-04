@@ -44,9 +44,9 @@ const Carousel: FC<CarouselProps> = ({
                     </div>
                 )
                 : (
-                    <div className={'d-flex shadow overflow-hidden flex-column w-700px border-radius-35px bg-surface justify-center'}>
+                    <div className={`d-flex shadow overflow-hidden flex-column ${screenWidth > 850 ? screenWidth > 1149 ? 'w-700px' : 'w-600px' : 'w-350px'}  border-radius-35px bg-surface justify-center`}>
                         <div
-                            className={'transform-6 nowrap w-700px'}
+                            className={`transform-6 nowrap ${screenWidth > 850 ? screenWidth > 1149 ? 'w-700px' : 'w-600px' : 'w-350px'}`}
                             style={{ transform: `translate(-${activeIndex * 100}%)` }}
                         >
                             {shownData?.map((item: any, index: number) => (

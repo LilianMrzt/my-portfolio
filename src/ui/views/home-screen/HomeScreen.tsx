@@ -3,6 +3,7 @@ import IntroductionSection from '@views/home-screen/IntroductionSection'
 import Footer from '@components/navigation/Footer'
 import { sectionIds } from '@constants/ScreensConstants'
 import ProjectsSection from '@views/home-screen/ProjectsSection'
+import TestimonialsSections from '@views/home-screen/TestimonialsSections'
 
 const HomeScreen = (): ReactElement => {
     return (
@@ -12,8 +13,9 @@ const HomeScreen = (): ReactElement => {
                 <ProjectsSection id={sectionIds.ProjectSectionId}/>
                 {/*                <AboutMeSection />
                 <SkillsSection/>
-                <TestimonialsSections/>
+
                 <InterestedSection/> */}
+                <TestimonialsSections/>
             </div>
             <Footer/>
         </div>

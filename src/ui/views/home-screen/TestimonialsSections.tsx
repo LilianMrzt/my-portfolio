@@ -2,13 +2,15 @@ import React, { type ReactElement } from 'react'
 import Carousel from '@components/common/carousel/Carousel'
 import Text from '@components/common/Text'
 import { useData } from '@utils/UseData'
+import { useScreenSize } from '@utils/UseScreenSize'
 
 const TestimonialsSections = (): ReactElement => {
     const { data } = useData()
+    const { screenWidth } = useScreenSize()
 
     return (
-        <div className={'w-100 mw-1512'}>
-            <div className={'p-100px space-between d-flex flex-row align-center gap-30 pb-40 wrap'}>
+        <div className={'mw-1512 w-100'}>
+            <div className={`p-100px  ${screenWidth > 850 ? 'space-between' : 'justify-center'} d-flex flex-row align-center gap-30 pb-40 wrap`}>
                 <div className={'w-300px'}>
                     <Text
                         fontWeight={'700'}
