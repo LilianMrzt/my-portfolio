@@ -6,11 +6,13 @@ import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
 import { useData } from '@utils/UseData'
 import { downloadFile } from '@services/DownloadFile'
+import { useScreenSize } from '@utils/UseScreenSize'
 
 const AboutMeSection = (): ReactElement => {
     const { theme } = useTheme()
     const isDarkTheme = theme === Theme.dark
     const { data } = useData()
+    const { screenWidth } = useScreenSize()
 
     return (
         <div className={'bg-tertiary w-100 d-flex flex-column border-radius-top-left-50px border-radius-top-right-50px align-center'}>
@@ -37,6 +39,7 @@ const AboutMeSection = (): ReactElement => {
                         backgroundColor={'surface'}
                         onClick={downloadFile}
                         animationFromCenter
+                        className={screenWidth < 1200 ? 'align-self-center' : ''}
                     />
                 </div>
                 <Picture/>

@@ -5,6 +5,7 @@ import App from './App'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from '@utils/UseTheme'
 import DataProvider from '@utils/UseData'
+import { ScreenSizeProvider } from '@utils/UseScreenSize'
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -14,9 +15,11 @@ root.render(
     <React.StrictMode>
         <ThemeProvider>
             <DataProvider>
-                <BrowserRouter>
-                    <App />
-                </BrowserRouter>
+                <ScreenSizeProvider>
+                    <BrowserRouter>
+                        <App />
+                    </BrowserRouter>
+                </ScreenSizeProvider>
             </DataProvider>
         </ThemeProvider>
     </React.StrictMode>
