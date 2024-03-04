@@ -32,6 +32,11 @@
     margin-right: 15px;
 }
 
+.mr-50 {
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
 .mb-10 {
     margin-bottom: 10px;
 }

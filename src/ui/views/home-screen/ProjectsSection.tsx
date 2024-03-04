@@ -5,12 +5,14 @@ import Button from '@components/common/Button'
 import { ExternalLinks } from '@constants/Constants'
 import { type ScreenProps } from '@interfaces/screens/ScreenProps'
 import { useData } from '@utils/UseData'
+import Carousel from '@components/common/carousel/Carousel'
+import { useScreenSize } from '@utils/UseScreenSize'
 
 const ProjectsSection: FC<ScreenProps> = ({
     id
 }): ReactElement => {
     const { data } = useData()
-
+    const { screenWidth } = useScreenSize()
     return (
         <div
             className={'w-100 mw-1512'}
@@ -30,22 +32,32 @@ const ProjectsSection: FC<ScreenProps> = ({
                 >
                     Voici quelques projets sur lesquels je travaille sur mon temps personnel.
                 </Text>
-                {data?.projects
+                {screenWidth > 1149
                     ? (
-                        <div className={'pt-40px d-flex w-100 flex-row justify-center gap-30 wrap align-center'}>
-                            {data?.projects?.map((project: any, index: Key) => (
-                                <ProjectCard
-                                    key={index}
-                                    project={project}
-                                />
-                            ))}
-                        </div>
+                        <>
+
+                            {data?.projects
+                                ? (
+                                    <div className={'pt-40px d-flex w-100 flex-row justify-center gap-30 wrap align-center'}>
+                                        {data?.projects?.map((project: any, index: Key) => (
+                                            <ProjectCard
+                                                key={index}
+                                                project={project}
+                                            />
+                                        ))}
+                                    </div>
+                                )
+                                : (
+                                    <Text>
+                                    Il semblerait qu&apos;aucun projet n&apos;ait été trouvé...
+                                    </Text>
+                                )}
+                        </>
                     )
                     : (
-                        <Text>
-                            Il semblerait qu&apos;aucun projet n&apos;ait été trouvé...
-                        </Text>
+                        <Carousel isProject data={data?.projects ?? []}/>
                     )}
+
                 <Button
                     label={'Voir mon Github'}
                     className={'mt-30 mb-20 mb-60 align-self-center'}

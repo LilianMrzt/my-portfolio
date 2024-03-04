@@ -6,14 +6,16 @@ import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
 import { Link } from 'react-router-dom'
 import { createUrl } from '@utils/TextUtils'
+import { useScreenSize } from '@utils/UseScreenSize'
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }): ReactElement => {
     const [isHovered, setIsHovered] = useState(false)
     const { theme } = useTheme()
+    const { screenWidth } = useScreenSize()
 
     return (
         <div
-            className={`w-400px h-350px overflow-hidden border-radius-35px d-flex justify-between flex-column gap-10 decoration-none border-radius-small border-none bg-surface pointer shadow ${isHovered ? 'translate-top-10px-shadow' : ''}`}
+            className={`${screenWidth > 850 ? 'w-400px' : 'w-300px'} mr-50 d-inline-flex h-350px overflow-hidden border-radius-35px d-flex justify-between flex-column gap-10 decoration-none border-radius-small border-none bg-surface pointer shadow ${isHovered ? 'translate-top-10px-shadow' : ''}`}
             onMouseEnter={() => { setIsHovered(true) }}
             onMouseLeave={() => { setIsHovered(false) }}
         >
