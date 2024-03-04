@@ -30,7 +30,7 @@ const TestimonialsSections = (): ReactElement => {
                         Qu&apos;ont pensé les personnes avec qui j&apos;ai travaillé?
                     </Text>
                 </div>
-                <div className={'d-flex flex-column flex-1 align-center '}>
+                <div className={`d-flex flex-column flex-1 ${screenWidth > 1149 ? 'align-end' : 'align-center'}`}>
                     <Carousel data={data?.testimonials ?? []}/>
                 </div>
             </div>
