@@ -8,7 +8,7 @@ const TestimonialsSections = (): ReactElement => {
 
     return (
         <div className={'w-100 mw-1512'}>
-            <div className={'p-100px space-between d-flex flex-row align-center gap-30 pb-40'}>
+            <div className={'p-100px space-between d-flex flex-row align-center gap-30 pb-40 wrap'}>
                 <div className={'w-300px'}>
                     <Text
                         fontWeight={'700'}
@@ -28,7 +28,7 @@ const TestimonialsSections = (): ReactElement => {
                         Qu&apos;ont pensé les personnes avec qui j&apos;ai travaillé?
                     </Text>
                 </div>
-                <Carousel data={data?.testimonials}/>
+                <Carousel data={data?.testimonials ?? []}/>
             </div>
         </div>
     )

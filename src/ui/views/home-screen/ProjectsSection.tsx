@@ -32,7 +32,7 @@ const ProjectsSection: FC<ScreenProps> = ({
                 </Text>
                 {data?.projects
                     ? (
-                        <div className={`pt-40px d-flex w-100 flex-row ${data?.projects?.length <= 2 ? 'justify-start' : 'justify-center'} gap-30 wrap align-center`}>
+                        <div className={'pt-40px d-flex w-100 flex-row justify-center gap-30 wrap align-center'}>
                             {data?.projects?.map((project: any, index: Key) => (
                                 <ProjectCard
                                     key={index}
@@ -43,7 +43,7 @@ const ProjectsSection: FC<ScreenProps> = ({
                     )
                     : (
                         <Text>
-                        Il semblerait qu&apos;aucun projet n&apos;ait été trouvé...
+                            Il semblerait qu&apos;aucun projet n&apos;ait été trouvé...
                         </Text>
                     )}
                 <Button

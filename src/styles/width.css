@@ -63,3 +63,7 @@
 .mw-1512 {
     max-width: 1512px;
 }
+
+.min-width-300px {
+    min-width: 300px;
+}
