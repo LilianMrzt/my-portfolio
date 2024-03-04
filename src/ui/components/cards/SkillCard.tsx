@@ -6,13 +6,14 @@ import Icon from '@components/common/Icon'
 import Tag from '@components/common/Tag'
 import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
+import { useScreenSize } from '@utils/UseScreenSize'
 
 const SkillCard: FC<SkillCardProps> = ({
     content
 }): ReactElement => {
     const { theme } = useTheme()
     const isDarkTheme = theme === Theme.dark
-
+    const { screenWidth } = useScreenSize()
     const getIcon = (iconName: string): string => {
         switch (iconName) {
             case 'ReactIcon':
@@ -28,7 +29,7 @@ const SkillCard: FC<SkillCardProps> = ({
 
     return (
         <div
-            className={'mw-1512 w-400px h-400px aspect-1 bg-surface border-radius-35px shadow flex-column'}
+            className={`mw-1512 ${screenWidth > 850 ? 'w-400px' : 'w-350px'} h-400px aspect-1 bg-surface border-radius-35px shadow flex-column`}
         >
             <div className={'p-40px d-flex flex-1 flex-column align-start space-between'}>
                 <Icon

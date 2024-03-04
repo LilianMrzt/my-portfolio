@@ -5,6 +5,7 @@ import { sectionIds } from '@constants/ScreensConstants'
 import ProjectsSection from '@views/home-screen/ProjectsSection'
 import TestimonialsSections from '@views/home-screen/TestimonialsSections'
 import InterestedSection from '@views/home-screen/InterestedSection'
+import SkillsSection from '@views/home-screen/SkillsSection'
 
 const HomeScreen = (): ReactElement => {
     return (
@@ -13,9 +14,9 @@ const HomeScreen = (): ReactElement => {
                 <IntroductionSection/>
                 <ProjectsSection id={sectionIds.ProjectSectionId}/>
                 {/*                <AboutMeSection />
-                <SkillsSection/>
 
                  */}
+                <SkillsSection/>
                 <TestimonialsSections/>
                 <InterestedSection/>
             </div>
