@@ -28,6 +28,11 @@
     justify-content: center;
 }
 
+
+.justify-self-start {
+    justify-self: start;
+}
+
 .justify-start {
     justify-content: start;
 }

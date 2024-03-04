@@ -5,16 +5,17 @@ import { useTheme } from '@utils/UseTheme'
 import { Theme } from '@constants/Constants'
 import { StarIcon } from '@assets/Images'
 import Icon from '@components/common/Icon'
+import { useScreenSize } from '@utils/UseScreenSize'
 
 const InterestedSection = (): ReactElement => {
     const { theme } = useTheme()
     const isDarkMode = theme === Theme.dark
-
+    const { screenWidth } = useScreenSize()
     return (
-        <div className={'pt-80px d-flex flex-column align-center pb-40'}>
+        <div className={'p-100px pt-80px d-flex flex-column justify-center align-center pb-40'}>
             <Text
                 fontWeight={'700'}
-                size={'60px'}
+                size={screenWidth > 850 ? '60px' : '40px'}
                 color={'primary'}
             >
                 COLLABORONS ENSEMBLE!

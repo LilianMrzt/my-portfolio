@@ -10,7 +10,7 @@ const TestimonialsSections = (): ReactElement => {
 
     return (
         <div className={'mw-1512 w-100'}>
-            <div className={`p-100px  ${screenWidth > 850 ? 'space-between' : 'justify-center'} d-flex flex-row align-center gap-30 pb-40 wrap`}>
+            <div className={`p-100px  ${screenWidth > 850 ? 'space-between' : 'justify-start'} d-flex flex-row align-center gap-30 pb-40 wrap`}>
                 <div className={'w-300px'}>
                     <Text
                         fontWeight={'700'}
@@ -30,7 +30,9 @@ const TestimonialsSections = (): ReactElement => {
                         Qu&apos;ont pensé les personnes avec qui j&apos;ai travaillé?
                     </Text>
                 </div>
-                <Carousel data={data?.testimonials ?? []}/>
+                <div className={'d-flex flex-column flex-1 align-center '}>
+                    <Carousel data={data?.testimonials ?? []}/>
+                </div>
             </div>
         </div>
     )
