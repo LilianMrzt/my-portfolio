@@ -17,3 +17,9 @@
     justify-content: center;
 }
 
+@media only screen {
+    .custom-button:focus {
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+    }
+}

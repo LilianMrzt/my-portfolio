@@ -5,13 +5,14 @@ import { Theme } from '@constants/Constants'
 import Button from '@components/common/Button'
 import { useNavigate } from 'react-router-dom'
 import { RoutesConstants } from '@constants/RoutesConstants'
+import { useScreenSize } from '@utils/UseScreenSize'
 
 const NavigationBar: FC<NavigationBarProps> = ({
     theme,
     toggleTheme
 }): ReactElement => {
     const [isIconSun, setIsIconSun] = useState(theme === Theme.dark)
-
+    const { screenWidth } = useScreenSize()
     const handleThemeChange = (): void => {
         setIsIconSun(!isIconSun)
         toggleTheme()
@@ -21,10 +22,10 @@ const NavigationBar: FC<NavigationBarProps> = ({
 
     return (
         <div
-            className={'d-flex space-between h-80px align-center pl-20 pr-20 index-2'}
+            className={`d-flex space-between h-80px align-center ${screenWidth > 850 && 'pl-20'} pr-20 index-2`}
         >
             <Button
-                label={'Portfolio.'}
+                label={screenWidth > 850 ? 'Portfolio.' : 'P.'}
                 onClick={() => {
                     navigate(RoutesConstants.HOME_SCREEN_ROUTE)
                 }}

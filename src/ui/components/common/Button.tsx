@@ -43,6 +43,11 @@ const Button: FC<ButtonProps> = ({
         setIsHovered(false)
     }
 
+    const handleFocus = (event: FocusEvent): void => {
+        // Prevent default focus state on mobile
+        event.preventDefault()
+    }
+
     return (
         <CustomButton
             className={`
@@ -59,13 +64,16 @@ const Button: FC<ButtonProps> = ({
                 ${className}
                 d-flex
                 p-0
+                custom-button
             `}
             onClick={(event: MouseEvent<HTMLButtonElement>) => {
                 onClick()
                 createRipple(event, animationFromCenter)
+                setIsHovered(false)
             }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            onFocus={handleFocus}
         >
             <div className={`
                 ${effect === 'darken' ? isHovered ? 'bg-shadow' : '' : ''}
