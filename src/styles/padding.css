@@ -70,6 +70,12 @@
     padding-right: 80px;
 }
 
+@media (max-width: 850px) {
+    .pr-80px {
+        padding-right: 0;
+    }
+}
+
 .pt-40px {
     padding-top: 40px;
 }

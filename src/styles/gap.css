@@ -9,3 +9,13 @@
 .gap-80 {
     gap: 80px;
 }
+
+.gap-100px {
+    gap: 100px;
+}
+
+@media (max-width: 850px) {
+    .gap-100px {
+        gap: 40px;
+    }
+}

@@ -6,6 +6,7 @@ import ProjectsSection from '@views/home-screen/ProjectsSection'
 import TestimonialsSections from '@views/home-screen/TestimonialsSections'
 import InterestedSection from '@views/home-screen/InterestedSection'
 import SkillsSection from '@views/home-screen/SkillsSection'
+import AboutMeSection from '@views/home-screen/AboutMeSection'
 
 const HomeScreen = (): ReactElement => {
     return (
@@ -13,9 +14,7 @@ const HomeScreen = (): ReactElement => {
             <div className={'d-flex flex-column align-center bg-background'}>
                 <IntroductionSection/>
                 <ProjectsSection id={sectionIds.ProjectSectionId}/>
-                {/*                <AboutMeSection />
-
-                 */}
+                <AboutMeSection />
                 <SkillsSection/>
                 <TestimonialsSections/>
                 <InterestedSection/>
