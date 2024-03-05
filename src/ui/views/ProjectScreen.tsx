@@ -4,11 +4,13 @@ import { RoutesConstants } from '@constants/RoutesConstants'
 import Text from '@components/common/Text'
 import Image from '@components/common/Image'
 import Button from '@components/common/Button'
+import { useScreenSize } from '@utils/UseScreenSize'
 
 const ProjectScreen = (): ReactElement => {
     const navigate = useNavigate()
 
     const { pathname, state } = useLocation()
+    const { screenWidth } = useScreenSize()
 
     const project = state?.project
 
@@ -19,9 +21,7 @@ const ProjectScreen = (): ReactElement => {
     }, [state, navigate])
 
     useEffect(() => {
-        if (pathname !== RoutesConstants.HOME_SCREEN_ROUTE) {
-            window.scrollTo(0, 0)
-        }
+        window.scrollTo(0, 0)
     }, [pathname])
 
     return (
@@ -42,7 +42,7 @@ const ProjectScreen = (): ReactElement => {
                         <Text
                             color={'text'}
                             font={'poppins'}
-                            className={'w-50'}
+                            className={screenWidth > 850 ? 'w-50' : 'w-100'}
                         >
                             {project?.introduction}
                         </Text>
@@ -56,21 +56,21 @@ const ProjectScreen = (): ReactElement => {
                         ÉCRANS ET FONCTIONNALITÉS
                     </Text>
                     {project?.screens?.map((screen: any, index: number) => (
-                        <div key={index} className={'d-flex flex-row mb-60 gap-10'}>
+                        <div key={index} className={`d-flex flex-row gap-10 ${screenWidth < 850 ? 'justify-center wrap mb-60' : 'mb-20'}`}>
                             {screen?.images?.map((section: any, index: string) => (
                                 <div
-                                    className={'d-flex flex-row'}
+                                    className={'d-flex flex-row wrap'}
                                     key={index}
                                 >
                                     <Image
                                         square={false}
                                         source={section}
-                                        height={'800px'}
-                                        width={'auto'}
+                                        height={screenWidth > 850 ? '800px' : 'auto'}
+                                        width={screenWidth > 850 ? 'auto' : '350px'}
                                     />
                                 </div>
                             ))}
-                            <div className={'p-80px'}>
+                            <div className={screenWidth > 850 ? 'p-80px' : ''}>
                                 <Text>
                                     {screen.description}
                                 </Text>
